@@ -44,6 +44,7 @@ namespace PRG282_Milestone2.PresentationLayer
             this.lblStudentName = new System.Windows.Forms.Label();
             this.lblStudentID = new System.Windows.Forms.Label();
             this.pnlSearchStudent = new System.Windows.Forms.Panel();
+            this.CourseID = new System.Windows.Forms.TextBox();
             this.Lastname = new System.Windows.Forms.TextBox();
             this.StudentName = new System.Windows.Forms.TextBox();
             this.StudentID = new System.Windows.Forms.TextBox();
@@ -51,7 +52,7 @@ namespace PRG282_Milestone2.PresentationLayer
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.CourseID = new System.Windows.Forms.TextBox();
+            this.button5 = new System.Windows.Forms.Button();
             this.pnlStudentDetails.SuspendLayout();
             this.pnlSearchStudent.SuspendLayout();
             this.SuspendLayout();
@@ -62,16 +63,16 @@ namespace PRG282_Milestone2.PresentationLayer
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 9;
-            this.button1.Text = "button1";
+            this.button1.Text = "Update";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(144, 207);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(102, 23);
             this.button2.TabIndex = 10;
-            this.button2.Text = "button2";
+            this.button2.Text = "View Student";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button3
@@ -103,7 +104,6 @@ namespace PRG282_Milestone2.PresentationLayer
             this.pnlStudentDetails.Controls.Add(this.lblCourseID);
             this.pnlStudentDetails.Controls.Add(this.lblStudentName);
             this.pnlStudentDetails.Controls.Add(this.lblStudentID);
-            this.pnlStudentDetails.Controls.Add(this.pnlSearchStudent);
             this.pnlStudentDetails.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlStudentDetails.Location = new System.Drawing.Point(0, 0);
             this.pnlStudentDetails.Name = "pnlStudentDetails";
@@ -194,11 +194,18 @@ namespace PRG282_Milestone2.PresentationLayer
             this.pnlSearchStudent.Controls.Add(this.label2);
             this.pnlSearchStudent.Controls.Add(this.label3);
             this.pnlSearchStudent.Controls.Add(this.label4);
-            this.pnlSearchStudent.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSearchStudent.Location = new System.Drawing.Point(0, 0);
+            this.pnlSearchStudent.Location = new System.Drawing.Point(386, 207);
             this.pnlSearchStudent.Name = "pnlSearchStudent";
-            this.pnlSearchStudent.Size = new System.Drawing.Size(663, 201);
-            this.pnlSearchStudent.TabIndex = 14;
+            this.pnlSearchStudent.Size = new System.Drawing.Size(241, 201);
+            this.pnlSearchStudent.TabIndex = 15;
+            // 
+            // CourseID
+            // 
+            this.CourseID.Location = new System.Drawing.Point(131, 117);
+            this.CourseID.Name = "CourseID";
+            this.CourseID.ReadOnly = true;
+            this.CourseID.Size = new System.Drawing.Size(100, 20);
+            this.CourseID.TabIndex = 24;
             // 
             // Lastname
             // 
@@ -260,19 +267,22 @@ namespace PRG282_Milestone2.PresentationLayer
             this.label4.TabIndex = 17;
             this.label4.Text = "Student ID:";
             // 
-            // CourseID
+            // button5
             // 
-            this.CourseID.Location = new System.Drawing.Point(131, 117);
-            this.CourseID.Name = "CourseID";
-            this.CourseID.ReadOnly = true;
-            this.CourseID.Size = new System.Drawing.Size(100, 20);
-            this.CourseID.TabIndex = 24;
+            this.button5.Location = new System.Drawing.Point(0, 394);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 16;
+            this.button5.Text = "Log Out";
+            this.button5.UseVisualStyleBackColor = true;
             // 
             // frmSearchStudents
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(663, 415);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.pnlSearchStudent);
             this.Controls.Add(this.pnlStudentDetails);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -296,15 +306,6 @@ namespace PRG282_Milestone2.PresentationLayer
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Panel pnlStudentDetails;
-        private System.Windows.Forms.Panel pnlSearchStudent;
-        private System.Windows.Forms.TextBox CourseID;
-        private System.Windows.Forms.TextBox Lastname;
-        private System.Windows.Forms.TextBox StudentName;
-        private System.Windows.Forms.TextBox StudentID;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblHeading;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox textBox3;
@@ -314,5 +315,15 @@ namespace PRG282_Milestone2.PresentationLayer
         private System.Windows.Forms.Label lblCourseID;
         private System.Windows.Forms.Label lblStudentName;
         private System.Windows.Forms.Label lblStudentID;
+        private System.Windows.Forms.Panel pnlSearchStudent;
+        private System.Windows.Forms.TextBox CourseID;
+        private System.Windows.Forms.TextBox Lastname;
+        private System.Windows.Forms.TextBox StudentName;
+        private System.Windows.Forms.TextBox StudentID;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button5;
     }
 }
