@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PRG282_Milestone2.PresentationLayer
 {
-    public partial class Form1 : Form
+    public partial class frmStudents : Form
     {
-        public Form1()
+        public frmStudents()
         {
             InitializeComponent();
         }
