@@ -18,6 +18,8 @@ namespace PRG282_Milestone2.DataLayer
             SqlCommand Job = new SqlCommand("Select * From DetailStudents", connect);
 
             SqlDataReader Reader = Job.ExecuteReader();
+
+            Console.WriteLine("test");
         }
     }
 }
