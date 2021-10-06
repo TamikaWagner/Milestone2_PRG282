@@ -92,7 +92,7 @@ namespace PRG282_Milestone2.PresentationLayer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(237, 264);
+            this.ClientSize = new System.Drawing.Size(185, 238);
             this.Controls.Add(this.brnRegister);
             this.Controls.Add(this.lbPassword);
             this.Controls.Add(this.lbUsername);
@@ -100,7 +100,7 @@ namespace PRG282_Milestone2.PresentationLayer
             this.Controls.Add(this.txtusername);
             this.Controls.Add(this.txtpassword);
             this.Name = "frmLogin";
-            this.Text = "frmLogin";
+            this.Text = "Login";
             this.Load += new System.EventHandler(this.frmLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

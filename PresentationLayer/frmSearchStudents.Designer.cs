@@ -96,6 +96,7 @@ namespace PRG282_Milestone2.PresentationLayer
             // pnlStudentDetails
             // 
             this.pnlStudentDetails.Controls.Add(this.lblHeading);
+            this.pnlStudentDetails.Controls.Add(this.pnlSearchStudent);
             this.pnlStudentDetails.Controls.Add(this.comboBox1);
             this.pnlStudentDetails.Controls.Add(this.textBox3);
             this.pnlStudentDetails.Controls.Add(this.textBox2);
@@ -107,7 +108,7 @@ namespace PRG282_Milestone2.PresentationLayer
             this.pnlStudentDetails.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlStudentDetails.Location = new System.Drawing.Point(0, 0);
             this.pnlStudentDetails.Name = "pnlStudentDetails";
-            this.pnlStudentDetails.Size = new System.Drawing.Size(663, 201);
+            this.pnlStudentDetails.Size = new System.Drawing.Size(574, 201);
             this.pnlStudentDetails.TabIndex = 13;
             // 
             // lblHeading
@@ -194,9 +195,9 @@ namespace PRG282_Milestone2.PresentationLayer
             this.pnlSearchStudent.Controls.Add(this.label2);
             this.pnlSearchStudent.Controls.Add(this.label3);
             this.pnlSearchStudent.Controls.Add(this.label4);
-            this.pnlSearchStudent.Location = new System.Drawing.Point(386, 207);
+            this.pnlSearchStudent.Location = new System.Drawing.Point(286, 0);
             this.pnlSearchStudent.Name = "pnlSearchStudent";
-            this.pnlSearchStudent.Size = new System.Drawing.Size(241, 201);
+            this.pnlSearchStudent.Size = new System.Drawing.Size(289, 201);
             this.pnlSearchStudent.TabIndex = 15;
             // 
             // CourseID
@@ -280,9 +281,8 @@ namespace PRG282_Milestone2.PresentationLayer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(663, 415);
+            this.ClientSize = new System.Drawing.Size(574, 394);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.pnlSearchStudent);
             this.Controls.Add(this.pnlStudentDetails);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
