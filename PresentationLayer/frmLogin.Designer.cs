@@ -35,6 +35,7 @@ namespace PRG282_Milestone2.PresentationLayer
             this.BtnLogin = new System.Windows.Forms.Button();
             this.txtusername = new System.Windows.Forms.TextBox();
             this.txtpassword = new System.Windows.Forms.TextBox();
+            this.btnExit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // brnRegister
@@ -88,11 +89,22 @@ namespace PRG282_Milestone2.PresentationLayer
             this.txtpassword.Size = new System.Drawing.Size(109, 20);
             this.txtpassword.TabIndex = 15;
             // 
+            // btnExit
+            // 
+            this.btnExit.Location = new System.Drawing.Point(71, 210);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(32, 23);
+            this.btnExit.TabIndex = 21;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(185, 238);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.brnRegister);
             this.Controls.Add(this.lbPassword);
             this.Controls.Add(this.lbUsername);
@@ -115,5 +127,6 @@ namespace PRG282_Milestone2.PresentationLayer
         private System.Windows.Forms.Button BtnLogin;
         private System.Windows.Forms.TextBox txtusername;
         private System.Windows.Forms.TextBox txtpassword;
+        private System.Windows.Forms.Button btnExit;
     }
 }

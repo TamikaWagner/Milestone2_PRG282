@@ -43,6 +43,37 @@ namespace PRG282_Milestone2.PresentationLayer
                 frmMenu home = new frmMenu();
                 home.ShowDialog();
             }
+            
+            string s =;
+            using (StreamReader reader = new StreamReader(@"C:\Users\Osama.OM\Documents\New folder\ss.txt"))
+            {
+                s = reader.ReadLine();
+            }
+            string[] ss = s.Split(':');
+            if (txtusername.Text == ss[0])
+            {
+                if (txtPass.Text == ss[1])
+                {
+                    this.Hide();
+                    Properties.Settings.Default.ss = txtusername.Text;
+                    Properties.Settings.Default.Save();
+                    MainForm mf = new MainForm();
+                    mf.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Sorry Wrong Password");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Sorry Wrong Username");
+            }
+
+
+
+
+
             /*else if (txtpassword.Text != string.Empty || txtusername.Text != string.Empty)
             {
 
@@ -74,9 +105,16 @@ namespace PRG282_Milestone2.PresentationLayer
             registration.ShowDialog();
         }
 
-        private void txtusername_TextChanged(object sender, EventArgs e)
-        {
+       
 
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            if(MessageBox.Show("Are you sure you want to exit?" , "Exit", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            {
+                this.Close();
+            }
         }
+
+      
     }
 }

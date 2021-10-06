@@ -76,6 +76,11 @@ namespace PRG282_Milestone2.PresentationLayer
         {
 
         }
+
+        private void BtnRegister_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }
