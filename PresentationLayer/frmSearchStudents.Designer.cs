@@ -53,6 +53,7 @@ namespace PRG282_Milestone2.PresentationLayer
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             this.pnlStudentDetails.SuspendLayout();
             this.pnlSearchStudent.SuspendLayout();
             this.SuspendLayout();
@@ -187,6 +188,7 @@ namespace PRG282_Milestone2.PresentationLayer
             // 
             // pnlSearchStudent
             // 
+            this.pnlSearchStudent.Controls.Add(this.label5);
             this.pnlSearchStudent.Controls.Add(this.CourseID);
             this.pnlSearchStudent.Controls.Add(this.Lastname);
             this.pnlSearchStudent.Controls.Add(this.StudentName);
@@ -202,7 +204,7 @@ namespace PRG282_Milestone2.PresentationLayer
             // 
             // CourseID
             // 
-            this.CourseID.Location = new System.Drawing.Point(131, 117);
+            this.CourseID.Location = new System.Drawing.Point(131, 143);
             this.CourseID.Name = "CourseID";
             this.CourseID.ReadOnly = true;
             this.CourseID.Size = new System.Drawing.Size(100, 20);
@@ -210,7 +212,7 @@ namespace PRG282_Milestone2.PresentationLayer
             // 
             // Lastname
             // 
-            this.Lastname.Location = new System.Drawing.Point(131, 82);
+            this.Lastname.Location = new System.Drawing.Point(131, 108);
             this.Lastname.Name = "Lastname";
             this.Lastname.ReadOnly = true;
             this.Lastname.Size = new System.Drawing.Size(100, 20);
@@ -218,7 +220,7 @@ namespace PRG282_Milestone2.PresentationLayer
             // 
             // StudentName
             // 
-            this.StudentName.Location = new System.Drawing.Point(131, 49);
+            this.StudentName.Location = new System.Drawing.Point(131, 75);
             this.StudentName.Name = "StudentName";
             this.StudentName.ReadOnly = true;
             this.StudentName.Size = new System.Drawing.Size(100, 20);
@@ -226,7 +228,7 @@ namespace PRG282_Milestone2.PresentationLayer
             // 
             // StudentID
             // 
-            this.StudentID.Location = new System.Drawing.Point(131, 16);
+            this.StudentID.Location = new System.Drawing.Point(131, 42);
             this.StudentID.Name = "StudentID";
             this.StudentID.ReadOnly = true;
             this.StudentID.Size = new System.Drawing.Size(100, 20);
@@ -235,7 +237,7 @@ namespace PRG282_Milestone2.PresentationLayer
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(38, 82);
+            this.label1.Location = new System.Drawing.Point(38, 108);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(58, 13);
             this.label1.TabIndex = 20;
@@ -244,7 +246,7 @@ namespace PRG282_Milestone2.PresentationLayer
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(39, 118);
+            this.label2.Location = new System.Drawing.Point(39, 144);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 13);
             this.label2.TabIndex = 19;
@@ -253,7 +255,7 @@ namespace PRG282_Milestone2.PresentationLayer
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(35, 48);
+            this.label3.Location = new System.Drawing.Point(35, 74);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(78, 13);
             this.label3.TabIndex = 18;
@@ -262,7 +264,7 @@ namespace PRG282_Milestone2.PresentationLayer
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(35, 19);
+            this.label4.Location = new System.Drawing.Point(35, 45);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(61, 13);
             this.label4.TabIndex = 17;
@@ -276,6 +278,15 @@ namespace PRG282_Milestone2.PresentationLayer
             this.button5.TabIndex = 16;
             this.button5.Text = "Log Out";
             this.button5.UseVisualStyleBackColor = true;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(39, 9);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(95, 13);
+            this.label5.TabIndex = 25;
+            this.label5.Text = "Student details for ";
             // 
             // frmSearchStudents
             // 
@@ -325,5 +336,6 @@ namespace PRG282_Milestone2.PresentationLayer
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Label label5;
     }
 }

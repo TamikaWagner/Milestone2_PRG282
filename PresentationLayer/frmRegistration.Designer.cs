@@ -91,6 +91,7 @@ namespace PRG282_Milestone2.PresentationLayer
             this.BtnRegister.TabIndex = 26;
             this.BtnRegister.Text = "Register";
             this.BtnRegister.UseVisualStyleBackColor = true;
+            this.BtnRegister.Click += new System.EventHandler(this.BtnRegister_Click);
             // 
             // txtusername
             // 
@@ -110,7 +111,7 @@ namespace PRG282_Milestone2.PresentationLayer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(240, 330);
+            this.ClientSize = new System.Drawing.Size(217, 318);
             this.Controls.Add(this.btnLoginredirect);
             this.Controls.Add(this.lbConfPassword);
             this.Controls.Add(this.txtconfirmpassword);
