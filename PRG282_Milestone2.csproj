@@ -68,11 +68,11 @@
     <Compile Include="PresentationLayer\frmRegistration.Designer.cs">
       <DependentUpon>frmRegistration.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\frmStudents.cs">
+    <Compile Include="PresentationLayer\frmSearchStudents.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PresentationLayer\frmStudents.Designer.cs">
-      <DependentUpon>frmStudents.cs</DependentUpon>
+    <Compile Include="PresentationLayer\frmSearchStudents.Designer.cs">
+      <DependentUpon>frmSearchStudents.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -84,6 +84,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\frmRegistration.resx">
       <DependentUpon>frmRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\frmSearchStudents.resx">
+      <DependentUpon>frmSearchStudents.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

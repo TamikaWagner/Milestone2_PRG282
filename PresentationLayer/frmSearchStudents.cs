@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace PRG282_Milestone2.PresentationLayer
 {
-    public partial class frmStudents : Form
+    public partial class frmSearchStudents : Form
     {
-        public frmStudents()
+        public frmSearchStudents()
         {
             InitializeComponent();
+        }
+
+        private void frmSearchStudents_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
