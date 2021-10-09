@@ -11,6 +11,9 @@ namespace PRG282_Milestone2.DataLayer
 {
     class DataHandler
     {
+        string conn = "Server =.; Initial Catalog = Student; Integrated Security = SSPI";
+        public DataHandler() { }
+
         public void GetStudents()
         {
             List<Students> StudentDetails = new List<Students>();
@@ -21,6 +24,25 @@ namespace PRG282_Milestone2.DataLayer
             SqlDataReader Reader = Job.ExecuteReader();
 
             Console.WriteLine("test");
+        }
+
+        public bool Register(Students student)
+        {
+            try
+            {
+                SqlConnection connection = new SqlConnection(conn);
+                connection.Open();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Not Connected");
+            }
+            string query = $"INSERT INTO Students(Student_Number, Student_Name, Gender, Date_Of_Birth, Phone, Student_Address, Module_Codes) VALUES({student.Student_Number}, '{person.Name}', '{person.Surname}', '{person.CourseID}')";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.ExecuteNonQuery();
+            conn.Close();
+            return true;
+            
         }
 
 

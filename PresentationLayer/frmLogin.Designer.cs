@@ -36,11 +36,13 @@ namespace PRG282_Milestone2.PresentationLayer
             this.txtusername = new System.Windows.Forms.TextBox();
             this.txtpassword = new System.Windows.Forms.TextBox();
             this.btnExit = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // brnRegister
             // 
-            this.brnRegister.Location = new System.Drawing.Point(33, 181);
+            this.brnRegister.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.brnRegister.Location = new System.Drawing.Point(56, 210);
             this.brnRegister.Name = "brnRegister";
             this.brnRegister.Size = new System.Drawing.Size(109, 23);
             this.brnRegister.TabIndex = 20;
@@ -50,24 +52,27 @@ namespace PRG282_Milestone2.PresentationLayer
             // lbPassword
             // 
             this.lbPassword.AutoSize = true;
-            this.lbPassword.Location = new System.Drawing.Point(29, 86);
+            this.lbPassword.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPassword.Location = new System.Drawing.Point(75, 123);
             this.lbPassword.Name = "lbPassword";
-            this.lbPassword.Size = new System.Drawing.Size(53, 13);
+            this.lbPassword.Size = new System.Drawing.Size(75, 18);
             this.lbPassword.TabIndex = 19;
             this.lbPassword.Text = "Password";
             // 
             // lbUsername
             // 
             this.lbUsername.AutoSize = true;
-            this.lbUsername.Location = new System.Drawing.Point(29, 23);
+            this.lbUsername.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbUsername.Location = new System.Drawing.Point(75, 57);
             this.lbUsername.Name = "lbUsername";
-            this.lbUsername.Size = new System.Drawing.Size(55, 13);
+            this.lbUsername.Size = new System.Drawing.Size(82, 18);
             this.lbUsername.TabIndex = 18;
             this.lbUsername.Text = "Username";
             // 
             // BtnLogin
             // 
-            this.BtnLogin.Location = new System.Drawing.Point(48, 152);
+            this.BtnLogin.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnLogin.Location = new System.Drawing.Point(68, 181);
             this.BtnLogin.Name = "BtnLogin";
             this.BtnLogin.Size = new System.Drawing.Size(75, 23);
             this.BtnLogin.TabIndex = 17;
@@ -76,34 +81,46 @@ namespace PRG282_Milestone2.PresentationLayer
             // 
             // txtusername
             // 
-            this.txtusername.Location = new System.Drawing.Point(32, 48);
+            this.txtusername.Location = new System.Drawing.Point(44, 90);
             this.txtusername.Name = "txtusername";
-            this.txtusername.Size = new System.Drawing.Size(109, 20);
+            this.txtusername.Size = new System.Drawing.Size(133, 20);
             this.txtusername.TabIndex = 16;
             // 
             // txtpassword
             // 
-            this.txtpassword.Location = new System.Drawing.Point(32, 116);
+            this.txtpassword.Location = new System.Drawing.Point(44, 155);
             this.txtpassword.Name = "txtpassword";
             this.txtpassword.PasswordChar = '*';
-            this.txtpassword.Size = new System.Drawing.Size(109, 20);
+            this.txtpassword.Size = new System.Drawing.Size(133, 20);
             this.txtpassword.TabIndex = 15;
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(71, 210);
+            this.btnExit.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.Location = new System.Drawing.Point(78, 239);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(32, 23);
+            this.btnExit.Size = new System.Drawing.Size(47, 22);
             this.btnExit.TabIndex = 21;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(84, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(51, 19);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "Login";
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(185, 238);
+            this.ClientSize = new System.Drawing.Size(233, 283);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.brnRegister);
             this.Controls.Add(this.lbPassword);
@@ -128,5 +145,6 @@ namespace PRG282_Milestone2.PresentationLayer
         private System.Windows.Forms.TextBox txtusername;
         private System.Windows.Forms.TextBox txtpassword;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Label label1;
     }
 }
