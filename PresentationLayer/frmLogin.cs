@@ -44,7 +44,7 @@ namespace PRG282_Milestone2.PresentationLayer
                 home.ShowDialog();
             }
             
-            string s =;
+            string s = "";
             using (StreamReader reader = new StreamReader(@"C:\Users\Osama.OM\Documents\New folder\ss.txt"))
             {
                 s = reader.ReadLine();
