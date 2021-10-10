@@ -49,6 +49,7 @@ namespace PRG282_Milestone2.PresentationLayer
                     R.Hide();
                     frmMenu M = new frmMenu();
                     M.Show();
+                    MessageBox.Show(Handler.RegisterStudent(SNumber, SName, Gender, DOB, Phone, SAddress, MCodes));
                 }
             }
             catch (Exception)
@@ -88,6 +89,7 @@ namespace PRG282_Milestone2.PresentationLayer
                     R.Hide();
                     frmMenu M = new frmMenu();
                     M.Show();
+                    MessageBox.Show(Handler.RegisterStudent(SNumber, SName, Gender, DOB, Phone, SAddress, MCodes));
                 }
             }
             catch (Exception)
@@ -99,6 +101,11 @@ namespace PRG282_Milestone2.PresentationLayer
         private void frmRegister_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
