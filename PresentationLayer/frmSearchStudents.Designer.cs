@@ -62,7 +62,7 @@ namespace PRG282_Milestone2.PresentationLayer
             // 
             this.btn_SUpdate.BackColor = System.Drawing.Color.White;
             this.btn_SUpdate.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_SUpdate.Location = new System.Drawing.Point(83, 306);
+            this.btn_SUpdate.Location = new System.Drawing.Point(146, 271);
             this.btn_SUpdate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_SUpdate.Name = "btn_SUpdate";
             this.btn_SUpdate.Size = new System.Drawing.Size(91, 31);
@@ -74,7 +74,7 @@ namespace PRG282_Milestone2.PresentationLayer
             // 
             this.btn_SView.BackColor = System.Drawing.Color.White;
             this.btn_SView.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_SView.Location = new System.Drawing.Point(199, 306);
+            this.btn_SView.Location = new System.Drawing.Point(17, 271);
             this.btn_SView.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_SView.Name = "btn_SView";
             this.btn_SView.Size = new System.Drawing.Size(87, 31);
@@ -86,7 +86,7 @@ namespace PRG282_Milestone2.PresentationLayer
             // 
             this.btn_SReg.BackColor = System.Drawing.Color.White;
             this.btn_SReg.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_SReg.Location = new System.Drawing.Point(83, 376);
+            this.btn_SReg.Location = new System.Drawing.Point(399, 272);
             this.btn_SReg.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_SReg.Name = "btn_SReg";
             this.btn_SReg.Size = new System.Drawing.Size(91, 30);
@@ -98,7 +98,7 @@ namespace PRG282_Milestone2.PresentationLayer
             // 
             this.btn_SReturn.BackColor = System.Drawing.Color.White;
             this.btn_SReturn.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_SReturn.Location = new System.Drawing.Point(199, 376);
+            this.btn_SReturn.Location = new System.Drawing.Point(522, 272);
             this.btn_SReturn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_SReturn.Name = "btn_SReturn";
             this.btn_SReturn.Size = new System.Drawing.Size(136, 30);
@@ -122,7 +122,7 @@ namespace PRG282_Milestone2.PresentationLayer
             this.pnlStudentDetails.Location = new System.Drawing.Point(0, 0);
             this.pnlStudentDetails.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlStudentDetails.Name = "pnlStudentDetails";
-            this.pnlStudentDetails.Size = new System.Drawing.Size(670, 263);
+            this.pnlStudentDetails.Size = new System.Drawing.Size(673, 263);
             this.pnlStudentDetails.TabIndex = 13;
             // 
             // lbl_SHeading
@@ -137,6 +137,8 @@ namespace PRG282_Milestone2.PresentationLayer
             // 
             // pnlSearchStudent
             // 
+            this.pnlSearchStudent.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlSearchStudent.Controls.Add(this.lbl_SDetailsFor);
             this.pnlSearchStudent.Controls.Add(this.CourseID);
             this.pnlSearchStudent.Controls.Add(this.Lastname);
@@ -149,7 +151,7 @@ namespace PRG282_Milestone2.PresentationLayer
             this.pnlSearchStudent.Location = new System.Drawing.Point(334, 0);
             this.pnlSearchStudent.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlSearchStudent.Name = "pnlSearchStudent";
-            this.pnlSearchStudent.Size = new System.Drawing.Size(337, 263);
+            this.pnlSearchStudent.Size = new System.Drawing.Size(336, 263);
             this.pnlSearchStudent.TabIndex = 15;
             // 
             // lbl_SDetailsFor
@@ -329,7 +331,7 @@ namespace PRG282_Milestone2.PresentationLayer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(670, 515);
+            this.ClientSize = new System.Drawing.Size(673, 316);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.pnlStudentDetails);
             this.Controls.Add(this.btn_SReturn);
