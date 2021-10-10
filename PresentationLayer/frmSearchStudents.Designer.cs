@@ -29,21 +29,14 @@ namespace PRG282_Milestone2.PresentationLayer
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btn_SUpdate = new System.Windows.Forms.Button();
+            this.btn_SView = new System.Windows.Forms.Button();
+            this.btn_SReg = new System.Windows.Forms.Button();
+            this.btn_SReturn = new System.Windows.Forms.Button();
             this.pnlStudentDetails = new System.Windows.Forms.Panel();
-            this.lblHeading = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.lblLastname = new System.Windows.Forms.Label();
-            this.lblCourseID = new System.Windows.Forms.Label();
-            this.lblStudentName = new System.Windows.Forms.Label();
-            this.lblStudentID = new System.Windows.Forms.Label();
+            this.lbl_SHeading = new System.Windows.Forms.Label();
             this.pnlSearchStudent = new System.Windows.Forms.Panel();
+            this.lbl_SDetailsFor = new System.Windows.Forms.Label();
             this.CourseID = new System.Windows.Forms.TextBox();
             this.Lastname = new System.Windows.Forms.TextBox();
             this.StudentName = new System.Windows.Forms.TextBox();
@@ -51,144 +44,100 @@ namespace PRG282_Milestone2.PresentationLayer
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lbl_SDStudentID = new System.Windows.Forms.Label();
+            this.cmb_S_CourseID = new System.Windows.Forms.ComboBox();
+            this.txt_S_LastName = new System.Windows.Forms.TextBox();
+            this.txt_SStudentName = new System.Windows.Forms.TextBox();
+            this.txt_SStudentID = new System.Windows.Forms.TextBox();
+            this.lbl_SLastname = new System.Windows.Forms.Label();
+            this.lbl_SCourseID = new System.Windows.Forms.Label();
+            this.lbl_SStudentName = new System.Windows.Forms.Label();
+            this.lbl_SStudentID = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
             this.pnlStudentDetails.SuspendLayout();
             this.pnlSearchStudent.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button1
+            // btn_SUpdate
             // 
-            this.button1.Location = new System.Drawing.Point(12, 207);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Update";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_SUpdate.BackColor = System.Drawing.Color.White;
+            this.btn_SUpdate.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_SUpdate.Location = new System.Drawing.Point(83, 306);
+            this.btn_SUpdate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btn_SUpdate.Name = "btn_SUpdate";
+            this.btn_SUpdate.Size = new System.Drawing.Size(91, 31);
+            this.btn_SUpdate.TabIndex = 9;
+            this.btn_SUpdate.Text = "Update";
+            this.btn_SUpdate.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btn_SView
             // 
-            this.button2.Location = new System.Drawing.Point(144, 207);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(102, 23);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "View Student";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_SView.BackColor = System.Drawing.Color.White;
+            this.btn_SView.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_SView.Location = new System.Drawing.Point(199, 306);
+            this.btn_SView.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btn_SView.Name = "btn_SView";
+            this.btn_SView.Size = new System.Drawing.Size(87, 31);
+            this.btn_SView.TabIndex = 10;
+            this.btn_SView.Text = "View Student";
+            this.btn_SView.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btn_SReg
             // 
-            this.button3.Location = new System.Drawing.Point(12, 254);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 11;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn_SReg.BackColor = System.Drawing.Color.White;
+            this.btn_SReg.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_SReg.Location = new System.Drawing.Point(83, 376);
+            this.btn_SReg.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btn_SReg.Name = "btn_SReg";
+            this.btn_SReg.Size = new System.Drawing.Size(91, 30);
+            this.btn_SReg.TabIndex = 11;
+            this.btn_SReg.Text = "Register";
+            this.btn_SReg.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // btn_SReturn
             // 
-            this.button4.Location = new System.Drawing.Point(144, 254);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 12;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btn_SReturn.BackColor = System.Drawing.Color.White;
+            this.btn_SReturn.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_SReturn.Location = new System.Drawing.Point(199, 376);
+            this.btn_SReturn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btn_SReturn.Name = "btn_SReturn";
+            this.btn_SReturn.Size = new System.Drawing.Size(136, 30);
+            this.btn_SReturn.TabIndex = 12;
+            this.btn_SReturn.Text = "Return to Menu";
+            this.btn_SReturn.UseVisualStyleBackColor = false;
             // 
             // pnlStudentDetails
             // 
-            this.pnlStudentDetails.Controls.Add(this.lblHeading);
+            this.pnlStudentDetails.Controls.Add(this.lbl_SHeading);
             this.pnlStudentDetails.Controls.Add(this.pnlSearchStudent);
-            this.pnlStudentDetails.Controls.Add(this.comboBox1);
-            this.pnlStudentDetails.Controls.Add(this.textBox3);
-            this.pnlStudentDetails.Controls.Add(this.textBox2);
-            this.pnlStudentDetails.Controls.Add(this.textBox1);
-            this.pnlStudentDetails.Controls.Add(this.lblLastname);
-            this.pnlStudentDetails.Controls.Add(this.lblCourseID);
-            this.pnlStudentDetails.Controls.Add(this.lblStudentName);
-            this.pnlStudentDetails.Controls.Add(this.lblStudentID);
+            this.pnlStudentDetails.Controls.Add(this.cmb_S_CourseID);
+            this.pnlStudentDetails.Controls.Add(this.txt_S_LastName);
+            this.pnlStudentDetails.Controls.Add(this.txt_SStudentName);
+            this.pnlStudentDetails.Controls.Add(this.txt_SStudentID);
+            this.pnlStudentDetails.Controls.Add(this.lbl_SLastname);
+            this.pnlStudentDetails.Controls.Add(this.lbl_SCourseID);
+            this.pnlStudentDetails.Controls.Add(this.lbl_SStudentName);
+            this.pnlStudentDetails.Controls.Add(this.lbl_SStudentID);
             this.pnlStudentDetails.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlStudentDetails.Location = new System.Drawing.Point(0, 0);
+            this.pnlStudentDetails.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlStudentDetails.Name = "pnlStudentDetails";
-            this.pnlStudentDetails.Size = new System.Drawing.Size(574, 201);
+            this.pnlStudentDetails.Size = new System.Drawing.Size(670, 263);
             this.pnlStudentDetails.TabIndex = 13;
             // 
-            // lblHeading
+            // lbl_SHeading
             // 
-            this.lblHeading.AutoSize = true;
-            this.lblHeading.Location = new System.Drawing.Point(59, 10);
-            this.lblHeading.Name = "lblHeading";
-            this.lblHeading.Size = new System.Drawing.Size(139, 13);
-            this.lblHeading.TabIndex = 17;
-            this.lblHeading.Text = "Enter Student details below.";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(125, 144);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 16;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(125, 111);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 15;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(125, 78);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 14;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(125, 45);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 13;
-            // 
-            // lblLastname
-            // 
-            this.lblLastname.AutoSize = true;
-            this.lblLastname.Location = new System.Drawing.Point(32, 111);
-            this.lblLastname.Name = "lblLastname";
-            this.lblLastname.Size = new System.Drawing.Size(58, 13);
-            this.lblLastname.TabIndex = 12;
-            this.lblLastname.Text = "Last Name";
-            // 
-            // lblCourseID
-            // 
-            this.lblCourseID.AutoSize = true;
-            this.lblCourseID.Location = new System.Drawing.Point(33, 147);
-            this.lblCourseID.Name = "lblCourseID";
-            this.lblCourseID.Size = new System.Drawing.Size(57, 13);
-            this.lblCourseID.TabIndex = 11;
-            this.lblCourseID.Text = "Course ID:";
-            // 
-            // lblStudentName
-            // 
-            this.lblStudentName.AutoSize = true;
-            this.lblStudentName.Location = new System.Drawing.Point(12, 78);
-            this.lblStudentName.Name = "lblStudentName";
-            this.lblStudentName.Size = new System.Drawing.Size(78, 13);
-            this.lblStudentName.TabIndex = 10;
-            this.lblStudentName.Text = "Student Name:";
-            // 
-            // lblStudentID
-            // 
-            this.lblStudentID.AutoSize = true;
-            this.lblStudentID.Location = new System.Drawing.Point(29, 48);
-            this.lblStudentID.Name = "lblStudentID";
-            this.lblStudentID.Size = new System.Drawing.Size(61, 13);
-            this.lblStudentID.TabIndex = 9;
-            this.lblStudentID.Text = "Student ID:";
+            this.lbl_SHeading.AutoSize = true;
+            this.lbl_SHeading.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_SHeading.Location = new System.Drawing.Point(69, 13);
+            this.lbl_SHeading.Name = "lbl_SHeading";
+            this.lbl_SHeading.Size = new System.Drawing.Size(208, 18);
+            this.lbl_SHeading.TabIndex = 17;
+            this.lbl_SHeading.Text = "Enter Student details below.";
             // 
             // pnlSearchStudent
             // 
-            this.pnlSearchStudent.Controls.Add(this.label5);
+            this.pnlSearchStudent.Controls.Add(this.lbl_SDetailsFor);
             this.pnlSearchStudent.Controls.Add(this.CourseID);
             this.pnlSearchStudent.Controls.Add(this.Lastname);
             this.pnlSearchStudent.Controls.Add(this.StudentName);
@@ -196,109 +145,199 @@ namespace PRG282_Milestone2.PresentationLayer
             this.pnlSearchStudent.Controls.Add(this.label1);
             this.pnlSearchStudent.Controls.Add(this.label2);
             this.pnlSearchStudent.Controls.Add(this.label3);
-            this.pnlSearchStudent.Controls.Add(this.label4);
-            this.pnlSearchStudent.Location = new System.Drawing.Point(286, 0);
+            this.pnlSearchStudent.Controls.Add(this.lbl_SDStudentID);
+            this.pnlSearchStudent.Location = new System.Drawing.Point(334, 0);
+            this.pnlSearchStudent.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlSearchStudent.Name = "pnlSearchStudent";
-            this.pnlSearchStudent.Size = new System.Drawing.Size(289, 201);
+            this.pnlSearchStudent.Size = new System.Drawing.Size(337, 263);
             this.pnlSearchStudent.TabIndex = 15;
+            // 
+            // lbl_SDetailsFor
+            // 
+            this.lbl_SDetailsFor.AutoSize = true;
+            this.lbl_SDetailsFor.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_SDetailsFor.Location = new System.Drawing.Point(45, 12);
+            this.lbl_SDetailsFor.Name = "lbl_SDetailsFor";
+            this.lbl_SDetailsFor.Size = new System.Drawing.Size(141, 18);
+            this.lbl_SDetailsFor.TabIndex = 25;
+            this.lbl_SDetailsFor.Text = "Student details for ";
             // 
             // CourseID
             // 
-            this.CourseID.Location = new System.Drawing.Point(131, 143);
+            this.CourseID.Location = new System.Drawing.Point(153, 187);
+            this.CourseID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.CourseID.Name = "CourseID";
             this.CourseID.ReadOnly = true;
-            this.CourseID.Size = new System.Drawing.Size(100, 20);
+            this.CourseID.Size = new System.Drawing.Size(116, 22);
             this.CourseID.TabIndex = 24;
             // 
             // Lastname
             // 
-            this.Lastname.Location = new System.Drawing.Point(131, 108);
+            this.Lastname.Location = new System.Drawing.Point(153, 141);
+            this.Lastname.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Lastname.Name = "Lastname";
             this.Lastname.ReadOnly = true;
-            this.Lastname.Size = new System.Drawing.Size(100, 20);
+            this.Lastname.Size = new System.Drawing.Size(116, 22);
             this.Lastname.TabIndex = 23;
             // 
             // StudentName
             // 
-            this.StudentName.Location = new System.Drawing.Point(131, 75);
+            this.StudentName.Location = new System.Drawing.Point(153, 98);
+            this.StudentName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.StudentName.Name = "StudentName";
             this.StudentName.ReadOnly = true;
-            this.StudentName.Size = new System.Drawing.Size(100, 20);
+            this.StudentName.Size = new System.Drawing.Size(116, 22);
             this.StudentName.TabIndex = 22;
             // 
             // StudentID
             // 
-            this.StudentID.Location = new System.Drawing.Point(131, 42);
+            this.StudentID.Location = new System.Drawing.Point(153, 55);
+            this.StudentID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.StudentID.Name = "StudentID";
             this.StudentID.ReadOnly = true;
-            this.StudentID.Size = new System.Drawing.Size(100, 20);
+            this.StudentID.Size = new System.Drawing.Size(116, 22);
             this.StudentID.TabIndex = 21;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(38, 108);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(44, 141);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 13);
+            this.label1.Size = new System.Drawing.Size(84, 18);
             this.label1.TabIndex = 20;
             this.label1.Text = "Last Name";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(39, 144);
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(45, 188);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 13);
+            this.label2.Size = new System.Drawing.Size(83, 18);
             this.label2.TabIndex = 19;
             this.label2.Text = "Course ID:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(35, 74);
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(41, 97);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(78, 13);
+            this.label3.Size = new System.Drawing.Size(115, 18);
             this.label3.TabIndex = 18;
             this.label3.Text = "Student Name:";
             // 
-            // label4
+            // lbl_SDStudentID
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(35, 45);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 13);
-            this.label4.TabIndex = 17;
-            this.label4.Text = "Student ID:";
+            this.lbl_SDStudentID.AutoSize = true;
+            this.lbl_SDStudentID.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_SDStudentID.Location = new System.Drawing.Point(41, 59);
+            this.lbl_SDStudentID.Name = "lbl_SDStudentID";
+            this.lbl_SDStudentID.Size = new System.Drawing.Size(85, 18);
+            this.lbl_SDStudentID.TabIndex = 17;
+            this.lbl_SDStudentID.Text = "Student ID:";
+            // 
+            // cmb_S_CourseID
+            // 
+            this.cmb_S_CourseID.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_S_CourseID.FormattingEnabled = true;
+            this.cmb_S_CourseID.Location = new System.Drawing.Point(146, 188);
+            this.cmb_S_CourseID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cmb_S_CourseID.Name = "cmb_S_CourseID";
+            this.cmb_S_CourseID.Size = new System.Drawing.Size(140, 25);
+            this.cmb_S_CourseID.TabIndex = 16;
+            // 
+            // txt_S_LastName
+            // 
+            this.txt_S_LastName.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_S_LastName.Location = new System.Drawing.Point(146, 141);
+            this.txt_S_LastName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txt_S_LastName.Name = "txt_S_LastName";
+            this.txt_S_LastName.Size = new System.Drawing.Size(116, 22);
+            this.txt_S_LastName.TabIndex = 15;
+            // 
+            // txt_SStudentName
+            // 
+            this.txt_SStudentName.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_SStudentName.Location = new System.Drawing.Point(146, 102);
+            this.txt_SStudentName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txt_SStudentName.Name = "txt_SStudentName";
+            this.txt_SStudentName.Size = new System.Drawing.Size(116, 22);
+            this.txt_SStudentName.TabIndex = 14;
+            // 
+            // txt_SStudentID
+            // 
+            this.txt_SStudentID.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_SStudentID.Location = new System.Drawing.Point(146, 59);
+            this.txt_SStudentID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txt_SStudentID.Name = "txt_SStudentID";
+            this.txt_SStudentID.Size = new System.Drawing.Size(116, 22);
+            this.txt_SStudentID.TabIndex = 13;
+            // 
+            // lbl_SLastname
+            // 
+            this.lbl_SLastname.AutoSize = true;
+            this.lbl_SLastname.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_SLastname.Location = new System.Drawing.Point(37, 145);
+            this.lbl_SLastname.Name = "lbl_SLastname";
+            this.lbl_SLastname.Size = new System.Drawing.Size(84, 18);
+            this.lbl_SLastname.TabIndex = 12;
+            this.lbl_SLastname.Text = "Last Name";
+            // 
+            // lbl_SCourseID
+            // 
+            this.lbl_SCourseID.AutoSize = true;
+            this.lbl_SCourseID.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_SCourseID.Location = new System.Drawing.Point(38, 192);
+            this.lbl_SCourseID.Name = "lbl_SCourseID";
+            this.lbl_SCourseID.Size = new System.Drawing.Size(83, 18);
+            this.lbl_SCourseID.TabIndex = 11;
+            this.lbl_SCourseID.Text = "Course ID:";
+            // 
+            // lbl_SStudentName
+            // 
+            this.lbl_SStudentName.AutoSize = true;
+            this.lbl_SStudentName.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_SStudentName.Location = new System.Drawing.Point(14, 102);
+            this.lbl_SStudentName.Name = "lbl_SStudentName";
+            this.lbl_SStudentName.Size = new System.Drawing.Size(115, 18);
+            this.lbl_SStudentName.TabIndex = 10;
+            this.lbl_SStudentName.Text = "Student Name:";
+            // 
+            // lbl_SStudentID
+            // 
+            this.lbl_SStudentID.AutoSize = true;
+            this.lbl_SStudentID.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_SStudentID.Location = new System.Drawing.Point(34, 63);
+            this.lbl_SStudentID.Name = "lbl_SStudentID";
+            this.lbl_SStudentID.Size = new System.Drawing.Size(85, 18);
+            this.lbl_SStudentID.TabIndex = 9;
+            this.lbl_SStudentID.Text = "Student ID:";
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(0, 394);
+            this.button5.Location = new System.Drawing.Point(0, 515);
+            this.button5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.Size = new System.Drawing.Size(87, 30);
             this.button5.TabIndex = 16;
             this.button5.Text = "Log Out";
             this.button5.UseVisualStyleBackColor = true;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(39, 9);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(95, 13);
-            this.label5.TabIndex = 25;
-            this.label5.Text = "Student details for ";
-            // 
             // frmSearchStudents
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(574, 394);
+            this.ClientSize = new System.Drawing.Size(670, 515);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.pnlStudentDetails);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_SReturn);
+            this.Controls.Add(this.btn_SReg);
+            this.Controls.Add(this.btn_SView);
+            this.Controls.Add(this.btn_SUpdate);
+            this.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmSearchStudents";
             this.Text = "frmSearchStudents";
             this.Load += new System.EventHandler(this.frmSearchStudents_Load);
@@ -312,20 +351,20 @@ namespace PRG282_Milestone2.PresentationLayer
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btn_SUpdate;
+        private System.Windows.Forms.Button btn_SView;
+        private System.Windows.Forms.Button btn_SReg;
+        private System.Windows.Forms.Button btn_SReturn;
         private System.Windows.Forms.Panel pnlStudentDetails;
-        private System.Windows.Forms.Label lblHeading;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label lblLastname;
-        private System.Windows.Forms.Label lblCourseID;
-        private System.Windows.Forms.Label lblStudentName;
-        private System.Windows.Forms.Label lblStudentID;
+        private System.Windows.Forms.Label lbl_SHeading;
+        private System.Windows.Forms.ComboBox cmb_S_CourseID;
+        private System.Windows.Forms.TextBox txt_S_LastName;
+        private System.Windows.Forms.TextBox txt_SStudentName;
+        private System.Windows.Forms.TextBox txt_SStudentID;
+        private System.Windows.Forms.Label lbl_SLastname;
+        private System.Windows.Forms.Label lbl_SCourseID;
+        private System.Windows.Forms.Label lbl_SStudentName;
+        private System.Windows.Forms.Label lbl_SStudentID;
         private System.Windows.Forms.Panel pnlSearchStudent;
         private System.Windows.Forms.TextBox CourseID;
         private System.Windows.Forms.TextBox Lastname;
@@ -334,8 +373,8 @@ namespace PRG282_Milestone2.PresentationLayer
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbl_SDStudentID;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lbl_SDetailsFor;
     }
 }

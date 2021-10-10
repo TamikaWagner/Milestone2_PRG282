@@ -41,13 +41,14 @@ namespace PRG282_Milestone2.PresentationLayer
             // 
             // brnRegister
             // 
-            this.brnRegister.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.brnRegister.Location = new System.Drawing.Point(56, 210);
+            this.brnRegister.BackColor = System.Drawing.Color.White;
+            this.brnRegister.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.brnRegister.Location = new System.Drawing.Point(56, 220);
             this.brnRegister.Name = "brnRegister";
-            this.brnRegister.Size = new System.Drawing.Size(109, 23);
+            this.brnRegister.Size = new System.Drawing.Size(119, 28);
             this.brnRegister.TabIndex = 20;
             this.brnRegister.Text = "Register New User";
-            this.brnRegister.UseVisualStyleBackColor = true;
+            this.brnRegister.UseVisualStyleBackColor = false;
             // 
             // lbPassword
             // 
@@ -71,38 +72,42 @@ namespace PRG282_Milestone2.PresentationLayer
             // 
             // BtnLogin
             // 
-            this.BtnLogin.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnLogin.Location = new System.Drawing.Point(68, 181);
+            this.BtnLogin.BackColor = System.Drawing.Color.White;
+            this.BtnLogin.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnLogin.Location = new System.Drawing.Point(72, 186);
             this.BtnLogin.Name = "BtnLogin";
-            this.BtnLogin.Size = new System.Drawing.Size(75, 23);
+            this.BtnLogin.Size = new System.Drawing.Size(85, 28);
             this.BtnLogin.TabIndex = 17;
             this.BtnLogin.Text = "Login";
-            this.BtnLogin.UseVisualStyleBackColor = true;
+            this.BtnLogin.UseVisualStyleBackColor = false;
             // 
             // txtusername
             // 
+            this.txtusername.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtusername.Location = new System.Drawing.Point(44, 90);
             this.txtusername.Name = "txtusername";
-            this.txtusername.Size = new System.Drawing.Size(133, 20);
+            this.txtusername.Size = new System.Drawing.Size(133, 22);
             this.txtusername.TabIndex = 16;
             // 
             // txtpassword
             // 
+            this.txtpassword.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtpassword.Location = new System.Drawing.Point(44, 155);
             this.txtpassword.Name = "txtpassword";
             this.txtpassword.PasswordChar = '*';
-            this.txtpassword.Size = new System.Drawing.Size(133, 20);
+            this.txtpassword.Size = new System.Drawing.Size(133, 22);
             this.txtpassword.TabIndex = 15;
             // 
             // btnExit
             // 
-            this.btnExit.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.Location = new System.Drawing.Point(78, 239);
+            this.btnExit.BackColor = System.Drawing.Color.White;
+            this.btnExit.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.Location = new System.Drawing.Point(88, 254);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(47, 22);
+            this.btnExit.Size = new System.Drawing.Size(57, 27);
             this.btnExit.TabIndex = 21;
             this.btnExit.Text = "Exit";
-            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // label1
