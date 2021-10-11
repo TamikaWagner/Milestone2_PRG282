@@ -117,5 +117,10 @@ namespace PRG282_Milestone2.PresentationLayer
                 MessageBox.Show("Somthing went wrong trying to search for Student information.");
             }
         }
+
+        private void btnClose_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

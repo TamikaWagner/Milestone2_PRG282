@@ -50,15 +50,16 @@ namespace PRG282_Milestone2.PresentationLayer
             this.btnRegister = new System.Windows.Forms.Button();
             this.btnUp = new System.Windows.Forms.Button();
             this.rbOther = new System.Windows.Forms.RadioButton();
+            this.btnClose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pb1)).BeginInit();
             this.SuspendLayout();
             // 
             // pb1
             // 
-            this.pb1.Location = new System.Drawing.Point(509, 93);
+            this.pb1.Location = new System.Drawing.Point(509, 81);
             this.pb1.Margin = new System.Windows.Forms.Padding(4);
             this.pb1.Name = "pb1";
-            this.pb1.Size = new System.Drawing.Size(248, 235);
+            this.pb1.Size = new System.Drawing.Size(248, 274);
             this.pb1.TabIndex = 1;
             this.pb1.TabStop = false;
             // 
@@ -247,7 +248,7 @@ namespace PRG282_Milestone2.PresentationLayer
             // 
             this.btnRegister.BackColor = System.Drawing.Color.White;
             this.btnRegister.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegister.Location = new System.Drawing.Point(185, 377);
+            this.btnRegister.Location = new System.Drawing.Point(59, 377);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(165, 41);
             this.btnRegister.TabIndex = 19;
@@ -259,10 +260,10 @@ namespace PRG282_Milestone2.PresentationLayer
             // 
             this.btnUp.BackColor = System.Drawing.Color.White;
             this.btnUp.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUp.Location = new System.Drawing.Point(412, 377);
+            this.btnUp.Location = new System.Drawing.Point(573, 377);
             this.btnUp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUp.Name = "btnUp";
-            this.btnUp.Size = new System.Drawing.Size(155, 41);
+            this.btnUp.Size = new System.Drawing.Size(165, 41);
             this.btnUp.TabIndex = 24;
             this.btnUp.Text = "Update";
             this.btnUp.UseVisualStyleBackColor = false;
@@ -281,11 +282,26 @@ namespace PRG282_Milestone2.PresentationLayer
             this.rbOther.Text = "Other";
             this.rbOther.UseVisualStyleBackColor = true;
             // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.White;
+            this.btnClose.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.Location = new System.Drawing.Point(320, 377);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(165, 41);
+            this.btnClose.TabIndex = 26;
+            this.btnClose.Text = "Close";
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Visible = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // frmRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(783, 424);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.rbOther);
             this.Controls.Add(this.btnUp);
             this.Controls.Add(this.btnRegister);
@@ -340,5 +356,6 @@ namespace PRG282_Milestone2.PresentationLayer
         private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.Button btnUp;
         private System.Windows.Forms.RadioButton rbOther;
+        private System.Windows.Forms.Button btnClose;
     }
 }
