@@ -11,22 +11,20 @@ using PRG282_Milestone2.PresentationLayer;
 using PRG282_Milestone2.BusinessLogicLayer;
 using PRG282_Milestone2.DataLayer;
 
+
 namespace PRG282_Milestone2.DataLayer
 {
     class DataHandler
     {
+        public string conn = "Server=.;Initial Catalog=tblClients;Integrated security=True";
 
-        public SqlConnection connectdb()
-        {
-            //need to add dbd
-            SqlConnection connection = new SqlConnection(@"Server=(local); Initial Catalog=/hereiam; Integrated Security=true");
+        //public SqlConnection connectdb()
+        //{
+        //    //need to add dbd
+        //    SqlConnection connection = new SqlConnection(conn);
+        //    return connection;
+        //}
 
-
-            return connection;
-        }
-
-        string conn = "Server =.; Initial Catalog = Student; Integrated Security = SSPI";
-        
         public DataHandler() { }
 
         public List<Students> GetStudents()
@@ -68,6 +66,7 @@ namespace PRG282_Milestone2.DataLayer
                 return "Registration failed.";
             }
         }
+
         public List<Module> GetModules(SqlConnection connection)
         {
             List<Module> modules = new List<Module>();
@@ -79,9 +78,7 @@ namespace PRG282_Milestone2.DataLayer
             {
                 MessageBox.Show(e.Message);
                 return modules;
-
             }
-
 
             SqlCommand cmd = new SqlCommand(@"SELECT * FROM tblModules", connection);
 

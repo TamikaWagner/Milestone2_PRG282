@@ -16,21 +16,20 @@ namespace PRG282_Milestone2.PresentationLayer
 {
     public partial class frmMenu : Form
     {
-        SqlConnection connect;
         List<Students> StudentDetails = new List<Students>();
         BindingSource source = new BindingSource();
         DataHandler Handler = new DataHandler();
+
         public frmMenu()
         {
             InitializeComponent();
             DataHandler Handler = new DataHandler();
+            StudentDetails = Handler.GetStudents();
             dgvStudents.DataSource = source;
         }
 
         private void frmMenu_Load(object sender, EventArgs e)
         {
-            dgvStudents.DataSource = source;
-           // btnUp.Visible = false;
             txtSearch.Visible = false;
         }
 
@@ -86,7 +85,15 @@ namespace PRG282_Milestone2.PresentationLayer
         {
             try
             {
-                source.DataSource = Handler.GetStudents();
+                SqlConnection conn = new SqlConnection("Server=.;Initial Catalog=tblClients;Integrated security=True");
+                conn.Open();
+                MessageBox.Show("Lets go");
+                conn.Close();
+                source.DataSource = StudentDetails;
+                txtSearch.Visible = true;
+                btnDel.Visible = true;
+                lblSearch.Visible = true;
+                lblDel.Visible = true;
             }
             catch (Exception)
             {
@@ -109,8 +116,8 @@ namespace PRG282_Milestone2.PresentationLayer
         }
 
         private void btnSearch_Click_1(object sender, EventArgs e)
-        {/*
-            string IDSearch = txtSearch.Text;
+        {
+            int IDSearch = int.Parse(txtSearch.Text);
             try
             {
                 source.DataSource = null;
@@ -119,7 +126,7 @@ namespace PRG282_Milestone2.PresentationLayer
             catch (Exception)
             {
                 MessageBox.Show("Somthing went wrong trying to search for Student information.");
-            }*/
+            }
         }
 
         private void btnClose_Click_1(object sender, EventArgs e)
