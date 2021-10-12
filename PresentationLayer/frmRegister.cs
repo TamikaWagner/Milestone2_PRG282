@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PRG282_Milestone2.PresentationLayer;
+using PRG282_Milestone2.BusinessLogicLayer;
+using PRG282_Milestone2.DataLayer;
 
 namespace PRG282_Milestone2.PresentationLayer
 {

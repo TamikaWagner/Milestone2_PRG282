@@ -46,11 +46,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BusinessLogicLayer\Logic.cs" />
+    <Compile Include="BusinessLogicLayer\CheckLogin.cs" />
+    <Compile Include="BusinessLogicLayer\clear.cs" />
+    <Compile Include="BusinessLogicLayer\Module.cs" />
+    <Compile Include="BusinessLogicLayer\RegisterUser.cs" />
     <Compile Include="DataLayer\DataHandler.cs" />
     <Compile Include="DataLayer\FileHandler.cs" />
     <Compile Include="DataLayer\SQLDB.cs" />
     <Compile Include="DataLayer\Students.cs" />
+    <Compile Include="DataLayer\User.cs" />
     <Compile Include="PresentationLayer\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>

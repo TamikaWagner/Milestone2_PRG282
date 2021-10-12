@@ -93,6 +93,7 @@ namespace PRG282_Milestone2.PresentationLayer
             this.btn_SReg.TabIndex = 11;
             this.btn_SReg.Text = "Register";
             this.btn_SReg.UseVisualStyleBackColor = false;
+            this.btn_SReg.Click += new System.EventHandler(this.btn_SReg_Click);
             // 
             // btn_SReturn
             // 

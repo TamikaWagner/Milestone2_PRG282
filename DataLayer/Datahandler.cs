@@ -7,10 +7,24 @@ using System.Data.SqlClient;
 using System.Data;
 using System.Windows.Forms;
 using System.IO;
+using PRG282_Milestone2.PresentationLayer;
+using PRG282_Milestone2.BusinessLogicLayer;
+using PRG282_Milestone2.DataLayer;
+
 namespace PRG282_Milestone2.DataLayer
 {
     class DataHandler
     {
+
+        public SqlConnection connectdb()
+        {
+            //need to add dbd
+            SqlConnection connection = new SqlConnection(@"Server=(local); Initial Catalog=/hereiam; Integrated Security=true");
+
+
+            return connection;
+        }
+
         string conn = "Server =.; Initial Catalog = Student; Integrated Security = SSPI";
         
         public DataHandler() { }
@@ -54,6 +68,36 @@ namespace PRG282_Milestone2.DataLayer
                 return "Registration failed.";
             }
         }
+        public List<Module> GetModules(SqlConnection connection)
+        {
+            List<Module> modules = new List<Module>();
+            try
+            {
+                connection.Open();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+                return modules;
+
+            }
+
+
+            SqlCommand cmd = new SqlCommand(@"SELECT * FROM tblModules", connection);
+
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    modules.Add(new Module(reader.GetString(0), reader.GetString(1), reader.GetString(2), reader.GetString(3)));
+                }
+            }
+            connection.Close();
+            return modules;
+        }
+
 
         public string DeleteStudent(int StudentNumber)
         {

@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using PRG282_Milestone2.PresentationLayer;
+using PRG282_Milestone2.BusinessLogicLayer;
+using PRG282_Milestone2.DataLayer;
 
 namespace PRG282_Milestone2.PresentationLayer
 {
@@ -16,6 +19,7 @@ namespace PRG282_Milestone2.PresentationLayer
         SqlConnection connect;
         List<Students> StudentDetails = new List<Students>();
         BindingSource source = new BindingSource();
+        DataHandler Handler = new DataHandler();
         public frmMenu()
         {
             InitializeComponent();
@@ -26,7 +30,7 @@ namespace PRG282_Milestone2.PresentationLayer
         private void frmMenu_Load(object sender, EventArgs e)
         {
             dgvStudents.DataSource = source;
-            btnUp.Visible = false;
+           // btnUp.Visible = false;
             txtSearch.Visible = false;
         }
 
@@ -96,7 +100,7 @@ namespace PRG282_Milestone2.PresentationLayer
             try
             {
                 Handler.DeleteStudent(StudentID);
-                MessageBox.Show(Handler.DeleteClients(StudentID));
+                MessageBox.Show(Handler.DeleteStudent(StudentID));
             }
             catch (Exception)
             {
@@ -105,7 +109,7 @@ namespace PRG282_Milestone2.PresentationLayer
         }
 
         private void btnSearch_Click_1(object sender, EventArgs e)
-        {
+        {/*
             string IDSearch = txtSearch.Text;
             try
             {
@@ -115,7 +119,7 @@ namespace PRG282_Milestone2.PresentationLayer
             catch (Exception)
             {
                 MessageBox.Show("Somthing went wrong trying to search for Student information.");
-            }
+            }*/
         }
 
         private void btnClose_Click_1(object sender, EventArgs e)
