@@ -115,8 +115,9 @@ namespace PRG282_Milestone2.PresentationLayer
 
         private void btnMenu_Click(object sender, EventArgs e)
         {
-            this.Hide(); ;
+            this.Hide(); 
             frmNavigation navi = new frmNavigation();
+            navi.Show();
         }
     }
 }
