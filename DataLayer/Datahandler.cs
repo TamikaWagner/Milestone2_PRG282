@@ -95,6 +95,21 @@ namespace PRG282_Milestone2.DataLayer
             return modules;
         }
 
+        public string UpdateModules()
+        {
+
+        }
+
+        public string InsertModules()
+        {
+
+        }
+
+        public string DeleteModules()
+        {
+
+        }
+
 
         public string DeleteStudent(int StudentNumber)
         {
