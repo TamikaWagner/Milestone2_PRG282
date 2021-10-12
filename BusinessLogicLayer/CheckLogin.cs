@@ -38,6 +38,7 @@ namespace PRG282_Milestone2.BusinessLogicLayer
                 {
                     System.Windows.Forms.MessageBox.Show("Please enter username", "Error", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
                     return;
+
                 }
                 if (password == "")
                 {
