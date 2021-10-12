@@ -133,5 +133,12 @@ namespace PRG282_Milestone2.PresentationLayer
         {
             Application.Exit();
         }
+
+        private void btnAdd_Up_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmRegisterStudent register = new frmRegisterStudent();
+            register.Show();
+        }
     }
 }
