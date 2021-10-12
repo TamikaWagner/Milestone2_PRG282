@@ -13,10 +13,10 @@ using PRG282_Milestone2.DataLayer;
 
 namespace PRG282_Milestone2.PresentationLayer
 {
-    public partial class frmRegister : Form
+    public partial class frmRegisterStudent : Form
     {
         DataHandler Handler = new DataHandler();
-        public frmRegister()
+        public frmRegisterStudent()
         {
             InitializeComponent();
         }
@@ -48,7 +48,7 @@ namespace PRG282_Milestone2.PresentationLayer
             {
                 if (Handler.RegisterStudent(SNumber, SName, Gender, DOB, Phone, SAddress, MCodes) == "Registration was successful.")
                 {
-                    frmRegister R = new frmRegister();
+                    frmRegisterStudent R = new frmRegisterStudent();
                     R.Hide();
                     frmMenu M = new frmMenu();
                     M.Show();
@@ -88,7 +88,7 @@ namespace PRG282_Milestone2.PresentationLayer
             {
                 if (Handler.UpdateStudent(SNumber, SName, Gender, DOB, Phone, SAddress, MCodes) == "Student with number " + SNumber + " was updated.")
                 {
-                    frmRegister R = new frmRegister();
+                    frmRegisterStudent R = new frmRegisterStudent();
                     R.Hide();
                     frmMenu M = new frmMenu();
                     M.Show();

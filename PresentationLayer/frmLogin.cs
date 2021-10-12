@@ -54,7 +54,7 @@ namespace PRG282_Milestone2.PresentationLayer
         private void brnRegister_Click(object sender, EventArgs e)
         {
              this.Hide();
-            frmRegister registration = new frmRegister();
+            frmRegisterStudent registration = new frmRegisterStudent();
             registration.ShowDialog();
         }
     }
