@@ -29,9 +29,9 @@ namespace PRG282_Milestone2.PresentationLayer
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_SUpdate = new System.Windows.Forms.Button();
-            this.btn_New = new System.Windows.Forms.Button();
-            this.btn_SReturn = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnCreate = new System.Windows.Forms.Button();
+            this.btnReturn = new System.Windows.Forms.Button();
             this.pnlStudentDetails = new System.Windows.Forms.Panel();
             this.pnlSearchStudent = new System.Windows.Forms.Panel();
             this.lbl_SDetailsFor = new System.Windows.Forms.Label();
@@ -56,51 +56,51 @@ namespace PRG282_Milestone2.PresentationLayer
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).BeginInit();
             this.SuspendLayout();
             // 
-            // btn_SUpdate
+            // btnUpdate
             // 
-            this.btn_SUpdate.BackColor = System.Drawing.Color.White;
-            this.btn_SUpdate.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_SUpdate.Location = new System.Drawing.Point(232, 412);
-            this.btn_SUpdate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btn_SUpdate.Name = "btn_SUpdate";
-            this.btn_SUpdate.Size = new System.Drawing.Size(91, 31);
-            this.btn_SUpdate.TabIndex = 9;
-            this.btn_SUpdate.Text = "Update";
-            this.btn_SUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.BackColor = System.Drawing.Color.White;
+            this.btnUpdate.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.Location = new System.Drawing.Point(232, 412);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(91, 31);
+            this.btnUpdate.TabIndex = 9;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = false;
             // 
-            // btn_New
+            // btnCreate
             // 
-            this.btn_New.BackColor = System.Drawing.Color.White;
-            this.btn_New.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_New.Location = new System.Drawing.Point(530, 412);
-            this.btn_New.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btn_New.Name = "btn_New";
-            this.btn_New.Size = new System.Drawing.Size(91, 30);
-            this.btn_New.TabIndex = 11;
-            this.btn_New.Text = "Create";
-            this.btn_New.UseVisualStyleBackColor = false;
-            this.btn_New.Click += new System.EventHandler(this.btn_SReg_Click);
+            this.btnCreate.BackColor = System.Drawing.Color.White;
+            this.btnCreate.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreate.Location = new System.Drawing.Point(530, 412);
+            this.btnCreate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnCreate.Name = "btnCreate";
+            this.btnCreate.Size = new System.Drawing.Size(91, 30);
+            this.btnCreate.TabIndex = 11;
+            this.btnCreate.Text = "Create";
+            this.btnCreate.UseVisualStyleBackColor = false;
+            this.btnCreate.Click += new System.EventHandler(this.btn_SReg_Click);
             // 
-            // btn_SReturn
+            // btnReturn
             // 
-            this.btn_SReturn.BackColor = System.Drawing.Color.White;
-            this.btn_SReturn.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_SReturn.Location = new System.Drawing.Point(679, 411);
-            this.btn_SReturn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btn_SReturn.Name = "btn_SReturn";
-            this.btn_SReturn.Size = new System.Drawing.Size(136, 30);
-            this.btn_SReturn.TabIndex = 12;
-            this.btn_SReturn.Text = "Return to Menu";
-            this.btn_SReturn.UseVisualStyleBackColor = false;
-            this.btn_SReturn.Click += new System.EventHandler(this.btn_SReturn_Click);
+            this.btnReturn.BackColor = System.Drawing.Color.White;
+            this.btnReturn.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReturn.Location = new System.Drawing.Point(679, 411);
+            this.btnReturn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnReturn.Name = "btnReturn";
+            this.btnReturn.Size = new System.Drawing.Size(136, 30);
+            this.btnReturn.TabIndex = 12;
+            this.btnReturn.Text = "Return to Menu";
+            this.btnReturn.UseVisualStyleBackColor = false;
+            this.btnReturn.Click += new System.EventHandler(this.btn_SReturn_Click);
             // 
             // pnlStudentDetails
             // 
-            this.pnlStudentDetails.Controls.Add(this.btn_SReturn);
+            this.pnlStudentDetails.Controls.Add(this.btnReturn);
             this.pnlStudentDetails.Controls.Add(this.pnlSearchStudent);
-            this.pnlStudentDetails.Controls.Add(this.btn_New);
+            this.pnlStudentDetails.Controls.Add(this.btnCreate);
             this.pnlStudentDetails.Controls.Add(this.lblDel);
-            this.pnlStudentDetails.Controls.Add(this.btn_SUpdate);
+            this.pnlStudentDetails.Controls.Add(this.btnUpdate);
             this.pnlStudentDetails.Controls.Add(this.dgvStudents);
             this.pnlStudentDetails.Controls.Add(this.lblRead);
             this.pnlStudentDetails.Controls.Add(this.btnDel);
@@ -340,9 +340,9 @@ namespace PRG282_Milestone2.PresentationLayer
 
         #endregion
 
-        private System.Windows.Forms.Button btn_SUpdate;
-        private System.Windows.Forms.Button btn_New;
-        private System.Windows.Forms.Button btn_SReturn;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button btnCreate;
+        private System.Windows.Forms.Button btnReturn;
         private System.Windows.Forms.Panel pnlStudentDetails;
         private System.Windows.Forms.Panel pnlSearchStudent;
         private System.Windows.Forms.TextBox CourseID;
