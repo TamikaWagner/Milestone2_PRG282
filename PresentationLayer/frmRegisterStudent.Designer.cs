@@ -63,6 +63,7 @@ namespace PRG282_Milestone2.PresentationLayer
             this.pb1.Size = new System.Drawing.Size(248, 274);
             this.pb1.TabIndex = 1;
             this.pb1.TabStop = false;
+            this.pb1.Click += new System.EventHandler(this.pb1_Click);
             // 
             // label1
             // 
@@ -71,7 +72,7 @@ namespace PRG282_Milestone2.PresentationLayer
             this.label1.Location = new System.Drawing.Point(33, 81);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(137, 18);
+            this.label1.Size = new System.Drawing.Size(173, 23);
             this.label1.TabIndex = 2;
             this.label1.Text = "Student Number : ";
             // 
@@ -79,10 +80,10 @@ namespace PRG282_Milestone2.PresentationLayer
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(33, 122);
+            this.label2.Location = new System.Drawing.Point(33, 123);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(151, 18);
+            this.label2.Size = new System.Drawing.Size(191, 23);
             this.label2.TabIndex = 3;
             this.label2.Text = "Student Full Name : ";
             // 
@@ -93,7 +94,7 @@ namespace PRG282_Milestone2.PresentationLayer
             this.label3.Location = new System.Drawing.Point(33, 163);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 18);
+            this.label3.Size = new System.Drawing.Size(95, 23);
             this.label3.TabIndex = 4;
             this.label3.Text = "Gender : ";
             // 
@@ -104,7 +105,7 @@ namespace PRG282_Milestone2.PresentationLayer
             this.label4.Location = new System.Drawing.Point(33, 207);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(108, 18);
+            this.label4.Size = new System.Drawing.Size(135, 23);
             this.label4.TabIndex = 5;
             this.label4.Text = "Date of Birth : ";
             // 
@@ -115,7 +116,7 @@ namespace PRG282_Milestone2.PresentationLayer
             this.label5.Location = new System.Drawing.Point(33, 247);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(129, 18);
+            this.label5.Size = new System.Drawing.Size(161, 23);
             this.label5.TabIndex = 6;
             this.label5.Text = "Phone Number : ";
             // 
@@ -126,7 +127,7 @@ namespace PRG282_Milestone2.PresentationLayer
             this.label6.Location = new System.Drawing.Point(33, 286);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(140, 18);
+            this.label6.Size = new System.Drawing.Size(178, 23);
             this.label6.TabIndex = 7;
             this.label6.Text = "Student  Address : ";
             // 
@@ -137,7 +138,7 @@ namespace PRG282_Milestone2.PresentationLayer
             this.label7.Location = new System.Drawing.Point(505, 54);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(126, 18);
+            this.label7.Size = new System.Drawing.Size(160, 23);
             this.label7.TabIndex = 8;
             this.label7.Text = "Student Image : ";
             // 
@@ -148,7 +149,7 @@ namespace PRG282_Milestone2.PresentationLayer
             this.label8.Location = new System.Drawing.Point(33, 328);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(129, 18);
+            this.label8.Size = new System.Drawing.Size(160, 23);
             this.label8.TabIndex = 9;
             this.label8.Text = "Module Codes : ";
             // 
@@ -159,7 +160,7 @@ namespace PRG282_Milestone2.PresentationLayer
             this.label9.Location = new System.Drawing.Point(224, 9);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(245, 25);
+            this.label9.Size = new System.Drawing.Size(312, 32);
             this.label9.TabIndex = 10;
             this.label9.Text = "REGISTER NEW STUDENT";
             // 
@@ -169,7 +170,7 @@ namespace PRG282_Milestone2.PresentationLayer
             this.txtSNumber.Location = new System.Drawing.Point(204, 81);
             this.txtSNumber.Margin = new System.Windows.Forms.Padding(4);
             this.txtSNumber.Name = "txtSNumber";
-            this.txtSNumber.Size = new System.Drawing.Size(281, 23);
+            this.txtSNumber.Size = new System.Drawing.Size(281, 27);
             this.txtSNumber.TabIndex = 11;
             // 
             // txtSName
@@ -178,7 +179,7 @@ namespace PRG282_Milestone2.PresentationLayer
             this.txtSName.Location = new System.Drawing.Point(221, 122);
             this.txtSName.Margin = new System.Windows.Forms.Padding(4);
             this.txtSName.Name = "txtSName";
-            this.txtSName.Size = new System.Drawing.Size(264, 23);
+            this.txtSName.Size = new System.Drawing.Size(264, 27);
             this.txtSName.TabIndex = 12;
             // 
             // txtPhone
@@ -187,7 +188,7 @@ namespace PRG282_Milestone2.PresentationLayer
             this.txtPhone.Location = new System.Drawing.Point(204, 247);
             this.txtPhone.Margin = new System.Windows.Forms.Padding(4);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(281, 23);
+            this.txtPhone.Size = new System.Drawing.Size(281, 27);
             this.txtPhone.TabIndex = 13;
             // 
             // txtAddress
@@ -196,7 +197,7 @@ namespace PRG282_Milestone2.PresentationLayer
             this.txtAddress.Location = new System.Drawing.Point(204, 286);
             this.txtAddress.Margin = new System.Windows.Forms.Padding(4);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(281, 23);
+            this.txtAddress.Size = new System.Drawing.Size(281, 27);
             this.txtAddress.TabIndex = 14;
             // 
             // txtCodes
@@ -205,7 +206,7 @@ namespace PRG282_Milestone2.PresentationLayer
             this.txtCodes.Location = new System.Drawing.Point(204, 328);
             this.txtCodes.Margin = new System.Windows.Forms.Padding(4);
             this.txtCodes.Name = "txtCodes";
-            this.txtCodes.Size = new System.Drawing.Size(281, 23);
+            this.txtCodes.Size = new System.Drawing.Size(281, 27);
             this.txtCodes.TabIndex = 15;
             // 
             // rbM
@@ -215,7 +216,7 @@ namespace PRG282_Milestone2.PresentationLayer
             this.rbM.Location = new System.Drawing.Point(204, 164);
             this.rbM.Margin = new System.Windows.Forms.Padding(4);
             this.rbM.Name = "rbM";
-            this.rbM.Size = new System.Drawing.Size(57, 21);
+            this.rbM.Size = new System.Drawing.Size(74, 25);
             this.rbM.TabIndex = 16;
             this.rbM.TabStop = true;
             this.rbM.Text = "Male";
@@ -228,7 +229,7 @@ namespace PRG282_Milestone2.PresentationLayer
             this.rbF.Location = new System.Drawing.Point(299, 164);
             this.rbF.Margin = new System.Windows.Forms.Padding(4);
             this.rbF.Name = "rbF";
-            this.rbF.Size = new System.Drawing.Size(73, 21);
+            this.rbF.Size = new System.Drawing.Size(91, 25);
             this.rbF.TabIndex = 17;
             this.rbF.TabStop = true;
             this.rbF.Text = "Female";
@@ -241,7 +242,7 @@ namespace PRG282_Milestone2.PresentationLayer
             this.dtpDOB.Margin = new System.Windows.Forms.Padding(4);
             this.dtpDOB.MaxDate = new System.DateTime(2021, 10, 9, 0, 0, 0, 0);
             this.dtpDOB.Name = "dtpDOB";
-            this.dtpDOB.Size = new System.Drawing.Size(281, 23);
+            this.dtpDOB.Size = new System.Drawing.Size(281, 27);
             this.dtpDOB.TabIndex = 18;
             this.dtpDOB.Value = new System.DateTime(2021, 10, 9, 0, 0, 0, 0);
             // 
@@ -277,7 +278,7 @@ namespace PRG282_Milestone2.PresentationLayer
             this.rbOther.Location = new System.Drawing.Point(406, 163);
             this.rbOther.Margin = new System.Windows.Forms.Padding(4);
             this.rbOther.Name = "rbOther";
-            this.rbOther.Size = new System.Drawing.Size(62, 21);
+            this.rbOther.Size = new System.Drawing.Size(79, 25);
             this.rbOther.TabIndex = 25;
             this.rbOther.TabStop = true;
             this.rbOther.Text = "Other";
@@ -312,7 +313,7 @@ namespace PRG282_Milestone2.PresentationLayer
             // 
             // frmRegisterStudent
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(783, 424);
             this.Controls.Add(this.btnMenu);

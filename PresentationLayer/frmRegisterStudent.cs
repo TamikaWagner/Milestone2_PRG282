@@ -119,5 +119,10 @@ namespace PRG282_Milestone2.PresentationLayer
             frmNavigation navi = new frmNavigation();
             navi.Show();
         }
+
+        private void pb1_Click(object sender, EventArgs e)
+        {
+             lekker = pb1.Image;
+        }
     }
 }

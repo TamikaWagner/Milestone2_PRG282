@@ -150,7 +150,6 @@ namespace PRG282_Milestone2.PresentationLayer
             this.btnClose.TabIndex = 23;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Visible = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click_1);
             // 
             // frmMenu
