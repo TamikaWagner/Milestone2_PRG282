@@ -96,16 +96,16 @@ VALUES
 ('LRP281',1, 'Liniar maths in Excel', 'https://www.youtube.com/watch?v=6xa1x_Iqjzg'),
 ('WRP281',2, 'Creating and validating websites', 'https://www.youtube.com/watch?v=In0nB0ABaUk'),
 ('INL282',3, 'Innovation in diffrent fields', 'https://www.youtube.com/watch?v=Mtjatz9r-Vc'),
-('DBD281',4 , 'Creating databases in SQL server', 'https://www.youtube.com/watch?v=jEBx4z3AxG4'),
-('MAT281',5, Mathematics, 'https://www.youtube.com/watch?v=yRwQ7A6jVLk'),
-('LRP282',6, ''),
-('SOT281',7),
+('DBD281',4, 'Creating databases in SQL server', 'https://www.youtube.com/watch?v=jEBx4z3AxG4'),
+('MAT281',5, 'Mathematics', 'https://www.youtube.com/watch?v=yRwQ7A6jVLk'),
+('LRP282',6, 'Using excel solver','https://www.youtube.com/watch?v=6xa1x_Iqjzg'),
+('IOT281',7, 'What Is IoT Technology And How It Works','https://www.youtube.com/watch?v=7DZR5UaAM0E'),
 ('STA281',8, 'Statistics', 'https://www.youtube.com/watch?v=GUQJ7zMoSCM'),
 ('INF281',9, 'Information systems', 'https://www.youtube.com/watch?v=Qujsd4vkqFI&t=3s'),
-('PMM281',10, ''),
-('SAD281',11, ),
-('DWH281',12),
-('COA281',13)
+('PMM281',10,'Types of Projects', 'https://www.youtube.com/watch?v=EQeZItIhDOI'),
+('SAD281',11,'Introduction to Software Analysis and Design','https://www.youtube.com/watch?v=6Wd0l7M1wpY'),
+('PRG281',12,'How to connect C# to SQL the easy way','https://www.youtube.com/watch?v=Et2khGnrIqc'),
+('WPR281',13,'Web Programming with Python and JavaScript','https://www.youtube.com/watch?v=NcoBAfJ6l2Q&t=1s')
 go
 
 drop table FullStudentDetails
