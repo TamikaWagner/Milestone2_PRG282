@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using PRG282_Milestone2.PresentationLayer;
+using PRG282_Milestone2.BusinessLogicLayer;
+using PRG282_Milestone2.DataLayer;
 
 namespace PRG282_Milestone2.PresentationLayer
 {
@@ -16,6 +19,7 @@ namespace PRG282_Milestone2.PresentationLayer
         SqlConnection connect;
         List<Students> StudentDetails = new List<Students>();
         BindingSource source = new BindingSource();
+        DataHandler Handler = new DataHandler();
         public frmMenu()
         {
             InitializeComponent();
@@ -25,7 +29,8 @@ namespace PRG282_Milestone2.PresentationLayer
 
         private void frmMenu_Load(object sender, EventArgs e)
         {
-            btnUp.Visible = false;
+            dgvStudents.DataSource = source;
+           // btnUp.Visible = false;
             txtSearch.Visible = false;
         }
 
@@ -34,8 +39,6 @@ namespace PRG282_Milestone2.PresentationLayer
             lblSearch.Visible = true;
             btnSearch.Visible = true;
             txtSearch.Visible = true;
-
-
         }
 
         private void lblUp_Click(object sender, EventArgs e)
@@ -53,8 +56,6 @@ namespace PRG282_Milestone2.PresentationLayer
             if (txtSearch.Text.Length > 0)
             {
                 btnDel.Visible = true;
-                btnUp.Visible = true;
-                lblUp.Visible = true;
                 lblDel.Visible = true;
             }
             else
@@ -70,7 +71,60 @@ namespace PRG282_Milestone2.PresentationLayer
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
+            frmMenu M = new frmMenu();
+            M.Hide();
+            frmRegisterStudent R = new frmRegisterStudent();
+            R.Show();
+        }
 
+        private void lblUp_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRead_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                source.DataSource = Handler.GetStudents();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Somthing went wrong trying to retrieve Student information.");
+            }
+        }
+
+        private void btnDel_Click(object sender, EventArgs e)
+        {
+            int StudentID = int.Parse(txtSearch.Text);
+            try
+            {
+                Handler.DeleteStudent(StudentID);
+                MessageBox.Show(Handler.DeleteStudent(StudentID));
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Failed to delete Student.");
+            }
+        }
+
+        private void btnSearch_Click_1(object sender, EventArgs e)
+        {/*
+            string IDSearch = txtSearch.Text;
+            try
+            {
+                source.DataSource = null;
+                source.DataSource = Handler.SearchStudent(IDSearch);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Somthing went wrong trying to search for Student information.");
+            }*/
+        }
+
+        private void btnClose_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

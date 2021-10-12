@@ -49,6 +49,7 @@ namespace PRG282_Milestone2.PresentationLayer
             this.brnRegister.TabIndex = 20;
             this.brnRegister.Text = "Register New User";
             this.brnRegister.UseVisualStyleBackColor = false;
+            this.brnRegister.Click += new System.EventHandler(this.brnRegister_Click);
             // 
             // lbPassword
             // 
@@ -80,6 +81,7 @@ namespace PRG282_Milestone2.PresentationLayer
             this.BtnLogin.TabIndex = 17;
             this.BtnLogin.Text = "Login";
             this.BtnLogin.UseVisualStyleBackColor = false;
+            this.BtnLogin.Click += new System.EventHandler(this.BtnLogin_Click);
             // 
             // txtusername
             // 

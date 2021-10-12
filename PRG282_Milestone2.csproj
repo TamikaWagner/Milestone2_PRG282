@@ -46,11 +46,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BusinessLogicLayer\Logic.cs" />
+    <Compile Include="BusinessLogicLayer\CheckLogin.cs" />
+    <Compile Include="BusinessLogicLayer\clear.cs" />
+    <Compile Include="BusinessLogicLayer\Module.cs" />
+    <Compile Include="BusinessLogicLayer\RegisterUser.cs" />
     <Compile Include="DataLayer\DataHandler.cs" />
     <Compile Include="DataLayer\FileHandler.cs" />
     <Compile Include="DataLayer\SQLDB.cs" />
     <Compile Include="DataLayer\Students.cs" />
+    <Compile Include="DataLayer\User.cs" />
     <Compile Include="PresentationLayer\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,17 +67,29 @@
     <Compile Include="PresentationLayer\frmMenu.Designer.cs">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="PresentationLayer\frmNavigation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\frmNavigation.Designer.cs">
+      <DependentUpon>frmNavigation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\frmRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\frmRegistration.Designer.cs">
+      <DependentUpon>frmRegistration.cs</DependentUpon>
+    </Compile>
     <Compile Include="PresentationLayer\frmSearchStudents.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PresentationLayer\frmSearchStudents.Designer.cs">
       <DependentUpon>frmSearchStudents.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\frmRegister.cs">
+    <Compile Include="PresentationLayer\frmRegisterStudent.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PresentationLayer\frmRegister.Designer.cs">
-      <DependentUpon>frmRegister.cs</DependentUpon>
+    <Compile Include="PresentationLayer\frmRegisterStudent.Designer.cs">
+      <DependentUpon>frmRegisterStudent.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -83,11 +99,17 @@
     <EmbeddedResource Include="PresentationLayer\frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\frmNavigation.resx">
+      <DependentUpon>frmNavigation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\frmRegistration.resx">
+      <DependentUpon>frmRegistration.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\frmSearchStudents.resx">
       <DependentUpon>frmSearchStudents.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\frmRegister.resx">
-      <DependentUpon>frmRegister.cs</DependentUpon>
+    <EmbeddedResource Include="PresentationLayer\frmRegisterStudent.resx">
+      <DependentUpon>frmRegisterStudent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -110,9 +132,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="DataLayer\UserLogin.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
