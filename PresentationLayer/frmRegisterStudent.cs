@@ -25,73 +25,69 @@ namespace PRG282_Milestone2.PresentationLayer
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
+            int SNumber = int.Parse(txtSNumber.Text);
+            string SName = txtSName.Text;
+            string Gender = "";
+            string DOB = dtpDOB.Text;
+            string Phone = txtPhone.Text;
+            string SAddress = txtAddress.Text;
+            int MCodes = int.Parse(txtCodes.Text);
+
+            if (rbF.Checked == true)
+            {
+                Gender = "Female";
+            }
+            else if (rbM.Checked == true)
+            {
+                Gender = "Male";
+            }
+            else
+            {
+                Gender = "Other";
+            }
+
             try
             {
-                int SNumber = int.Parse(txtSNumber.Text);
-                string SName = txtSName.Text;
-                string Gender = "";
-                string DOB = dtpDOB.Text;
-                string Phone = txtPhone.Text;
-                string SAddress = txtAddress.Text;
-                int MCodes = int.Parse(txtCodes.Text);
-
-                if (rbF.Checked == true)
+                if (Handler.RegisterStudent(SNumber, SName, Gender, DOB, Phone, SAddress, MCodes) == "Registration was successful.")
                 {
-                    Gender = "Female";
-                }
-                else if (rbM.Checked == true)
-                {
-                    Gender = "Male";
-                }
-                else
-                {
-                    Gender = "Other";
-                }
-
-                MessageBox.Show(Handler.RegisterStudent(SNumber, SName, Gender, DOB, Phone, SAddress, MCodes));
-
-                if (Handler.RegisterStudent(SNumber, SName, Gender, DOB, Phone, SAddress, MCodes) == "New Student was added.")
-                {
-                    Handler.RegisterStudent(SNumber, SName, Gender, DOB, Phone, SAddress, MCodes);
-                    this.Hide();
+                    frmRegisterStudent R = new frmRegisterStudent();
+                    R.Hide();
                     frmMenu M = new frmMenu();
                     M.Show();
+                    MessageBox.Show(Handler.RegisterStudent(SNumber, SName, Gender, DOB, Phone, SAddress, MCodes));
                 }
             }
             catch (Exception)
             {
-                MessageBox.Show("Something went wrong trying to register Student.");
+                MessageBox.Show("Somthing went wrong trying to register Student.");
             }
         }
 
         private void btnUp_Click(object sender, EventArgs e)
         {
-            
+            int SNumber = int.Parse(txtSNumber.Text);
+            string SName = txtSName.Text;
+            string Gender = "";
+            string DOB = dtpDOB.Text;
+            string Phone = txtPhone.Text;
+            string SAddress = txtAddress.Text;
+            int MCodes = int.Parse(txtCodes.Text);
+
+            if (rbF.Checked == true)
+            {
+                Gender = "Female";
+            }
+            else if(rbM.Checked == true)
+            {
+                Gender = "Male";
+            }
+            else
+            {
+                Gender = "Other";
+            }
+
             try
             {
-                int SNumber = int.Parse(txtSNumber.Text);
-                string SName = txtSName.Text;
-                string Gender = "";
-                string DOB = dtpDOB.Text.ToString();
-                string Phone = txtPhone.Text;
-                string SAddress = txtAddress.Text;
-                int MCodes = int.Parse(txtCodes.Text);
-
-                if (rbF.Checked == true)
-                {
-                    Gender = "Female";
-                }
-                else if (rbM.Checked == true)
-                {
-                    Gender = "Male";
-                }
-                else
-                {
-                    Gender = "Other";
-                }
-
-                MessageBox.Show(Handler.UpdateStudent(SNumber, SName, Gender, DOB, Phone, SAddress, MCodes));
-
                 if (Handler.UpdateStudent(SNumber, SName, Gender, DOB, Phone, SAddress, MCodes) == "Student with number " + SNumber + " was updated.")
                 {
                     frmRegisterStudent R = new frmRegisterStudent();
@@ -103,7 +99,7 @@ namespace PRG282_Milestone2.PresentationLayer
             }
             catch (Exception)
             {
-                MessageBox.Show("Something went wrong trying to register Student.");
+                MessageBox.Show("Somthing went wrong trying to register Student.");
             }
         }
 
