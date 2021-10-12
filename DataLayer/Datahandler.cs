@@ -87,8 +87,8 @@ namespace PRG282_Milestone2.DataLayer
                 return modules;
             }
 
-            SqlCommand cmd = new SqlCommand(@"SELECT * FROM ModuleDetails", connection);
-
+            string Query = "SELECT * FROM ModuleDetails";
+            SqlCommand cmd = new SqlCommand(Query, connection);
             SqlDataReader reader = cmd.ExecuteReader();
 
             if (reader.HasRows)

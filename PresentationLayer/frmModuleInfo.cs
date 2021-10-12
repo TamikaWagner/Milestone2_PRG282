@@ -21,6 +21,8 @@ namespace PRG282_Milestone2.PresentationLayer
         public frmModuleInfo()
         {
             InitializeComponent();
+            dgvModules.DataSource = Source;
+            ModuleDetails = Handler.GetModules(Handler.connectdb());
         }
 
         private void frmSearchStudents_Load(object sender, EventArgs e)
@@ -48,13 +50,22 @@ namespace PRG282_Milestone2.PresentationLayer
         {
             try
             {
-
+                Source.DataSource = ModuleDetails;
             }
             catch (Exception)
             {
-
-                throw;
+                MessageBox.Show("Something went wrong getting the data.");
             }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnClose_Click_1(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
         }
     }
 }

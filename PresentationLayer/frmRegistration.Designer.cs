@@ -41,9 +41,10 @@ namespace PRG282_Milestone2.PresentationLayer
             // btnLoginredirect
             // 
             this.btnLoginredirect.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLoginredirect.Location = new System.Drawing.Point(71, 233);
+            this.btnLoginredirect.Location = new System.Drawing.Point(95, 287);
+            this.btnLoginredirect.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLoginredirect.Name = "btnLoginredirect";
-            this.btnLoginredirect.Size = new System.Drawing.Size(155, 49);
+            this.btnLoginredirect.Size = new System.Drawing.Size(207, 60);
             this.btnLoginredirect.TabIndex = 31;
             this.btnLoginredirect.Text = "Have Account? Login Now";
             this.btnLoginredirect.UseVisualStyleBackColor = true;
@@ -54,9 +55,10 @@ namespace PRG282_Milestone2.PresentationLayer
             this.lbRPassword.BackColor = System.Drawing.Color.Transparent;
             this.lbRPassword.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbRPassword.ForeColor = System.Drawing.Color.GhostWhite;
-            this.lbRPassword.Location = new System.Drawing.Point(95, 131);
+            this.lbRPassword.Location = new System.Drawing.Point(127, 161);
+            this.lbRPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbRPassword.Name = "lbRPassword";
-            this.lbRPassword.Size = new System.Drawing.Size(103, 19);
+            this.lbRPassword.Size = new System.Drawing.Size(137, 23);
             this.lbRPassword.TabIndex = 28;
             this.lbRPassword.Text = "Password";
             this.lbRPassword.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -66,9 +68,10 @@ namespace PRG282_Milestone2.PresentationLayer
             this.lbRUsername.BackColor = System.Drawing.Color.Transparent;
             this.lbRUsername.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbRUsername.ForeColor = System.Drawing.Color.GhostWhite;
-            this.lbRUsername.Location = new System.Drawing.Point(95, 60);
+            this.lbRUsername.Location = new System.Drawing.Point(127, 74);
+            this.lbRUsername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbRUsername.Name = "lbRUsername";
-            this.lbRUsername.Size = new System.Drawing.Size(103, 24);
+            this.lbRUsername.Size = new System.Drawing.Size(137, 30);
             this.lbRUsername.TabIndex = 27;
             this.lbRUsername.Text = "Username";
             this.lbRUsername.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -77,9 +80,10 @@ namespace PRG282_Milestone2.PresentationLayer
             // 
             this.BtnRegister.BackColor = System.Drawing.Color.Gainsboro;
             this.BtnRegister.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnRegister.Location = new System.Drawing.Point(98, 199);
+            this.BtnRegister.Location = new System.Drawing.Point(131, 245);
+            this.BtnRegister.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnRegister.Name = "BtnRegister";
-            this.BtnRegister.Size = new System.Drawing.Size(100, 28);
+            this.BtnRegister.Size = new System.Drawing.Size(133, 34);
             this.BtnRegister.TabIndex = 26;
             this.BtnRegister.Text = "Register";
             this.BtnRegister.UseVisualStyleBackColor = false;
@@ -87,31 +91,34 @@ namespace PRG282_Milestone2.PresentationLayer
             // 
             // txtusername
             // 
-            this.txtusername.Location = new System.Drawing.Point(98, 96);
+            this.txtusername.Location = new System.Drawing.Point(131, 118);
+            this.txtusername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtusername.Name = "txtusername";
-            this.txtusername.Size = new System.Drawing.Size(100, 20);
+            this.txtusername.Size = new System.Drawing.Size(132, 22);
             this.txtusername.TabIndex = 25;
             // 
             // txtpassword
             // 
-            this.txtpassword.Location = new System.Drawing.Point(98, 164);
+            this.txtpassword.Location = new System.Drawing.Point(131, 202);
+            this.txtpassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtpassword.Name = "txtpassword";
             this.txtpassword.PasswordChar = '*';
-            this.txtpassword.Size = new System.Drawing.Size(100, 20);
+            this.txtpassword.Size = new System.Drawing.Size(132, 22);
             this.txtpassword.TabIndex = 24;
             // 
             // frmRegistration
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(297, 389);
+            this.ClientSize = new System.Drawing.Size(396, 452);
             this.Controls.Add(this.btnLoginredirect);
             this.Controls.Add(this.lbRPassword);
             this.Controls.Add(this.lbRUsername);
             this.Controls.Add(this.BtnRegister);
             this.Controls.Add(this.txtusername);
             this.Controls.Add(this.txtpassword);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmRegistration";
             this.Text = "frmRegistration";
             this.Load += new System.EventHandler(this.frmRegistration_Load_1);
