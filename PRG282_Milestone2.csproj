@@ -79,11 +79,11 @@
     <Compile Include="PresentationLayer\frmRegistration.Designer.cs">
       <DependentUpon>frmRegistration.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\frmSearchStudents.cs">
+    <Compile Include="PresentationLayer\frmModuleInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PresentationLayer\frmSearchStudents.Designer.cs">
-      <DependentUpon>frmSearchStudents.cs</DependentUpon>
+    <Compile Include="PresentationLayer\frmModuleInfo.Designer.cs">
+      <DependentUpon>frmModuleInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="PresentationLayer\frmRegisterStudent.cs">
       <SubType>Form</SubType>
@@ -105,8 +105,8 @@
     <EmbeddedResource Include="PresentationLayer\frmRegistration.resx">
       <DependentUpon>frmRegistration.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\frmSearchStudents.resx">
-      <DependentUpon>frmSearchStudents.cs</DependentUpon>
+    <EmbeddedResource Include="PresentationLayer\frmModuleInfo.resx">
+      <DependentUpon>frmModuleInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\frmRegisterStudent.resx">
       <DependentUpon>frmRegisterStudent.cs</DependentUpon>

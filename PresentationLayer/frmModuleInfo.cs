@@ -13,9 +13,9 @@ using PRG282_Milestone2.DataLayer;
 
 namespace PRG282_Milestone2.PresentationLayer
 {
-    public partial class frmSearchStudents : Form
+    public partial class frmModuleInfo : Form
     {
-        public frmSearchStudents()
+        public frmModuleInfo()
         {
             InitializeComponent();
         }
