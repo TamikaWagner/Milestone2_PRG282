@@ -20,14 +20,15 @@ namespace PRG282_Milestone2.PresentationLayer
         private void btnSearch_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmSearchStudents search = new frmSearchStudents();
-
+            frmMenu search = new frmMenu();
+            search.Show();
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
             this.Hide();
             frmRegisterStudent register = new frmRegisterStudent();
+            register.Show();
         }
 
         private void btnModules_Click(object sender, EventArgs e)
