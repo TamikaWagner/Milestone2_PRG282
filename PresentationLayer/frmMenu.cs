@@ -73,7 +73,7 @@ namespace PRG282_Milestone2.PresentationLayer
         {
             frmMenu M = new frmMenu();
             M.Hide();
-            frmRegister R = new frmRegister();
+            frmRegisterStudent R = new frmRegisterStudent();
             R.Show();
         }
 

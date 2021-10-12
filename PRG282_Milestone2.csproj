@@ -73,11 +73,11 @@
     <Compile Include="PresentationLayer\frmSearchStudents.Designer.cs">
       <DependentUpon>frmSearchStudents.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\frmRegister.cs">
+    <Compile Include="PresentationLayer\frmRegisterStudent.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PresentationLayer\frmRegister.Designer.cs">
-      <DependentUpon>frmRegister.cs</DependentUpon>
+    <Compile Include="PresentationLayer\frmRegisterStudent.Designer.cs">
+      <DependentUpon>frmRegisterStudent.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -90,8 +90,8 @@
     <EmbeddedResource Include="PresentationLayer\frmSearchStudents.resx">
       <DependentUpon>frmSearchStudents.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\frmRegister.resx">
-      <DependentUpon>frmRegister.cs</DependentUpon>
+    <EmbeddedResource Include="PresentationLayer\frmRegisterStudent.resx">
+      <DependentUpon>frmRegisterStudent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -114,9 +114,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="DataLayer\UserLogin.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

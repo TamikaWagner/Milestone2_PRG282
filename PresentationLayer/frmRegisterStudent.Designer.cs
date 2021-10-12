@@ -1,7 +1,7 @@
 ﻿
 namespace PRG282_Milestone2.PresentationLayer
 {
-    partial class frmRegister
+    partial class frmRegisterStudent
     {
         /// <summary>
         /// Required designer variable.
