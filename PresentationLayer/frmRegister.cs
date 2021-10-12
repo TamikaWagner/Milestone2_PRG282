@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using PRG282_Milestone2.PresentationLayer;
 using PRG282_Milestone2.BusinessLogicLayer;
 using PRG282_Milestone2.DataLayer;
+using System.IO;
+using System.Data.SqlClient;
 
 namespace PRG282_Milestone2.PresentationLayer
 {
