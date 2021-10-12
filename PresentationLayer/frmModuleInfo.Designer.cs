@@ -330,6 +330,7 @@ namespace PRG282_Milestone2.PresentationLayer
             this.btnRead.TabIndex = 29;
             this.btnRead.Text = "Read";
             this.btnRead.UseVisualStyleBackColor = false;
+            this.btnRead.Click += new System.EventHandler(this.btnRead_Click);
             // 
             // frmModuleInfo
             // 
