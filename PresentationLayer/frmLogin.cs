@@ -40,7 +40,8 @@ namespace PRG282_Milestone2.PresentationLayer
         private void BtnLogin_Click(object sender, EventArgs e)
         {
             cl.checkLogin(txtusername.Text, txtpassword.Text , usersInSystem);
-          
+            frmMenu fm = new frmMenu();
+            fm.Show();
         }
 
         private void brnRegister_Click(object sender, EventArgs e)
