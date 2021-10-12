@@ -42,5 +42,10 @@ namespace PRG282_Milestone2.PresentationLayer
                 this.Close();
             }
         }
+
+        private void frmNavigation_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

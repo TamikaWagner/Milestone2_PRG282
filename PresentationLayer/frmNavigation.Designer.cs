@@ -86,6 +86,7 @@ namespace PRG282_Milestone2.PresentationLayer
             this.Controls.Add(this.btnSearch);
             this.Name = "frmNavigation";
             this.Text = "frmNavigation";
+            this.Load += new System.EventHandler(this.frmNavigation_Load);
             this.ResumeLayout(false);
 
         }

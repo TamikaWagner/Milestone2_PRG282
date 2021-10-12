@@ -69,7 +69,10 @@ namespace PRG282_Milestone2.PresentationLayer
            
         }
 
-
+        private void frmRegistration_Load_1(object sender, EventArgs e)
+        {
+            this.ActiveControl = txtusername;
+        }
     }
 
 }

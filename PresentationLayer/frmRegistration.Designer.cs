@@ -103,6 +103,7 @@ namespace PRG282_Milestone2.PresentationLayer
             this.Controls.Add(this.txtpassword);
             this.Name = "frmRegistration";
             this.Text = "frmRegistration";
+            this.Load += new System.EventHandler(this.frmRegistration_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();
 

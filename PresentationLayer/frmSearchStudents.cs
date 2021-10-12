@@ -22,7 +22,7 @@ namespace PRG282_Milestone2.PresentationLayer
 
         private void frmSearchStudents_Load(object sender, EventArgs e)
         {
-
+            this.ActiveControl = txt_SStudentID;
         }
 
         private void btn_SReg_Click(object sender, EventArgs e)
