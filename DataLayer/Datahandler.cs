@@ -16,14 +16,14 @@ namespace PRG282_Milestone2.DataLayer
 {
     class DataHandler
     {
-        public string conn = "Server=.;Initial Catalog=tblClients;Integrated security=True";
+        public string conn = "Data source=.;Initial Catalog=StudentInfo;Integrated security=True";
 
-        //public SqlConnection connectdb()
-        //{
-        //    //need to add dbd
-        //    SqlConnection connection = new SqlConnection(conn);
-        //    return connection;
-        //}
+        public SqlConnection connectdb()
+        {
+            //need to add dbd
+            SqlConnection connection = new SqlConnection(conn);
+            return connection;
+        }
 
         public DataHandler() { }
 
@@ -34,14 +34,14 @@ namespace PRG282_Milestone2.DataLayer
             if (connect.State != ConnectionState.Open)
             {
                 connect.Open();
-                string Q = "Select * from DetailsStudent";
+                string Q = "Select * from StudentDetails";
 
                 SqlCommand Command = new SqlCommand(Q, connect);
                 using (var reader = Command.ExecuteReader())
                 {
                     while (reader.Read())
                     {
-                        AllClients.Add(new Students(int.Parse(reader[0].ToString()), reader[1].ToString(), int.Parse(reader[2].ToString()), reader[3].ToString(), int.Parse(reader[4].ToString()), reader[5].ToString(), reader[6].ToString()));
+                        AllClients.Add(new Students(int.Parse(reader[0].ToString()), reader[1].ToString(), reader[2].ToString(), reader[3].ToString(), reader[4].ToString(), reader[5].ToString(), int.Parse(reader[6].ToString())));
                     }
                 }
             }
@@ -55,7 +55,7 @@ namespace PRG282_Milestone2.DataLayer
             {
                 SqlConnection connection = new SqlConnection(conn);
                 connection.Open();
-                string Query = $"INSERT INTO DetailsStudent(Student_Number, Student_Name, Gender, Date_Of_Birth, Phone, Student_Address, Module_Codes) VALUES({SNumber}, '{SName}', '{Gender}', '{DOB}', '{Phone}', '{SAddress}', '{MCode}')";
+                string Query = $"INSERT INTO StudentDetails(Student_Number, Student_Name, Gender, Date_Of_Birth, Phone, Student_Address, Module_Codes) VALUES({SNumber}, '{SName}', '{Gender}', '{DOB}', '{Phone}', '{SAddress}', '{MCode}')";
                 SqlCommand cmd = new SqlCommand(Query, connection);
                 cmd.ExecuteNonQuery();
                 connection.Close();
@@ -80,7 +80,7 @@ namespace PRG282_Milestone2.DataLayer
                 return modules;
             }
 
-            SqlCommand cmd = new SqlCommand(@"SELECT * FROM tblModules", connection);
+            SqlCommand cmd = new SqlCommand(@"SELECT * FROM ModuleDetails", connection);
 
             SqlDataReader reader = cmd.ExecuteReader();
 
@@ -95,19 +95,82 @@ namespace PRG282_Milestone2.DataLayer
             return modules;
         }
 
-        public string UpdateModules()
+        public string UpdateModules(string MCode, string MName, string MDescription, string Link)
         {
+            SqlConnection connect = new SqlConnection(conn);
+            connect.Open();
+            string Query = $"Update ModuleDetails set Module_Code = '" + MCode + "', Module_Name = '" + MName + "', Module_Description = '" + MDescription + "', Module_Link = '" + Link + "' Where Module_Code = '" + MCode + "'";
 
+            if (MCode != "")
+            {
+                if (MName != "" || MDescription != "" || Link != "")
+                {
+                    SqlCommand Command = new SqlCommand(Query, connect);
+                    int Row = Command.ExecuteNonQuery();
+                    if (Row > 0)
+                    {
+                        return "Module with code " + MCode + " was updated.";
+                    }
+                    else
+                    {
+                        return "Module with number " + MCode + " failed to be updated.";
+                    }
+                }
+                else
+                {
+                    return "Please enter data to be updated.";
+                }
+            }
+            else
+            {
+                return "Please enter the Module code.";
+            }
         }
 
-        public string InsertModules()
+        public string AddModules(string MCode, string MName, string MDescription, string Link)
         {
-
+            try
+            {
+                SqlConnection connection = new SqlConnection(conn);
+                connection.Open();
+                string Query = $"INSERT INTO ModuleDetails(Module_Code, Module_Name, Module_Description, Module_Description, Module_Link) VALUES({MName}, '{MName}', '{MDescription}', '{Link}')";
+                SqlCommand cmd = new SqlCommand(Query, connection);
+                cmd.ExecuteNonQuery();
+                connection.Close();
+                return "Registration was successful.";
+            }
+            catch (Exception)
+            {
+                return "Registration failed.";
+            }
         }
 
-        public string DeleteModules()
+        public string DeleteModules(int MCode)
         {
+            SqlConnection connect = new SqlConnection(conn);
+            connect.Open();
+            string Query = "Delete from ModuleDetails Where Module_Code = '" + MCode + "'";
+            SqlCommand Command = new SqlCommand(Query, connect);
+            int Rows = Command.ExecuteNonQuery();
 
+            if (MCode >= 0)
+            {
+                if (Rows > 0)
+                {
+                    connect.Close();
+                    return "Deleted details of module with the code: " + MCode + "'.";
+                }
+                else
+                {
+                    connect.Close();
+                    return "This Module does not exits.";
+                }
+            }
+            else
+            {
+                connect.Close();
+                return "Please enter a Module code.";
+            }
         }
 
 
@@ -115,7 +178,7 @@ namespace PRG282_Milestone2.DataLayer
         {
             SqlConnection connect = new SqlConnection(conn);
             connect.Open();
-            string Query = "Delete from DetailsStudent Where Student_Number = '" + StudentNumber + "'";
+            string Query = "Delete from StudentDetails Where Student_Number = '" + StudentNumber + "'";
             SqlCommand Command = new SqlCommand(Query, connect);
             int Rows = Command.ExecuteNonQuery();
 
@@ -124,7 +187,7 @@ namespace PRG282_Milestone2.DataLayer
                 if (Rows > 0)
                 {
                     connect.Close();
-                    return "Deleted details of Student with the number: " + StudentNumber + ".";
+                    return "Deleted details of Student with the number: " + StudentNumber + "'.";
                 }
                 else
                 {
@@ -146,13 +209,13 @@ namespace PRG282_Milestone2.DataLayer
             if (connect.State != ConnectionState.Open)
             {
                 connect.Open();
-                string Query = "Select * from DeltailsStudent Where Student_Number = '" + StudentID + "'";
+                string Query = "Select * from StudentDetails Where Student_Number = '" + StudentID + "'";
                 SqlCommand Command = new SqlCommand(Query, connect);
                 using (var reader = Command.ExecuteReader())
                 {
                     while (reader.Read())
                     {
-                        Found.Add(new Students(int.Parse(reader[0].ToString()), reader[1].ToString(), int.Parse(reader[2].ToString()), reader[3].ToString(), int.Parse(reader[4].ToString()), reader[5].ToString(), reader[6].ToString()));
+                        Found.Add(new Students(int.Parse(reader[0].ToString()), reader[1].ToString(), reader[2].ToString(), reader[3].ToString(), reader[4].ToString(), reader[5].ToString(), int.Parse(reader[6].ToString())));
                     }
                 }
             }
@@ -164,24 +227,31 @@ namespace PRG282_Milestone2.DataLayer
         {
             SqlConnection connect = new SqlConnection(conn);
             connect.Open();
-            string Query = $"Update DetailsStudent set Student_Number = '" + SNumber + "', Student_Name = '" + SName + "', Gender = '" + Gender + "', Date_Of_Birth = '" + DOB + "', Phone = '" + Phone + "', Student_Address = '" + SAddress + "', Module_Code = '" + MCode + "' Where Student_Number = '" + SNumber + "'";
+            string Query = $"Update StudentDetails set Student_Number = '" + SNumber + "', Student_Name = '" + SName + "', Gender = '" + Gender + "', Date_Of_Birth = '" + DOB + "', Phone = '" + Phone + "', Student_Address = '" + SAddress + "', Module_Code = '" + MCode + "' Where Student_Number = '" + SNumber + "'";
 
-            if (SNumber < 0 && SName != "" && Gender != "" && DOB >= 0 && Phone < 0 && SAddress != "" && MCode != "")
+            if (SNumber > 0 )
             {
-                SqlCommand Command = new SqlCommand(Query, connect);
-                int Row = Command.ExecuteNonQuery();
-                if (Row > 0)
+                if (SName != "" || Gender != "" || DOB > 0 || Phone > 0 || SAddress != "" || MCode != "")
                 {
-                    return "Student with number " + SNumber + " was updated.";
+                    SqlCommand Command = new SqlCommand(Query, connect);
+                    int Row = Command.ExecuteNonQuery();
+                    if (Row > 0)
+                    {
+                        return "Student with number " + SNumber + " was updated.";
+                    }
+                    else
+                    {
+                        return "Student with number " + SNumber + " failed to be updated.";
+                    }
                 }
                 else
                 {
-                    return "Student with number " + SNumber + " failed to be updated.";
+                    return "Please enter data to be updated.";
                 }
             }
             else
             {
-                return "Please enter the required data.";
+                return "Please enter the Student number.";
             }
         }
 
