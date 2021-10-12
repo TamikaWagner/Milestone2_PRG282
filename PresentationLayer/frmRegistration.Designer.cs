@@ -47,6 +47,7 @@ namespace PRG282_Milestone2.PresentationLayer
             this.btnLoginredirect.TabIndex = 31;
             this.btnLoginredirect.Text = "Have Account? Login Now";
             this.btnLoginredirect.UseVisualStyleBackColor = true;
+//            this.btnLoginredirect.Click += new System.EventHandler(this.btnLoginredirect_Click);
             // 
             // lbConfPassword
             // 
@@ -122,7 +123,6 @@ namespace PRG282_Milestone2.PresentationLayer
             this.Controls.Add(this.txtpassword);
             this.Name = "frmRegistration";
             this.Text = "frmRegistration";
-            this.Load += new System.EventHandler(this.frmRegistration_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
