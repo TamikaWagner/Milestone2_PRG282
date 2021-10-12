@@ -24,7 +24,6 @@ namespace PRG282_Milestone2.PresentationLayer
         {
             InitializeComponent();
             DataHandler Handler = new DataHandler();
-            StudentDetails = Handler.GetStudents();
             dgvStudents.DataSource = source;
         }
 
@@ -85,15 +84,13 @@ namespace PRG282_Milestone2.PresentationLayer
         {
             try
             {
-                SqlConnection conn = new SqlConnection("Server=.;Initial Catalog=tblClients;Integrated security=True");
-                conn.Open();
-                MessageBox.Show("Lets go");
-                conn.Close();
                 source.DataSource = StudentDetails;
                 txtSearch.Visible = true;
                 btnDel.Visible = true;
                 lblSearch.Visible = true;
                 lblDel.Visible = true;
+                btnSearch.Visible = true;
+                source.DataSource = Handler.GetStudents();
             }
             catch (Exception)
             {

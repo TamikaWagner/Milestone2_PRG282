@@ -27,13 +27,15 @@ namespace PRG282_Milestone2.PresentationLayer
         private void btnRegister_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmRegisterStudent register = new frmRegisterStudent();
-            register.Show();
+            frmMenu f  = new frmMenu();
+            f.Show();
         }
 
         private void btnModules_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            frmModuleInfo MI = new frmModuleInfo();
+            MI.Show();
         }
 
         private void btnExit_Click(object sender, EventArgs e)

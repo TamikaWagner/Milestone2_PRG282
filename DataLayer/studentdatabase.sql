@@ -18,6 +18,7 @@ create table StudentDetails
   Module_Codes int ,
   Student_Image VARBINARY(MAX)
   )
+
   INSERT INTO StudentDetails(Student_Number, Student_Name, Gender , Date_Of_Birth, Phone, Student_Address, Module_Codes)
 VALUES (5000,'Kieran Mckenzie','Female','1999-01-20','(790) 247-3753','Ap #729-4357 Ut St.',3),
   (5007,'Cheyenne Lloyd','Female','1992-01-21','(191) 303-1461','Ap #311-4658 Ornare. Road',3),
@@ -76,31 +77,33 @@ VALUES (5000,'Kieran Mckenzie','Female','1999-01-20','(790) 247-3753','Ap #729-4
 
 
 
- select *
- from 
- create table Cource
+Go
+Use Students
+ create table ModuleDetails
 (
   
   Module_Name varchar(255) ,
   Module_Codes int ,
- 
+  Module_Description VarChar(255),
+  Module_Link VarChar(255)
+
   )
 
-   INSERT INTO Cource(Module_Name,	Module_Codes)
+   INSERT INTO ModuleDetails(Module_Name, Module_Codes, Module_Description, Module_Link)
 VALUES
 
  
-('LRP281',1),
-('WrP281',2),
-('INL282',3),
-('DBD281',4),
-('MAT281',5),
-('LRP282',6),
+('LRP281',1, 'Liniar maths in Excel', 'https://www.youtube.com/watch?v=6xa1x_Iqjzg'),
+('WRP281',2, 'Creating and validating websites', 'https://www.youtube.com/watch?v=In0nB0ABaUk'),
+('INL282',3, 'Innovation in diffrent fields', 'https://www.youtube.com/watch?v=Mtjatz9r-Vc'),
+('DBD281',4 , 'Creating databases in SQL server', 'https://www.youtube.com/watch?v=jEBx4z3AxG4'),
+('MAT281',5, Mathematics, 'https://www.youtube.com/watch?v=yRwQ7A6jVLk'),
+('LRP282',6, ''),
 ('SOT281',7),
-('STA281',8),
-('INF281',9),
-('PMM281',10),
-('SAD281',11),
+('STA281',8, 'Statistics', 'https://www.youtube.com/watch?v=GUQJ7zMoSCM'),
+('INF281',9, 'Information systems', 'https://www.youtube.com/watch?v=Qujsd4vkqFI&t=3s'),
+('PMM281',10, ''),
+('SAD281',11, ),
 ('DWH281',12),
 ('COA281',13)
 go

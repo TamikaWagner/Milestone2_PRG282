@@ -17,10 +17,7 @@ namespace PRG282_Milestone2.BusinessLogicLayer
 {
    internal class clear
     {
-      
-
             DataHandler datah = new DataHandler();
-
 
             public void clearFieldsLogIn(TextBox txtName, TextBox txtPass)
 
