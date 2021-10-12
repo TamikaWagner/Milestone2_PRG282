@@ -19,7 +19,7 @@ namespace PRG282_Milestone2.PresentationLayer
     {
         FileHandler db = new FileHandler();
         clear clearbox = new clear();
-        CheckLogin loginc = new CheckLogin();
+        CheckLogin cl = new CheckLogin();
         List<string> usersInSystem = new List<string>();
 
         public frmLogin()
@@ -27,17 +27,7 @@ namespace PRG282_Milestone2.PresentationLayer
             InitializeComponent();
       
         }
-
-        private void frmLogin_Load(object sender, EventArgs e)
-        {
-            this.ActiveControl = txtusername;
-        }
-
-      
-
-
-        
-
+       
         private void btnExit_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Are you sure you want to exit?", "Exit", MessageBoxButtons.OKCancel) == DialogResult.OK)
@@ -48,56 +38,23 @@ namespace PRG282_Milestone2.PresentationLayer
 
         private void BtnLogin_Click(object sender, EventArgs e)
         {
-            loginc.checkLogin(txtusername.Text, txtpassword.Text , usersInSystem);
+            cl.checkLogin(txtusername.Text, txtpassword.Text , usersInSystem);
+          
         }
 
         private void brnRegister_Click(object sender, EventArgs e)
         {
              this.Hide();
-            frmRegisterStudent registration = new frmRegisterStudent();
+            frmRegistration registration = new frmRegistration();
             registration.ShowDialog();
         }
-    }
-}
-/*
- * FileHandler db = new FileHandler();
-        ComponentController cc = new ComponentController();
-        CheckLogin cl = new CheckLogin();
-        List<string> usersInSystem = new List<string>();
-
-        public frmLogin()
-        {
-            InitializeComponent();
-        }
-
-        private void linkRegister_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            Register registerForm = new Register();
-            registerForm.Show();
-            Hide();
-        }
-
-        private void btnLogin_Click(object sender, EventArgs e)
-        {
-            cl.checkLogin(txtusernameBoxLogin.Text, txtpasswordBoxLogin.Text, usersInSystem);
-            
-        }
-
-        private void btnClearLogin_Click(object sender, EventArgs e)
-        {
-            cc.clearFieldsLogIn(txtusernameBoxLogin,txtpasswordBoxLogin); 
-        }
-
-
         public void loginSuccessful()
         {
-            //frmMain main = new frmMain(txtusernameBoxLogin.Text);
-            frmNavigation navigation = new frmNavigation(txtusernameBoxLogin.Text);
-            cc.clearFieldsLogIn(txtusernameBoxLogin,txtpasswordBoxLogin);
-            navigation.Show();
+            frmNavigation navi = new frmNavigation();
+            clearbox.clearFieldsLogIn(txtusername, txtpassword);
+            navi.Show();
             Hide();
         }
-
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
@@ -106,4 +63,3 @@ namespace PRG282_Milestone2.PresentationLayer
         }
     }
 }
-*/

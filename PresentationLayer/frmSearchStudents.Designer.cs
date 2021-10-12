@@ -106,6 +106,7 @@ namespace PRG282_Milestone2.PresentationLayer
             this.btn_SReturn.TabIndex = 12;
             this.btn_SReturn.Text = "Return to Menu";
             this.btn_SReturn.UseVisualStyleBackColor = false;
+            this.btn_SReturn.Click += new System.EventHandler(this.btn_SReturn_Click);
             // 
             // pnlStudentDetails
             // 
