@@ -24,6 +24,7 @@ namespace PRG282_Milestone2.PresentationLayer
         {
             InitializeComponent();
             DataHandler Handler = new DataHandler();
+            StudentDetails = Handler.GetStudents();
             dgvStudents.DataSource = source;
         }
 
@@ -90,7 +91,7 @@ namespace PRG282_Milestone2.PresentationLayer
                 lblSearch.Visible = true;
                 lblDel.Visible = true;
                 btnSearch.Visible = true;
-                source.DataSource = Handler.GetStudents();
+                source.DataSource = StudentDetails;
             }
             catch (Exception)
             {
