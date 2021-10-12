@@ -64,6 +64,22 @@ namespace PRG282_Milestone2.PresentationLayer
             cl.loginSuccess += loginSuccessful;
             usersInSystem = db.getUsers();
             this.ActiveControl = txtusername;
+
+        }
+
+        private void image1ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
