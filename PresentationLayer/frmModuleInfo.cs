@@ -15,6 +15,9 @@ namespace PRG282_Milestone2.PresentationLayer
 {
     public partial class frmModuleInfo : Form
     {
+        DataHandler Handler = new DataHandler();
+        BindingSource Source = new BindingSource();
+        List<Module> ModuleDetails = new List<Module>();
         public frmModuleInfo()
         {
             InitializeComponent();
@@ -39,6 +42,19 @@ namespace PRG282_Milestone2.PresentationLayer
         private void pnlStudentDetails_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnRead_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
     }
 }
