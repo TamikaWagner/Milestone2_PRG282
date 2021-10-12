@@ -19,7 +19,7 @@ namespace PRG282_Milestone2.DataLayer
         public SqlConnection connectdb()
         {
             //need to add dbd
-            SqlConnection connection = new SqlConnection(@"Server=(local); Initial Catalog=/hereiam; Integrated Security=true");
+            SqlConnection connection = new SqlConnection(@"Server=(local); Initial Catalog=/StudentInfo; Integrated Security=true");
 
 
             return connection;
