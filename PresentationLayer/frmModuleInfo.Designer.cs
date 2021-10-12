@@ -33,6 +33,7 @@ namespace PRG282_Milestone2.PresentationLayer
             this.btn_SReg = new System.Windows.Forms.Button();
             this.btn_SReturn = new System.Windows.Forms.Button();
             this.pnlStudentDetails = new System.Windows.Forms.Panel();
+            this.btnClose = new System.Windows.Forms.Button();
             this.pnlSearchStudent = new System.Windows.Forms.Panel();
             this.lbl_SDetailsFor = new System.Windows.Forms.Label();
             this.CourseID = new System.Windows.Forms.TextBox();
@@ -43,15 +44,14 @@ namespace PRG282_Milestone2.PresentationLayer
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lbl_SDStudentID = new System.Windows.Forms.Label();
-            this.btnClose = new System.Windows.Forms.Button();
             this.lblDel = new System.Windows.Forms.Label();
-            this.lblRead = new System.Windows.Forms.Label();
-            this.lblSearch = new System.Windows.Forms.Label();
             this.dgvStudents = new System.Windows.Forms.DataGridView();
-            this.btnRead = new System.Windows.Forms.Button();
-            this.txtSearch = new System.Windows.Forms.TextBox();
-            this.btnSearch = new System.Windows.Forms.Button();
+            this.lblRead = new System.Windows.Forms.Label();
             this.btnDel = new System.Windows.Forms.Button();
+            this.lblSearch = new System.Windows.Forms.Label();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.btnRead = new System.Windows.Forms.Button();
             this.pnlStudentDetails.SuspendLayout();
             this.pnlSearchStudent.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).BeginInit();
@@ -113,6 +113,19 @@ namespace PRG282_Milestone2.PresentationLayer
             this.pnlStudentDetails.Name = "pnlStudentDetails";
             this.pnlStudentDetails.Size = new System.Drawing.Size(882, 480);
             this.pnlStudentDetails.TabIndex = 13;
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.White;
+            this.btnClose.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.Location = new System.Drawing.Point(404, 412);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(77, 30);
+            this.btnClose.TabIndex = 34;
+            this.btnClose.Text = "Close";
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Visible = false;
             // 
             // pnlSearchStudent
             // 
@@ -219,19 +232,6 @@ namespace PRG282_Milestone2.PresentationLayer
             this.lbl_SDStudentID.TabIndex = 17;
             this.lbl_SDStudentID.Text = "Student ID:";
             // 
-            // btnClose
-            // 
-            this.btnClose.BackColor = System.Drawing.Color.White;
-            this.btnClose.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.Location = new System.Drawing.Point(404, 412);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(77, 30);
-            this.btnClose.TabIndex = 34;
-            this.btnClose.Text = "Close";
-            this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Visible = false;
-            // 
             // lblDel
             // 
             this.lblDel.AutoSize = true;
@@ -244,29 +244,6 @@ namespace PRG282_Milestone2.PresentationLayer
             this.lblDel.Text = "Delete student info";
             this.lblDel.Visible = false;
             // 
-            // lblRead
-            // 
-            this.lblRead.AutoSize = true;
-            this.lblRead.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRead.Location = new System.Drawing.Point(39, 22);
-            this.lblRead.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblRead.Name = "lblRead";
-            this.lblRead.Size = new System.Drawing.Size(132, 16);
-            this.lblRead.TabIndex = 32;
-            this.lblRead.Text = "Show the database";
-            // 
-            // lblSearch
-            // 
-            this.lblSearch.AutoSize = true;
-            this.lblSearch.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSearch.Location = new System.Drawing.Point(310, 22);
-            this.lblSearch.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblSearch.Name = "lblSearch";
-            this.lblSearch.Size = new System.Drawing.Size(121, 16);
-            this.lblSearch.TabIndex = 31;
-            this.lblSearch.Text = "Enter a student ID";
-            this.lblSearch.Visible = false;
-            // 
             // dgvStudents
             // 
             this.dgvStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -278,40 +255,16 @@ namespace PRG282_Milestone2.PresentationLayer
             this.dgvStudents.Size = new System.Drawing.Size(440, 288);
             this.dgvStudents.TabIndex = 30;
             // 
-            // btnRead
+            // lblRead
             // 
-            this.btnRead.BackColor = System.Drawing.Color.White;
-            this.btnRead.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRead.Location = new System.Drawing.Point(42, 50);
-            this.btnRead.Margin = new System.Windows.Forms.Padding(2);
-            this.btnRead.Name = "btnRead";
-            this.btnRead.Size = new System.Drawing.Size(78, 27);
-            this.btnRead.TabIndex = 29;
-            this.btnRead.Text = "Read";
-            this.btnRead.UseVisualStyleBackColor = false;
-            // 
-            // txtSearch
-            // 
-            this.txtSearch.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.Location = new System.Drawing.Point(270, 52);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(2);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(121, 22);
-            this.txtSearch.TabIndex = 28;
-            this.txtSearch.WordWrap = false;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.BackColor = System.Drawing.Color.White;
-            this.btnSearch.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(409, 48);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(77, 30);
-            this.btnSearch.TabIndex = 27;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = false;
-            this.btnSearch.Visible = false;
+            this.lblRead.AutoSize = true;
+            this.lblRead.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRead.Location = new System.Drawing.Point(39, 22);
+            this.lblRead.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblRead.Name = "lblRead";
+            this.lblRead.Size = new System.Drawing.Size(132, 16);
+            this.lblRead.TabIndex = 32;
+            this.lblRead.Text = "Show the database";
             // 
             // btnDel
             // 
@@ -326,6 +279,53 @@ namespace PRG282_Milestone2.PresentationLayer
             this.btnDel.UseVisualStyleBackColor = false;
             this.btnDel.UseWaitCursor = true;
             this.btnDel.Visible = false;
+            // 
+            // lblSearch
+            // 
+            this.lblSearch.AutoSize = true;
+            this.lblSearch.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSearch.Location = new System.Drawing.Point(310, 22);
+            this.lblSearch.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSearch.Name = "lblSearch";
+            this.lblSearch.Size = new System.Drawing.Size(121, 16);
+            this.lblSearch.TabIndex = 31;
+            this.lblSearch.Text = "Enter a student ID";
+            this.lblSearch.Visible = false;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.BackColor = System.Drawing.Color.White;
+            this.btnSearch.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.Location = new System.Drawing.Point(415, 50);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(77, 30);
+            this.btnSearch.TabIndex = 27;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Visible = false;
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.Location = new System.Drawing.Point(270, 52);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(121, 22);
+            this.txtSearch.TabIndex = 28;
+            this.txtSearch.WordWrap = false;
+            // 
+            // btnRead
+            // 
+            this.btnRead.BackColor = System.Drawing.Color.White;
+            this.btnRead.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRead.Location = new System.Drawing.Point(42, 50);
+            this.btnRead.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRead.Name = "btnRead";
+            this.btnRead.Size = new System.Drawing.Size(78, 27);
+            this.btnRead.TabIndex = 29;
+            this.btnRead.Text = "Read";
+            this.btnRead.UseVisualStyleBackColor = false;
             // 
             // frmModuleInfo
             // 
