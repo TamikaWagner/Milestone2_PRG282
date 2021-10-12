@@ -85,29 +85,28 @@ VALUES (5000,'Kieran Mckenzie','Female','1999-01-20','(790) 247-3753','Ap #729-4
 
 
 Go
-Use Students
+Use StudentInfo
  create table ModuleDetails
 (
-  
-  Module_Name varchar(255) ,
-  Module_Codes int ,
+  Module_Codes int,
+  Module_Name varchar(255),
   Module_Description VarChar(255),
   Module_Link VarChar(255)
-
   )
+  use StudentInfo
+  drop table ModuleDetails
 
-   INSERT INTO ModuleDetails(Module_Name, Module_Codes, Module_Description, Module_Link)
+  use StudentInfo
+   INSERT INTO ModuleDetails(Module_Codes, Module_Name, Module_Description, Module_Link)
 VALUES
-
- 
-('LRP281',1, 'Liniar maths in Excel', 'https://www.youtube.com/watch?v=6xa1x_Iqjzg'),
-('WRP281',2, 'Creating and validating websites', 'https://www.youtube.com/watch?v=In0nB0ABaUk'),
-('INL282',3, 'Innovation in diffrent fields', 'https://www.youtube.com/watch?v=Mtjatz9r-Vc'),
-('DBD281',4 , 'Creating databases in SQL server', 'https://www.youtube.com/watch?v=jEBx4z3AxG4'),
-('MAT281',5, Mathematics, 'https://www.youtube.com/watch?v=yRwQ7A6jVLk'),
-('LRP282',6, ''),
-('SOT281',7),
-('STA281',8, 'Statistics', 'https://www.youtube.com/watch?v=GUQJ7zMoSCM'),
+(1, 'LRP281', 'Liniar maths in Excel', 'https://www.youtube.com/watch?v=6xa1x_Iqjzg')
+(2, 'WRP281', 'Creating and validating websites', 'https://www.youtube.com/watch?v=In0nB0ABaUk'),
+(3, 'INL282', 'Innovation in diffrent fields', 'https://www.youtube.com/watch?v=Mtjatz9r-Vc'),
+(,4 , 'DBD281' 'Creating databases in SQL server', 'https://www.youtube.com/watch?v=jEBx4z3AxG4'),
+(5, 'MAT281', 'Mathematics', 'https://www.youtube.com/watch?v=yRwQ7A6jVLk'),
+(6, 'LRP282', ''),
+(7'SOT281', ),
+(8, 'STA281', 'Statistics', 'https://www.youtube.com/watch?v=GUQJ7zMoSCM'),
 ('INF281',9, 'Information systems', 'https://www.youtube.com/watch?v=Qujsd4vkqFI&t=3s'),
 ('PMM281',10, ''),
 ('SAD281',11, ),

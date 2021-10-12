@@ -87,15 +87,15 @@ namespace PRG282_Milestone2.DataLayer
                 return modules;
             }
 
-            string Query = "SELECT * FROM ModuleDetails";
+            string Query = "Select * From ModuleDetails";
             SqlCommand cmd = new SqlCommand(Query, connection);
-            SqlDataReader reader = cmd.ExecuteReader();
+            SqlDataReader Reader = cmd.ExecuteReader();
 
-            if (reader.HasRows)
+            if (Reader.HasRows)
             {
-                while (reader.Read())
+                while (Reader.Read())
                 {
-                    modules.Add(new Module(int.Parse(reader[0].ToString()), reader[1].ToString(), reader[2].ToString(), reader[3].ToString()));
+                    modules.Add(new Module(int.Parse(Reader[0].ToString()), Reader[1].ToString(), Reader[2].ToString(), Reader[3].ToString()));
                 }
             }
             connection.Close();
@@ -134,35 +134,43 @@ namespace PRG282_Milestone2.DataLayer
             }
         }
 
-        public string AddModules(string MCode, string MName, string MDescription, string Link)
+        public string AddModules(int MCode, string MName, string MDescription, string Link)
         {
-            try
+            SqlConnection connect = new SqlConnection(conn);
+            connect.Open();
+            string Query = $"Insert Into ModuleDetails(Module_Codes, Module_Name, Module_Description, Module_Link) Values('{MCode}', '{MName}', '{MDescription}', '{Link}')";
+            SqlCommand Command = new SqlCommand(Query, connect);
+            int RowsChanges = Command.ExecuteNonQuery();
+            if (MCode > 0 && MName != "" && MDescription != "" && Link != "")
             {
-                SqlConnection connection = new SqlConnection(conn);
-                connection.Open();
-                string Query = $"INSERT INTO ModuleDetails(Module_Code, Module_Name, Module_Description, Module_Description, Module_Link) VALUES({MName}, '{MName}', '{MDescription}', '{Link}')";
-                SqlCommand cmd = new SqlCommand(Query, connection);
-                cmd.ExecuteNonQuery();
-                connection.Close();
-                return "Registration was successful.";
+                if (RowsChanges > 0)
+                {
+                    return "New Module " + MName + " was added.";
+                }
+                else
+                {
+                    return "Inserting " + MName + " failed.";
+                }
             }
-            catch (Exception)
+            else
             {
-                return "Registration failed.";
+                connect.Close();
+                return "Please enter all the required data.";
             }
         }
+        
 
         public string DeleteModules(int MCode)
         {
             SqlConnection connect = new SqlConnection(conn);
             connect.Open();
-            string Query = "Delete from ModuleDetails Where Module_Code = '" + MCode + "'";
+            string Query = "Delete from ModuleDetails Where Module_Codes = '" + MCode + "'";
             SqlCommand Command = new SqlCommand(Query, connect);
             int Rows = Command.ExecuteNonQuery();
 
             if (MCode >= 0)
             {
-                if (Rows > 0)
+                if (Rows >= 0)
                 {
                     connect.Close();
                     return "Deleted details of module with the code: " + MCode + "'.";
@@ -191,7 +199,7 @@ namespace PRG282_Milestone2.DataLayer
             {
                 SqlCommand Command = new SqlCommand(Query, connect);
                 int Rows = Command.ExecuteNonQuery();
-                if (Rows > 0)
+                if (Rows >= 0)
                 {
                     connect.Close();
                     return "Deleted details of Student with the number: " + StudentNumber + ".";
