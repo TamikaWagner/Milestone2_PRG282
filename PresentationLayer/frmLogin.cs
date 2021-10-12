@@ -76,5 +76,10 @@ namespace PRG282_Milestone2.PresentationLayer
         {
 
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -44,9 +44,9 @@ namespace PRG282_Milestone2.PresentationLayer
             // 
             // brnRegister
             // 
-            this.brnRegister.BackColor = System.Drawing.Color.White;
+            this.brnRegister.BackColor = System.Drawing.Color.LightGray;
             this.brnRegister.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.brnRegister.Location = new System.Drawing.Point(73, 269);
+            this.brnRegister.Location = new System.Drawing.Point(73, 270);
             this.brnRegister.Name = "brnRegister";
             this.brnRegister.Size = new System.Drawing.Size(132, 28);
             this.brnRegister.TabIndex = 20;
@@ -80,9 +80,9 @@ namespace PRG282_Milestone2.PresentationLayer
             // 
             // BtnLogin
             // 
-            this.BtnLogin.BackColor = System.Drawing.Color.White;
-            this.BtnLogin.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnLogin.Location = new System.Drawing.Point(98, 225);
+            this.BtnLogin.BackColor = System.Drawing.Color.Gainsboro;
+            this.BtnLogin.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnLogin.Location = new System.Drawing.Point(98, 226);
             this.BtnLogin.Name = "BtnLogin";
             this.BtnLogin.Size = new System.Drawing.Size(84, 28);
             this.BtnLogin.TabIndex = 17;
@@ -109,7 +109,7 @@ namespace PRG282_Milestone2.PresentationLayer
             // 
             // btnExit
             // 
-            this.btnExit.BackColor = System.Drawing.Color.White;
+            this.btnExit.BackColor = System.Drawing.Color.Gainsboro;
             this.btnExit.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.Location = new System.Drawing.Point(98, 314);
             this.btnExit.Name = "btnExit";
@@ -122,14 +122,15 @@ namespace PRG282_Milestone2.PresentationLayer
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.GhostWhite;
-            this.label1.Location = new System.Drawing.Point(100, 43);
+            this.label1.Location = new System.Drawing.Point(73, 46);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 30);
+            this.label1.Size = new System.Drawing.Size(132, 30);
             this.label1.TabIndex = 22;
             this.label1.Text = "Login";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel1
             // 
