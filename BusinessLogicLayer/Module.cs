@@ -8,11 +8,11 @@ namespace PRG282_Milestone2.BusinessLogicLayer
 {
     class Module
     {
-        string moduleID;
+        int moduleID;
         string moduleName, moduleDescription, moduleLink;
         public Module() { }
 
-        public Module(string moduleID, string moduleName, string moduleDescription, string moduleLink)
+        public Module(int moduleID, string moduleName, string moduleDescription, string moduleLink)
         {
             this.Module_ID = moduleID;
             this.Module_Name = moduleName;
@@ -20,7 +20,7 @@ namespace PRG282_Milestone2.BusinessLogicLayer
             this.Module_Link = moduleLink;
            
         }
-        public string Module_ID { get => moduleID; set => moduleID = value; }
+        public int Module_ID { get => moduleID; set => moduleID = value; }
         public string Module_Name { get => moduleName; set => moduleName = value; }
         public string Module_Description { get => moduleDescription; set => moduleDescription = value; }
         public string Module_Link { get => moduleLink; set => moduleLink = value; }

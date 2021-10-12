@@ -51,19 +51,26 @@ namespace PRG282_Milestone2.DataLayer
 
         public string RegisterStudent(int SNumber, string SName, string Gender, string DOB, string Phone, string SAddress, int MCode)
         {
-            try
+            SqlConnection connect = new SqlConnection(conn);
+            connect.Open();
+            string Query = $"Insert Into StudentDetails(Student_Number, Student_Name, Gender, Date_Of_Birth, Phone , Student_Address, Module_Codes) Values('{SNumber}', '{SName}', '{Gender}', '{DOB}', '{Phone}', '{SAddress}', '{MCode}')";
+            if (SNumber > 0 && SName != "" && Gender != "" && DOB != "" && Phone != "" && SAddress != "" && MCode > 0)
             {
-                SqlConnection connection = new SqlConnection(conn);
-                connection.Open();
-                string Query = $"INSERT INTO StudentDetails(Student_Number, Student_Name, Gender, Date_Of_Birth, Phone, Student_Address, Module_Codes) VALUES('{SNumber}', '{SName}', '{Gender}', '{DOB}', '{Phone}', '{SAddress}', '{MCode}')";
-                SqlCommand cmd = new SqlCommand(Query, connection);
-                cmd.ExecuteNonQuery();
-                connection.Close();
-                return "Registration was successful.";
+                SqlCommand Command = new SqlCommand(Query, connect);
+                int Changes = Command.ExecuteNonQuery();
+                if (Changes > 0)
+                {
+                    return "New Student was added.";
+                }
+                else
+                {
+                    return "Insertion Failed.";
+                }
             }
-            catch (Exception)
+            else
             {
-                return "Registration failed.";
+                connect.Close();
+                return "Please enter all the required data.";
             }
         }
 
@@ -88,7 +95,7 @@ namespace PRG282_Milestone2.DataLayer
             {
                 while (reader.Read())
                 {
-                    modules.Add(new Module(reader.GetString(0), reader.GetString(1), reader.GetString(2), reader.GetString(3)));
+                    modules.Add(new Module(int.Parse(reader[0].ToString()), reader[1].ToString(), reader[2].ToString(), reader[3].ToString()));
                 }
             }
             connection.Close();
@@ -103,7 +110,7 @@ namespace PRG282_Milestone2.DataLayer
 
             if (MCode != "")
             {
-                if (MName != "" || MDescription != "" || Link != "")
+                if (MName != "" && MDescription != "" && Link != "")
                 {
                     SqlCommand Command = new SqlCommand(Query, connect);
                     int Row = Command.ExecuteNonQuery();
@@ -179,15 +186,15 @@ namespace PRG282_Milestone2.DataLayer
             SqlConnection connect = new SqlConnection(conn);
             connect.Open();
             string Query = "Delete from StudentDetails Where Student_Number = '" + StudentNumber + "'";
-            SqlCommand Command = new SqlCommand(Query, connect);
-            int Rows = Command.ExecuteNonQuery();
 
-            if (StudentNumber >= 0)
+            if (StudentNumber > 0)
             {
+                SqlCommand Command = new SqlCommand(Query, connect);
+                int Rows = Command.ExecuteNonQuery();
                 if (Rows > 0)
                 {
                     connect.Close();
-                    return "Deleted details of Student with the number: " + StudentNumber + "'.";
+                    return "Deleted details of Student with the number: " + StudentNumber + ".";
                 }
                 else
                 {
@@ -227,11 +234,11 @@ namespace PRG282_Milestone2.DataLayer
         {
             SqlConnection connect = new SqlConnection(conn);
             connect.Open();
-            string Query = $"Update StudentDetails set Student_Number = '" + SNumber + "', Student_Name = '" + SName + "', Gender = '" + Gender + "', Date_Of_Birth = '" + DOB + "', Phone = '" + Phone + "', Student_Address = '" + SAddress + "', Module_Code = '" + MCode + "' Where Student_Number = '" + SNumber + "'";
+            string Query = $"Update StudentDetails set Student_Number = '" + SNumber + "', Student_Name = '" + SName + "', Gender = '" + Gender + "', Date_Of_Birth = '" + DOB + "', Phone = '" + Phone + "', Student_Address = '" + SAddress + "', Module_Codes = '" + MCode + "' Where Student_Number = '" + SNumber + "'";
 
             if (SNumber > 0 )
             {
-                if (SName != "" || Gender != "" || DOB != "" || Phone != "" || SAddress != "" || MCode > 0)
+                if (SName != "" && Gender != "" && DOB != "" && Phone != "" && SAddress != "" && MCode > 0)
                 {
                     SqlCommand Command = new SqlCommand(Query, connect);
                     int Row = Command.ExecuteNonQuery();
@@ -241,7 +248,7 @@ namespace PRG282_Milestone2.DataLayer
                     }
                     else
                     {
-                        return "Student with number " + SNumber + " failed to be updated.";
+                        return "Student with number " + SNumber + " Does not exist.";
                     }
                 }
                 else

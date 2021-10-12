@@ -75,6 +75,7 @@ namespace PRG282_Milestone2.PresentationLayer
             this.dgvStudents.RowTemplate.Height = 40;
             this.dgvStudents.Size = new System.Drawing.Size(587, 354);
             this.dgvStudents.TabIndex = 18;
+            this.dgvStudents.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStudents_CellContentClick_1);
             // 
             // txtSearch
             // 
@@ -190,7 +191,7 @@ namespace PRG282_Milestone2.PresentationLayer
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btnDel);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmMenu";
             this.Text = "Student Details";
             this.Load += new System.EventHandler(this.frmMenu_Load);

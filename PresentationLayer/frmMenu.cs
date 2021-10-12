@@ -95,7 +95,7 @@ namespace PRG282_Milestone2.PresentationLayer
             }
             catch (Exception)
             {
-                MessageBox.Show("Somthing went wrong trying to retrieve Student information.");
+                MessageBox.Show("Something went wrong trying to retrieve Student information.");
             }
         }
 
@@ -123,7 +123,7 @@ namespace PRG282_Milestone2.PresentationLayer
             }
             catch (Exception)
             {
-                MessageBox.Show("Somthing went wrong trying to search for Student information.");
+                MessageBox.Show("Something went wrong trying to search for Student information.");
             }
         }
 
@@ -137,6 +137,15 @@ namespace PRG282_Milestone2.PresentationLayer
             this.Hide();
             frmRegisterStudent register = new frmRegisterStudent();
             register.Show();
+        }
+
+        private void dgvStudents_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+             if (e.RowIndex >= 0)
+                {
+                    DataGridViewRow Rows = this.dgvStudents.Rows[e.RowIndex];
+                    txtSearch.Text = Rows.Cells["Studentnumber"].Value.ToString();
+                }
         }
     }
 }
