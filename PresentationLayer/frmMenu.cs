@@ -101,9 +101,9 @@ namespace PRG282_Milestone2.PresentationLayer
 
         private void btnDel_Click(object sender, EventArgs e)
         {
-            int StudentID = int.Parse(txtSearch.Text);
             try
             {
+                int StudentID = int.Parse(txtSearch.Text);
                 Handler.DeleteStudent(StudentID);
                 MessageBox.Show(Handler.DeleteStudent(StudentID));
             }
@@ -115,9 +115,9 @@ namespace PRG282_Milestone2.PresentationLayer
 
         private void btnSearch_Click_1(object sender, EventArgs e)
         {
-            int IDSearch = int.Parse(txtSearch.Text);
             try
             {
+                int IDSearch = int.Parse(txtSearch.Text);
                 source.DataSource = null;
                 source.DataSource = Handler.SearchStudent(IDSearch);
             }

@@ -49,13 +49,13 @@ namespace PRG282_Milestone2.DataLayer
             return AllClients;
         }
 
-        public string RegisterStudent(int SNumber, string SName, string Gender, int DOB, int Phone, string SAddress, string MCode)
+        public string RegisterStudent(int SNumber, string SName, string Gender, string DOB, string Phone, string SAddress, int MCode)
         {
             try
             {
                 SqlConnection connection = new SqlConnection(conn);
                 connection.Open();
-                string Query = $"INSERT INTO StudentDetails(Student_Number, Student_Name, Gender, Date_Of_Birth, Phone, Student_Address, Module_Codes) VALUES({SNumber}, '{SName}', '{Gender}', '{DOB}', '{Phone}', '{SAddress}', '{MCode}')";
+                string Query = $"INSERT INTO StudentDetails(Student_Number, Student_Name, Gender, Date_Of_Birth, Phone, Student_Address, Module_Codes) VALUES('{SNumber}', '{SName}', '{Gender}', '{DOB}', '{Phone}', '{SAddress}', '{MCode}')";
                 SqlCommand cmd = new SqlCommand(Query, connection);
                 cmd.ExecuteNonQuery();
                 connection.Close();
@@ -223,7 +223,7 @@ namespace PRG282_Milestone2.DataLayer
             return Found;
         }
 
-        public string UpdateStudent(int SNumber, string SName, string Gender, int DOB, int Phone, string SAddress, string MCode)
+        public string UpdateStudent(int SNumber, string SName, string Gender, string DOB, string Phone, string SAddress, int MCode)
         {
             SqlConnection connect = new SqlConnection(conn);
             connect.Open();
@@ -231,7 +231,7 @@ namespace PRG282_Milestone2.DataLayer
 
             if (SNumber > 0 )
             {
-                if (SName != "" || Gender != "" || DOB > 0 || Phone > 0 || SAddress != "" || MCode != "")
+                if (SName != "" || Gender != "" || DOB != "" || Phone != "" || SAddress != "" || MCode > 0)
                 {
                     SqlCommand Command = new SqlCommand(Query, connect);
                     int Row = Command.ExecuteNonQuery();

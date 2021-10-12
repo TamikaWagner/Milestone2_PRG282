@@ -28,10 +28,10 @@ namespace PRG282_Milestone2.PresentationLayer
             int SNumber = int.Parse(txtSNumber.Text);
             string SName = txtSName.Text;
             string Gender = "";
-            int DOB = int.Parse(dtpDOB.Text);
-            int Phone = int.Parse(txtPhone.Text);
+            string DOB = dtpDOB.Text;
+            string Phone = txtPhone.Text;
             string SAddress = txtAddress.Text;
-            string MCodes = txtCodes.Text;
+            int MCodes = int.Parse(txtCodes.Text);
 
             if (rbF.Checked == true)
             {
@@ -68,10 +68,10 @@ namespace PRG282_Milestone2.PresentationLayer
             int SNumber = int.Parse(txtSNumber.Text);
             string SName = txtSName.Text;
             string Gender = "";
-            int DOB = int.Parse(dtpDOB.Text);
-            int Phone = int.Parse(txtPhone.Text);
+            string DOB = dtpDOB.Text;
+            string Phone = txtPhone.Text;
             string SAddress = txtAddress.Text;
-            string MCodes = txtCodes.Text;
+            int MCodes = int.Parse(txtCodes.Text);
 
             if (rbF.Checked == true)
             {
