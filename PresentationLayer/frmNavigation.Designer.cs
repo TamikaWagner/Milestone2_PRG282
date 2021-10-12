@@ -29,7 +29,6 @@ namespace PRG282_Milestone2.PresentationLayer
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNavigation));
             this.btnRegister = new System.Windows.Forms.Button();
             this.btnModules = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
@@ -38,9 +37,10 @@ namespace PRG282_Milestone2.PresentationLayer
             // btnRegister
             // 
             this.btnRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegister.Location = new System.Drawing.Point(53, 29);
+            this.btnRegister.Location = new System.Drawing.Point(58, 22);
+            this.btnRegister.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(202, 37);
+            this.btnRegister.Size = new System.Drawing.Size(269, 46);
             this.btnRegister.TabIndex = 1;
             this.btnRegister.Text = "View Student Details";
             this.btnRegister.UseVisualStyleBackColor = true;
@@ -49,9 +49,10 @@ namespace PRG282_Milestone2.PresentationLayer
             // btnModules
             // 
             this.btnModules.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModules.Location = new System.Drawing.Point(53, 73);
+            this.btnModules.Location = new System.Drawing.Point(58, 76);
+            this.btnModules.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnModules.Name = "btnModules";
-            this.btnModules.Size = new System.Drawing.Size(202, 37);
+            this.btnModules.Size = new System.Drawing.Size(269, 46);
             this.btnModules.TabIndex = 2;
             this.btnModules.Text = "View Module Details";
             this.btnModules.UseVisualStyleBackColor = true;
@@ -60,9 +61,10 @@ namespace PRG282_Milestone2.PresentationLayer
             // btnExit
             // 
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.Location = new System.Drawing.Point(127, 117);
+            this.btnExit.Location = new System.Drawing.Point(157, 130);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(52, 28);
+            this.btnExit.Size = new System.Drawing.Size(69, 34);
             this.btnExit.TabIndex = 3;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
@@ -70,13 +72,13 @@ namespace PRG282_Milestone2.PresentationLayer
             // 
             // frmNavigation
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(307, 176);
+            this.ClientSize = new System.Drawing.Size(385, 170);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnModules);
             this.Controls.Add(this.btnRegister);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmNavigation";
             this.Text = "frmNavigation";
             this.Load += new System.EventHandler(this.frmNavigation_Load);
