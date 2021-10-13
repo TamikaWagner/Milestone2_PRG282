@@ -12,7 +12,8 @@ using PRG282_Milestone2.BusinessLogicLayer;
 using PRG282_Milestone2.DataLayer;
 using System.IO;
 using System.Data.SqlClient;
-
+using System.Drawing.Imaging;
+using Microsoft.VisualBasic;
 namespace PRG282_Milestone2.PresentationLayer
 {
     public partial class frmRegisterStudent : Form
@@ -22,6 +23,12 @@ namespace PRG282_Milestone2.PresentationLayer
         {
             InitializeComponent();
         }
+        SqlConnection con;
+        SqlCommand cmd;
+        SqlDataAdapter adapter;
+        DataSet ds; int rno = 0;
+        MemoryStream ms;
+        byte[] photo_array;
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
@@ -126,7 +133,15 @@ namespace PRG282_Milestone2.PresentationLayer
 
         private void pb1_Click(object sender, EventArgs e)
         {
-             
+            if (pb1.Image != null)
+            { 
+                ms = new MemoryStream();
+                pb1.Image.Save(ms, ImageFormat.Jpeg);
+                byte[] photo_aray = new byte[ms.Length];
+                ms.Position = 0;
+                ms.Read(photo_aray, 0, photo_aray.Length);
+                cmd.Parameters.AddWithValue("@photo", photo_aray);
+            }
         }
     }
 }
