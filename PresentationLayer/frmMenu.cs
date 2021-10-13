@@ -31,6 +31,8 @@ namespace PRG282_Milestone2.PresentationLayer
         private void frmMenu_Load(object sender, EventArgs e)
         {
             txtSearch.Visible = false;
+            btnUp.Enabled = false;
+            btnRegister.Enabled = false;
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -146,6 +148,11 @@ namespace PRG282_Milestone2.PresentationLayer
                     DataGridViewRow Rows = this.dgvStudents.Rows[e.RowIndex];
                     txtSearch.Text = Rows.Cells["Studentnumber"].Value.ToString();
                 }
+        }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
