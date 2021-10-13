@@ -85,7 +85,7 @@ namespace PRG282_Milestone2.PresentationLayer
 
         private void btnRead_Click(object sender, EventArgs e)
         {
-            pnlStudents.Visible = true;
+            btnRegister.Visible = true;
             try
             {
                 source.DataSource = StudentDetails;
@@ -95,6 +95,7 @@ namespace PRG282_Milestone2.PresentationLayer
                 lblDel.Visible = true;
                 btnSearch.Visible = true;
                 source.DataSource = StudentDetails;
+                label11.Visible = true;
             }
             catch (Exception)
             {
@@ -148,10 +149,46 @@ namespace PRG282_Milestone2.PresentationLayer
                 {
                     DataGridViewRow Rows = this.dgvStudents.Rows[e.RowIndex];
                     txtSearch.Text = Rows.Cells["Studentnumber"].Value.ToString();
+                    txtSNumber.Text = Rows.Cells["Studentnumber"].Value.ToString();
+                    txtSName.Text = Rows.Cells["fullname"].Value.ToString();
+                    dtpDOB.Text = Rows.Cells["dob"].Value.ToString();
+                    txtPhone.Text = Rows.Cells["phone"].Value.ToString();
+                    txtAddress.Text = Rows.Cells["address"].Value.ToString();
+                    txtCodes.Text = Rows.Cells["mcode"].Value.ToString();
+
+                    if (Rows.Cells["gender"].Value.ToString() == "Male")
+                    {
+                         rbM.Checked = true;
+                    }
+                    else if (Rows.Cells["gender"].Value.ToString() == "Female")
+                    {
+                        rbF.Checked = true;
+                    }
+                    else
+                    {
+                        rbOther.Checked = true;
+                    }
                 }
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnUp_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnMenu_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmNavigation navi = new frmNavigation();
+            navi.Show();
+        }
+
+        private void btnRegister_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -190,9 +227,10 @@ namespace PRG282_Milestone2.PresentationLayer
             {
                 MessageBox.Show("Something went wrong trying to register Student.");
             }
+
         }
 
-        private void btnUp_Click(object sender, EventArgs e)
+        private void btnUp_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -234,11 +272,87 @@ namespace PRG282_Milestone2.PresentationLayer
             }
         }
 
-        private void btnMenu_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            frmNavigation navi = new frmNavigation();
-            navi.Show();
+            try
+            {
+                int SNumber = int.Parse(txtSNumber.Text);
+                string SName = txtSName.Text;
+                string Gender = "";
+                string DOB = dtpDOB.Text;
+                string Phone = txtPhone.Text;
+                string SAddress = txtAddress.Text;
+                int MCodes = int.Parse(txtCodes.Text);
+
+                if (rbF.Checked == true)
+                {
+                    Gender = "Female";
+                }
+                else if (rbM.Checked == true)
+                {
+                    Gender = "Male";
+                }
+                else
+                {
+                    Gender = "Other";
+                }
+
+                MessageBox.Show(Handler.RegisterStudent(SNumber, SName, Gender, DOB, Phone, SAddress, MCodes));
+
+                if (Handler.RegisterStudent(SNumber, SName, Gender, DOB, Phone, SAddress, MCodes) == "New Student was added.")
+                {
+                    Handler.RegisterStudent(SNumber, SName, Gender, DOB, Phone, SAddress, MCodes);
+                    this.Hide();
+                    frmMenu M = new frmMenu();
+                    M.Show();
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Something went wrong trying to register Student.");
+            }
+        }
+
+        private void btnUp_Click_2(object sender, EventArgs e)
+        {
+            try
+            {
+                int SNumber = int.Parse(txtSNumber.Text);
+                string SName = txtSName.Text;
+                string Gender = "";
+                string DOB = dtpDOB.Text.ToString();
+                string Phone = txtPhone.Text;
+                string SAddress = txtAddress.Text;
+                int MCodes = int.Parse(txtCodes.Text);
+
+                if (rbF.Checked == true)
+                {
+                    Gender = "Female";
+                }
+                else if (rbM.Checked == true)
+                {
+                    Gender = "Male";
+                }
+                else
+                {
+                    Gender = "Other";
+                }
+
+                MessageBox.Show(Handler.UpdateStudent(SNumber, SName, Gender, DOB, Phone, SAddress, MCodes));
+
+                if (Handler.UpdateStudent(SNumber, SName, Gender, DOB, Phone, SAddress, MCodes) == "Student with number " + SNumber + " was updated.")
+                {
+                    frmRegisterStudent R = new frmRegisterStudent();
+                    R.Hide();
+                    frmMenu M = new frmMenu();
+                    M.Show();
+                    MessageBox.Show(Handler.RegisterStudent(SNumber, SName, Gender, DOB, Phone, SAddress, MCodes));
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Something went wrong trying to register Student.");
+            }
         }
     }
 }

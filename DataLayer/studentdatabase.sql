@@ -91,11 +91,10 @@ VALUES (5000,'Kieran Mckenzie','Female','1999-01-20','(790) 247-3753','Ap #729-4
 
 Use StudentInfo
 go
-
 drop table ModuleDetails
  go
 
-
+ use StudentInfo
  create table ModuleDetails
 (
   Module_Codes int,
