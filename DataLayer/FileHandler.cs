@@ -1,22 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.IO;
-using System.Data.SqlClient;
-using PRG282_Milestone2.PresentationLayer;
-using PRG282_Milestone2.BusinessLogicLayer;
-using PRG282_Milestone2.DataLayer;
+using System.Text;
+using System.Windows.Forms;
 
 namespace PRG282_Milestone2.DataLayer
 {
-  
-  internal class FileHandler
+
+    internal class FileHandler
     {
         public FileHandler()
         {

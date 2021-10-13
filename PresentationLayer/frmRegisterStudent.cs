@@ -1,19 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using PRG282_Milestone2.DataLayer;
+using System;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using PRG282_Milestone2.PresentationLayer;
-using PRG282_Milestone2.BusinessLogicLayer;
-using PRG282_Milestone2.DataLayer;
 using System.IO;
-using System.Data.SqlClient;
-using System.Drawing.Imaging;
-using Microsoft.VisualBasic;
+using System.Windows.Forms;
 namespace PRG282_Milestone2.PresentationLayer
 {
     public partial class frmRegisterStudent : Form
@@ -69,7 +58,7 @@ namespace PRG282_Milestone2.PresentationLayer
 
         private void btnUp_Click(object sender, EventArgs e)
         {
-            
+
             try
             {
                 int SNumber = int.Parse(txtSNumber.Text);
@@ -122,7 +111,7 @@ namespace PRG282_Milestone2.PresentationLayer
 
         private void btnMenu_Click(object sender, EventArgs e)
         {
-            this.Hide(); 
+            this.Hide();
             frmNavigation navi = new frmNavigation();
             navi.Show();
         }
@@ -135,7 +124,7 @@ namespace PRG282_Milestone2.PresentationLayer
                 bytes = operations.newImage();
                 MemoryStream memoryStream = new MemoryStream(bytes);
                 Image image = Image.FromStream(memoryStream);
-                pb1.Image = image; 
+                pb1.Image = image;
             }
             catch (Exception ex)
             {

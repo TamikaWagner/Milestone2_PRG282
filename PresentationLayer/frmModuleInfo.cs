@@ -1,15 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using PRG282_Milestone2.PresentationLayer;
-using PRG282_Milestone2.BusinessLogicLayer;
+﻿using PRG282_Milestone2.BusinessLogicLayer;
 using PRG282_Milestone2.DataLayer;
+using System;
+using System.Collections.Generic;
+using System.Windows.Forms;
 
 namespace PRG282_Milestone2.PresentationLayer
 {
@@ -34,17 +27,17 @@ namespace PRG282_Milestone2.PresentationLayer
         {
             //try
             //{
-                int MNumber = int.Parse(txtMNumber.Text);
-                string MName = txtMName.Text;
-                string MDesc = txtMDesc.Text;
-                string MLink = txtMLink.Text;
-                Handler.AddModules(MNumber, MName, MDesc, MLink);
-                MessageBox.Show(Handler.AddModules(MNumber, MName, MDesc, MLink));
+            int MNumber = int.Parse(txtMNumber.Text);
+            string MName = txtMName.Text;
+            string MDesc = txtMDesc.Text;
+            string MLink = txtMLink.Text;
+            Handler.AddModules(MNumber, MName, MDesc, MLink);
+            MessageBox.Show(Handler.AddModules(MNumber, MName, MDesc, MLink));
             //}
             //catch (Exception)
             //{
-                //string MName = txtMName.Text;
-                //MessageBox.Show($"Smoething went wrong trying to add {MName} as a new Module.");
+            //string MName = txtMName.Text;
+            //MessageBox.Show($"Smoething went wrong trying to add {MName} as a new Module.");
             //}
         }
 
@@ -80,7 +73,7 @@ namespace PRG282_Milestone2.PresentationLayer
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void btnClose_Click_1(object sender, EventArgs e)
@@ -122,7 +115,7 @@ namespace PRG282_Milestone2.PresentationLayer
                 int SModule = int.Parse(txtSearch.Text);
                 Source.DataSource = null;
                 Source.DataSource = Handler.SearchModules(SModule);
-                
+
             }
             catch (Exception)
             {

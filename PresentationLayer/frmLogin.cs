@@ -1,17 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Data.SqlClient;
-using System.Threading;
-using PRG282_Milestone2.PresentationLayer;
-using PRG282_Milestone2.BusinessLogicLayer;
+﻿using PRG282_Milestone2.BusinessLogicLayer;
 using PRG282_Milestone2.DataLayer;
+using System;
+using System.Collections.Generic;
+using System.Windows.Forms;
 
 namespace PRG282_Milestone2.PresentationLayer
 {
@@ -25,10 +16,10 @@ namespace PRG282_Milestone2.PresentationLayer
         public frmLogin()
         {
             InitializeComponent();
-            
+
 
         }
-       
+
         private void btnExit_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Are you sure you want to exit?", "Exit", MessageBoxButtons.OKCancel) == DialogResult.OK)
@@ -39,13 +30,13 @@ namespace PRG282_Milestone2.PresentationLayer
 
         private void BtnLogin_Click(object sender, EventArgs e)
         {
-            cl.checkLogin(txtusername.Text, txtpassword.Text , usersInSystem);
-            
+            cl.checkLogin(txtusername.Text, txtpassword.Text, usersInSystem);
+
         }
 
         private void brnRegister_Click(object sender, EventArgs e)
         {
-             this.Hide();
+            this.Hide();
             frmRegistration registration = new frmRegistration();
             registration.ShowDialog();
         }
@@ -67,7 +58,7 @@ namespace PRG282_Milestone2.PresentationLayer
 
         private void image1ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

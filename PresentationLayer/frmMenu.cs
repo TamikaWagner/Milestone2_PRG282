@@ -1,16 +1,7 @@
-﻿using System;
+﻿using PRG282_Milestone2.DataLayer;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
-using PRG282_Milestone2.PresentationLayer;
-using PRG282_Milestone2.BusinessLogicLayer;
-using PRG282_Milestone2.DataLayer;
 
 namespace PRG282_Milestone2.PresentationLayer
 {
@@ -144,40 +135,40 @@ namespace PRG282_Milestone2.PresentationLayer
 
         private void dgvStudents_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-             if (e.RowIndex >= 0)
-                {
-                    DataGridViewRow Rows = this.dgvStudents.Rows[e.RowIndex];
-                    txtSearch.Text = Rows.Cells["Studentnumber"].Value.ToString();
-                    txtSNumber.Text = Rows.Cells["Studentnumber"].Value.ToString();
-                    txtSName.Text = Rows.Cells["fullname"].Value.ToString();
-                    dtpDOB.Text = Rows.Cells["dob"].Value.ToString();
-                    txtPhone.Text = Rows.Cells["phone"].Value.ToString();
-                    txtAddress.Text = Rows.Cells["address"].Value.ToString();
-                    txtCodes.Text = Rows.Cells["mcode"].Value.ToString();
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow Rows = this.dgvStudents.Rows[e.RowIndex];
+                txtSearch.Text = Rows.Cells["Studentnumber"].Value.ToString();
+                txtSNumber.Text = Rows.Cells["Studentnumber"].Value.ToString();
+                txtSName.Text = Rows.Cells["fullname"].Value.ToString();
+                dtpDOB.Text = Rows.Cells["dob"].Value.ToString();
+                txtPhone.Text = Rows.Cells["phone"].Value.ToString();
+                txtAddress.Text = Rows.Cells["address"].Value.ToString();
+                txtCodes.Text = Rows.Cells["mcode"].Value.ToString();
 
-                    if (Rows.Cells["gender"].Value.ToString() == "Male")
-                    {
-                         rbM.Checked = true;
-                    }
-                    else if (Rows.Cells["gender"].Value.ToString() == "Female")
-                    {
-                        rbF.Checked = true;
-                    }
-                    else
-                    {
-                        rbOther.Checked = true;
-                    }
+                if (Rows.Cells["gender"].Value.ToString() == "Male")
+                {
+                    rbM.Checked = true;
                 }
+                else if (Rows.Cells["gender"].Value.ToString() == "Female")
+                {
+                    rbF.Checked = true;
+                }
+                else
+                {
+                    rbOther.Checked = true;
+                }
+            }
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void btnUp_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void btnMenu_Click(object sender, EventArgs e)

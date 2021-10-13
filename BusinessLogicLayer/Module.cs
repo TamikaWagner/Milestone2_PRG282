@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PRG282_Milestone2.BusinessLogicLayer
+﻿namespace PRG282_Milestone2.BusinessLogicLayer
 {
     class Module
     {
@@ -13,7 +7,7 @@ namespace PRG282_Milestone2.BusinessLogicLayer
         public string moduleDescription;
         public string moduleLink;
         public Module() { }
-        
+
         public int Module_ID { get => moduleID; set => moduleID = value; }
         public string Module_Name { get => moduleName; set => moduleName = value; }
         public string Module_Description { get => moduleDescription; set => moduleDescription = value; }

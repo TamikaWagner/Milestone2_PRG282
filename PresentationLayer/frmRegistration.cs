@@ -1,17 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Data.SqlClient;
-using System.Threading;
-using PRG282_Milestone2.PresentationLayer;
-using PRG282_Milestone2.BusinessLogicLayer;
+﻿using PRG282_Milestone2.BusinessLogicLayer;
 using PRG282_Milestone2.DataLayer;
+using System;
+using System.Collections.Generic;
+using System.Windows.Forms;
 
 namespace PRG282_Milestone2.PresentationLayer
 {
@@ -51,14 +42,14 @@ namespace PRG282_Milestone2.PresentationLayer
 
         private void BtnRegister_Click(object sender, EventArgs e)
         {
-           
-                string newUser = ru.addUser(txtusername.Text, txtpassword.Text);
-                exsistingUsers.Add(newUser);
-                db.addUser(exsistingUsers);
-                clearFields();
-                showLogin();
-                
-         
+
+            string newUser = ru.addUser(txtusername.Text, txtpassword.Text);
+            exsistingUsers.Add(newUser);
+            db.addUser(exsistingUsers);
+            clearFields();
+            showLogin();
+
+
         }
 
 
@@ -66,7 +57,7 @@ namespace PRG282_Milestone2.PresentationLayer
         {
             txtusername.Clear();
             txtpassword.Clear();
-           
+
         }
 
         private void frmRegistration_Load_1(object sender, EventArgs e)

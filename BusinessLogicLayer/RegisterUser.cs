@@ -1,14 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using PRG282_Milestone2.PresentationLayer;
-using PRG282_Milestone2.BusinessLogicLayer;
-using PRG282_Milestone2.DataLayer;
-using System.IO;
-using System.Data;
-using System.Data.SqlClient;
+﻿using PRG282_Milestone2.DataLayer;
 
 namespace PRG282_Milestone2.BusinessLogicLayer
 {

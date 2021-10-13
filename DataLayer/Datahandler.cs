@@ -1,15 +1,10 @@
-﻿using System;
+﻿using PRG282_Milestone2.BusinessLogicLayer;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data.SqlClient;
 using System.Data;
-using System.Windows.Forms;
+using System.Data.SqlClient;
 using System.IO;
-using PRG282_Milestone2.PresentationLayer;
-using PRG282_Milestone2.BusinessLogicLayer;
-using PRG282_Milestone2.DataLayer;
+using System.Windows.Forms;
 
 
 namespace PRG282_Milestone2.DataLayer
@@ -158,7 +153,7 @@ namespace PRG282_Milestone2.DataLayer
                 return "Please enter all the required data.";
             }
         }
-        
+
 
         public string DeleteModules(int MCode)
         {
@@ -188,7 +183,7 @@ namespace PRG282_Milestone2.DataLayer
             }
         }
 
-        public List<Module>SearchModules(int MCode)
+        public List<Module> SearchModules(int MCode)
         {
             List<Module> FoundList = new List<Module>();
             SqlConnection connect = new SqlConnection(conn);
@@ -265,7 +260,7 @@ namespace PRG282_Milestone2.DataLayer
             connect.Open();
             string Query = $"Update StudentDetails set Student_Number = '" + SNumber + "', Student_Name = '" + SName + "', Gender = '" + Gender + "', Date_Of_Birth = '" + DOB + "', Phone = '" + Phone + "', Student_Address = '" + SAddress + "', Module_Codes = '" + MCode + "' Where Student_Number = '" + SNumber + "'";
 
-            if (SNumber > 0 )
+            if (SNumber > 0)
             {
                 if (SName != "" && Gender != "" && DOB != "" && Phone != "" && SAddress != "" && MCode > 0)
                 {

@@ -1,22 +1,13 @@
-﻿using System;
+﻿using PRG282_Milestone2.DataLayer;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Data.SqlClient;
-using System.Threading;
-using PRG282_Milestone2.PresentationLayer;
-using PRG282_Milestone2.BusinessLogicLayer;
-using PRG282_Milestone2.DataLayer;
 
 namespace PRG282_Milestone2.BusinessLogicLayer
 {
-  
-    
+
+
     public delegate void loginDelegate();
 
     internal class CheckLogin
