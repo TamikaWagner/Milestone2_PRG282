@@ -64,11 +64,12 @@ namespace PRG282_Milestone2.PresentationLayer
             this.label10 = new System.Windows.Forms.Label();
             this.pb1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnlStudents = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb1)).BeginInit();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.pnlStudents.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblDel
@@ -103,7 +104,7 @@ namespace PRG282_Milestone2.PresentationLayer
             // 
             this.dgvStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvStudents.Location = new System.Drawing.Point(41, 89);
-            this.dgvStudents.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvStudents.Margin = new System.Windows.Forms.Padding(2);
             this.dgvStudents.Name = "dgvStudents";
             this.dgvStudents.RowHeadersWidth = 102;
             this.dgvStudents.RowTemplate.Height = 40;
@@ -115,7 +116,7 @@ namespace PRG282_Milestone2.PresentationLayer
             // 
             this.txtSearch.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.Location = new System.Drawing.Point(43, 435);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(2);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(121, 22);
             this.txtSearch.TabIndex = 16;
@@ -126,7 +127,7 @@ namespace PRG282_Milestone2.PresentationLayer
             this.btnSearch.BackColor = System.Drawing.Color.White;
             this.btnSearch.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.Location = new System.Drawing.Point(182, 431);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(77, 35);
             this.btnSearch.TabIndex = 15;
@@ -140,7 +141,7 @@ namespace PRG282_Milestone2.PresentationLayer
             this.btnDel.BackColor = System.Drawing.Color.White;
             this.btnDel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDel.Location = new System.Drawing.Point(372, 430);
-            this.btnDel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDel.Margin = new System.Windows.Forms.Padding(2);
             this.btnDel.Name = "btnDel";
             this.btnDel.Size = new System.Drawing.Size(77, 35);
             this.btnDel.TabIndex = 14;
@@ -155,7 +156,7 @@ namespace PRG282_Milestone2.PresentationLayer
             this.btnClose.BackColor = System.Drawing.Color.White;
             this.btnClose.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.Location = new System.Drawing.Point(427, 422);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(77, 35);
             this.btnClose.TabIndex = 23;
@@ -168,7 +169,7 @@ namespace PRG282_Milestone2.PresentationLayer
             this.btnRead.BackColor = System.Drawing.Color.White;
             this.btnRead.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRead.Location = new System.Drawing.Point(374, 51);
-            this.btnRead.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRead.Margin = new System.Windows.Forms.Padding(2);
             this.btnRead.Name = "btnRead";
             this.btnRead.Size = new System.Drawing.Size(77, 35);
             this.btnRead.TabIndex = 17;
@@ -207,7 +208,7 @@ namespace PRG282_Milestone2.PresentationLayer
             this.btnAdd_Up.BackColor = System.Drawing.Color.White;
             this.btnAdd_Up.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd_Up.Location = new System.Drawing.Point(41, 51);
-            this.btnAdd_Up.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAdd_Up.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd_Up.Name = "btnAdd_Up";
             this.btnAdd_Up.Size = new System.Drawing.Size(119, 35);
             this.btnAdd_Up.TabIndex = 24;
@@ -226,6 +227,7 @@ namespace PRG282_Milestone2.PresentationLayer
             this.btnMenu.TabIndex = 50;
             this.btnMenu.Text = "Return to Menu";
             this.btnMenu.UseVisualStyleBackColor = false;
+            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
             // rbOther
             // 
@@ -253,6 +255,7 @@ namespace PRG282_Milestone2.PresentationLayer
             this.btnUp.TabIndex = 47;
             this.btnUp.Text = "Update";
             this.btnUp.UseVisualStyleBackColor = false;
+            this.btnUp.Click += new System.EventHandler(this.btnUp_Click);
             // 
             // btnRegister
             // 
@@ -358,7 +361,7 @@ namespace PRG282_Milestone2.PresentationLayer
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label9.Location = new System.Drawing.Point(612, 21);
+            this.label9.Location = new System.Drawing.Point(527, 9);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(163, 25);
@@ -496,43 +499,58 @@ namespace PRG282_Milestone2.PresentationLayer
             this.panel1.Size = new System.Drawing.Size(538, 540);
             this.panel1.TabIndex = 51;
             // 
-            // panel2
+            // pnlStudents
             // 
-            this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.Controls.Add(this.txtSNumber);
-            this.panel2.Controls.Add(this.btnMenu);
-            this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.btnUp);
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.btnRegister);
-            this.panel2.Controls.Add(this.pb1);
-            this.panel2.Controls.Add(this.rbOther);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.btnClose);
-            this.panel2.Controls.Add(this.dtpDOB);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.rbF);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.rbM);
-            this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.txtCodes);
-            this.panel2.Controls.Add(this.txtSName);
-            this.panel2.Controls.Add(this.txtAddress);
-            this.panel2.Controls.Add(this.txtPhone);
-            this.panel2.Location = new System.Drawing.Point(733, 56);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(783, 540);
-            this.panel2.TabIndex = 52;
+            this.pnlStudents.BackColor = System.Drawing.Color.Transparent;
+            this.pnlStudents.Controls.Add(this.txtSNumber);
+            this.pnlStudents.Controls.Add(this.btnMenu);
+            this.pnlStudents.Controls.Add(this.label10);
+            this.pnlStudents.Controls.Add(this.btnUp);
+            this.pnlStudents.Controls.Add(this.label7);
+            this.pnlStudents.Controls.Add(this.btnRegister);
+            this.pnlStudents.Controls.Add(this.pb1);
+            this.pnlStudents.Controls.Add(this.rbOther);
+            this.pnlStudents.Controls.Add(this.label2);
+            this.pnlStudents.Controls.Add(this.label3);
+            this.pnlStudents.Controls.Add(this.label4);
+            this.pnlStudents.Controls.Add(this.btnClose);
+            this.pnlStudents.Controls.Add(this.dtpDOB);
+            this.pnlStudents.Controls.Add(this.label5);
+            this.pnlStudents.Controls.Add(this.rbF);
+            this.pnlStudents.Controls.Add(this.label6);
+            this.pnlStudents.Controls.Add(this.rbM);
+            this.pnlStudents.Controls.Add(this.label8);
+            this.pnlStudents.Controls.Add(this.txtCodes);
+            this.pnlStudents.Controls.Add(this.txtSName);
+            this.pnlStudents.Controls.Add(this.txtAddress);
+            this.pnlStudents.Controls.Add(this.txtPhone);
+            this.pnlStudents.Location = new System.Drawing.Point(658, 56);
+            this.pnlStudents.Name = "pnlStudents";
+            this.pnlStudents.Size = new System.Drawing.Size(783, 540);
+            this.pnlStudents.TabIndex = 52;
+            this.pnlStudents.Visible = false;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label11.Location = new System.Drawing.Point(999, 28);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(225, 25);
+            this.label11.TabIndex = 53;
+            this.label11.Text = "Register New Student";
             // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1568, 789);
-            this.Controls.Add(this.panel2);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.pnlStudents);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label9);
             this.Name = "frmMenu";
@@ -542,8 +560,8 @@ namespace PRG282_Milestone2.PresentationLayer
             ((System.ComponentModel.ISupportInitialize)(this.pb1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.pnlStudents.ResumeLayout(false);
+            this.pnlStudents.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -584,6 +602,7 @@ namespace PRG282_Milestone2.PresentationLayer
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.PictureBox pb1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnlStudents;
+        private System.Windows.Forms.Label label11;
     }
 }
