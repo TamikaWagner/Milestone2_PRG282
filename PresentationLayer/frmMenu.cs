@@ -31,8 +31,7 @@ namespace PRG282_Milestone2.PresentationLayer
         private void frmMenu_Load(object sender, EventArgs e)
         {
             txtSearch.Visible = false;
-            btnUp.Enabled = false;
-            btnRegister.Enabled = false;
+
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -353,6 +352,11 @@ namespace PRG282_Milestone2.PresentationLayer
             {
                 MessageBox.Show("Something went wrong trying to register Student.");
             }
+        }
+
+        private void btnRegister_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
