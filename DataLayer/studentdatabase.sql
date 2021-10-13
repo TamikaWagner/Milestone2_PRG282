@@ -99,19 +99,19 @@ Use StudentInfo
   use StudentInfo
    INSERT INTO ModuleDetails(Module_Codes, Module_Name, Module_Description, Module_Link)
 VALUES
-(1, 'LRP281', 'Liniar maths in Excel', 'https://www.youtube.com/watch?v=6xa1x_Iqjzg')
+(1, 'LRP281', 'Liniar maths in Excel', 'https://www.youtube.com/watch?v=6xa1x_Iqjzg'),
 (2, 'WRP281', 'Creating and validating websites', 'https://www.youtube.com/watch?v=In0nB0ABaUk'),
 (3, 'INL282', 'Innovation in diffrent fields', 'https://www.youtube.com/watch?v=Mtjatz9r-Vc'),
-(,4 , 'DBD281' 'Creating databases in SQL server', 'https://www.youtube.com/watch?v=jEBx4z3AxG4'),
+(4 , 'DBD281' ,'Creating databases in SQL server', 'https://www.youtube.com/watch?v=jEBx4z3AxG4'),
 (5, 'MAT281', 'Mathematics', 'https://www.youtube.com/watch?v=yRwQ7A6jVLk'),
-(6, 'LRP282', ''),
-(7'SOT281', ),
+(6, 'LPR282', 'Linear Programming (LP) Optimization with Excel Solver','https://www.youtube.com/watch?v=6xa1x_Iqjzg'),
+(7,'PRG282','How to connect C# to SQL (the easy way)','https://www.youtube.com/watch?v=Et2khGnrIqc' ),
 (8, 'STA281', 'Statistics', 'https://www.youtube.com/watch?v=GUQJ7zMoSCM'),
-('INF281',9, 'Information systems', 'https://www.youtube.com/watch?v=Qujsd4vkqFI&t=3s'),
-('PMM281',10, ''),
-('SAD281',11, ),
-('DWH281',12),
-('COA281',13)
+(9,'INF281', 'Information systems', 'https://www.youtube.com/watch?v=Qujsd4vkqFI&t=3s'),
+(10,'PMM281', 'Project Types','https://www.youtube.com/watch?v=EQeZItIhDOI'),
+(11,'WPR281','Programming with Python and JavaScript','https://www.youtube.com/watch?v=NcoBAfJ6l2Q&t=1s' ),
+(12,'PRG281','How to Save and Retrieve Image from Database','https://www.youtube.com/watch?v=W_cOlBBlFGM'),
+(13,'IOT281','What Is IoT Technology And How It Works','https://www.youtube.com/watch?v=7DZR5UaAM0E')
 go
 
 drop table FullStudentDetails
