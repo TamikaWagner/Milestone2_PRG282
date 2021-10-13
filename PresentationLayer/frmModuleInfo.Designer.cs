@@ -98,12 +98,12 @@ namespace PRG282_Milestone2.PresentationLayer
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label4.Location = new System.Drawing.Point(864, 370);
+            this.label4.Location = new System.Drawing.Point(864, 356);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(130, 19);
+            this.label4.Size = new System.Drawing.Size(118, 18);
             this.label4.TabIndex = 38;
             this.label4.Text = "Close Program";
             // 
@@ -125,12 +125,12 @@ namespace PRG282_Milestone2.PresentationLayer
             // 
             this.lblSearch.AutoSize = true;
             this.lblSearch.BackColor = System.Drawing.Color.Transparent;
-            this.lblSearch.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSearch.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSearch.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblSearch.Location = new System.Drawing.Point(142, 366);
+            this.lblSearch.Location = new System.Drawing.Point(144, 356);
             this.lblSearch.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSearch.Name = "lblSearch";
-            this.lblSearch.Size = new System.Drawing.Size(149, 19);
+            this.lblSearch.Size = new System.Drawing.Size(140, 18);
             this.lblSearch.TabIndex = 31;
             this.lblSearch.Text = "Enter a Course ID";
             this.lblSearch.Visible = false;
@@ -141,7 +141,7 @@ namespace PRG282_Milestone2.PresentationLayer
             this.txtSearch.Location = new System.Drawing.Point(85, 400);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(2);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(135, 26);
+            this.txtSearch.Size = new System.Drawing.Size(135, 22);
             this.txtSearch.TabIndex = 28;
             this.txtSearch.Visible = false;
             this.txtSearch.WordWrap = false;
@@ -174,12 +174,12 @@ namespace PRG282_Milestone2.PresentationLayer
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label5.Location = new System.Drawing.Point(130, 25);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(271, 19);
+            this.label5.Size = new System.Drawing.Size(245, 18);
             this.label5.TabIndex = 39;
             this.label5.Text = "Please enter the required details";
             // 
@@ -188,7 +188,7 @@ namespace PRG282_Milestone2.PresentationLayer
             this.txtMLink.Location = new System.Drawing.Point(234, 197);
             this.txtMLink.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMLink.Name = "txtMLink";
-            this.txtMLink.Size = new System.Drawing.Size(249, 26);
+            this.txtMLink.Size = new System.Drawing.Size(249, 22);
             this.txtMLink.TabIndex = 27;
             // 
             // brnReturn
@@ -209,7 +209,7 @@ namespace PRG282_Milestone2.PresentationLayer
             this.txtMDesc.Location = new System.Drawing.Point(234, 154);
             this.txtMDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMDesc.Name = "txtMDesc";
-            this.txtMDesc.Size = new System.Drawing.Size(249, 26);
+            this.txtMDesc.Size = new System.Drawing.Size(249, 22);
             this.txtMDesc.TabIndex = 26;
             // 
             // btnUp
@@ -230,7 +230,7 @@ namespace PRG282_Milestone2.PresentationLayer
             this.txtMName.Location = new System.Drawing.Point(234, 110);
             this.txtMName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMName.Name = "txtMName";
-            this.txtMName.Size = new System.Drawing.Size(249, 26);
+            this.txtMName.Size = new System.Drawing.Size(249, 22);
             this.txtMName.TabIndex = 22;
             // 
             // txtMNumber
@@ -238,18 +238,18 @@ namespace PRG282_Milestone2.PresentationLayer
             this.txtMNumber.Location = new System.Drawing.Point(234, 69);
             this.txtMNumber.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMNumber.Name = "txtMNumber";
-            this.txtMNumber.Size = new System.Drawing.Size(249, 26);
+            this.txtMNumber.Size = new System.Drawing.Size(249, 22);
             this.txtMNumber.TabIndex = 21;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label1.Location = new System.Drawing.Point(40, 154);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(193, 23);
+            this.label1.Size = new System.Drawing.Size(155, 18);
             this.label1.TabIndex = 20;
             this.label1.Text = "Module Description:";
             // 
@@ -257,11 +257,11 @@ namespace PRG282_Milestone2.PresentationLayer
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label2.Location = new System.Drawing.Point(41, 200);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(138, 23);
+            this.label2.Size = new System.Drawing.Size(115, 18);
             this.label2.TabIndex = 19;
             this.label2.Text = "Module Links: ";
             // 
@@ -269,11 +269,11 @@ namespace PRG282_Milestone2.PresentationLayer
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label3.Location = new System.Drawing.Point(37, 110);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(147, 23);
+            this.label3.Size = new System.Drawing.Size(117, 18);
             this.label3.TabIndex = 18;
             this.label3.Text = "Module Name:";
             // 
@@ -281,11 +281,11 @@ namespace PRG282_Milestone2.PresentationLayer
             // 
             this.lbl_SDStudentID.AutoSize = true;
             this.lbl_SDStudentID.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_SDStudentID.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_SDStudentID.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_SDStudentID.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.lbl_SDStudentID.Location = new System.Drawing.Point(37, 72);
             this.lbl_SDStudentID.Name = "lbl_SDStudentID";
-            this.lbl_SDStudentID.Size = new System.Drawing.Size(108, 23);
+            this.lbl_SDStudentID.Size = new System.Drawing.Size(89, 18);
             this.lbl_SDStudentID.TabIndex = 17;
             this.lbl_SDStudentID.Text = "Module ID:";
             // 
@@ -307,12 +307,12 @@ namespace PRG282_Milestone2.PresentationLayer
             // 
             this.lblDel.AutoSize = true;
             this.lblDel.BackColor = System.Drawing.Color.Transparent;
-            this.lblDel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDel.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDel.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblDel.Location = new System.Drawing.Point(567, 366);
+            this.lblDel.Location = new System.Drawing.Point(569, 356);
             this.lblDel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDel.Name = "lblDel";
-            this.lblDel.Size = new System.Drawing.Size(165, 19);
+            this.lblDel.Size = new System.Drawing.Size(147, 18);
             this.lblDel.TabIndex = 33;
             this.lblDel.Text = "Delete module info";
             this.lblDel.Visible = false;
@@ -333,12 +333,12 @@ namespace PRG282_Milestone2.PresentationLayer
             // 
             this.lblRead.AutoSize = true;
             this.lblRead.BackColor = System.Drawing.Color.Transparent;
-            this.lblRead.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRead.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRead.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.lblRead.Location = new System.Drawing.Point(569, 22);
             this.lblRead.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRead.Name = "lblRead";
-            this.lblRead.Size = new System.Drawing.Size(164, 19);
+            this.lblRead.Size = new System.Drawing.Size(152, 18);
             this.lblRead.TabIndex = 32;
             this.lblRead.Text = "Show the  modules";
             // 
@@ -372,7 +372,7 @@ namespace PRG282_Milestone2.PresentationLayer
             // 
             // frmModuleInfo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1016, 474);
             this.Controls.Add(this.pnlStudentDetails);
