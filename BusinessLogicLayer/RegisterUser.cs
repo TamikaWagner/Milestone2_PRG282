@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 using PRG282_Milestone2.PresentationLayer;
 using PRG282_Milestone2.BusinessLogicLayer;
 using PRG282_Milestone2.DataLayer;
+using System.IO;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace PRG282_Milestone2.BusinessLogicLayer
 {
@@ -22,5 +25,6 @@ namespace PRG282_Milestone2.BusinessLogicLayer
 
             return newuser;
         }
+
     }
 }

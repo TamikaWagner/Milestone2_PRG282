@@ -291,6 +291,26 @@ namespace PRG282_Milestone2.DataLayer
             }
         }
 
+        public byte[] newImage()
+        {
+            using (OpenFileDialog openFileDialog = new OpenFileDialog()
+            {
+                Filter = "images|*.jpg; *.png",
+                ValidateNames = true,
+                Multiselect = false
+            })
+            {
+                byte[] bytes = null;
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    string imageFileName = openFileDialog.FileName;
+                    bytes = File.ReadAllBytes(imageFileName);
+                    return bytes;
+                }
+                return bytes;
+            }
+        }
+
 
         class DH_ReadLogin
         {

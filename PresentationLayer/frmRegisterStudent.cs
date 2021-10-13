@@ -23,12 +23,8 @@ namespace PRG282_Milestone2.PresentationLayer
         {
             InitializeComponent();
         }
-        SqlConnection con;
-        SqlCommand cmd;
-        SqlDataAdapter adapter;
-        DataSet ds; int rno = 0;
-        MemoryStream ms;
-        byte[] photo_array;
+
+        private byte[] bytes;
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
@@ -133,14 +129,17 @@ namespace PRG282_Milestone2.PresentationLayer
 
         private void pb1_Click(object sender, EventArgs e)
         {
-            if (pb1.Image != null)
-            { 
-                ms = new MemoryStream();
-                pb1.Image.Save(ms, ImageFormat.Jpeg);
-                byte[] photo_aray = new byte[ms.Length];
-                ms.Position = 0;
-                ms.Read(photo_aray, 0, photo_aray.Length);
-                cmd.Parameters.AddWithValue("@photo", photo_aray);
+            try
+            {
+                DataHandler operations = new DataHandler();
+                bytes = operations.newImage();
+                MemoryStream memoryStream = new MemoryStream(bytes);
+                Image image = Image.FromStream(memoryStream);
+                pb1.Image = image; 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Please upload a photo", ex.Message);
             }
         }
     }
