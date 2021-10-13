@@ -410,7 +410,7 @@ namespace PRG282_Milestone2.PresentationLayer
             this.lblDel.BackColor = System.Drawing.Color.Transparent;
             this.lblDel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDel.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblDel.Location = new System.Drawing.Point(468, 517);
+            this.lblDel.Location = new System.Drawing.Point(473, 493);
             this.lblDel.Name = "lblDel";
             this.lblDel.Size = new System.Drawing.Size(160, 19);
             this.lblDel.TabIndex = 22;
@@ -471,7 +471,7 @@ namespace PRG282_Milestone2.PresentationLayer
             // 
             this.btnDel.BackColor = System.Drawing.Color.White;
             this.btnDel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDel.Location = new System.Drawing.Point(499, 548);
+            this.btnDel.Location = new System.Drawing.Point(504, 524);
             this.btnDel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDel.Name = "btnDel";
             this.btnDel.Size = new System.Drawing.Size(103, 43);
