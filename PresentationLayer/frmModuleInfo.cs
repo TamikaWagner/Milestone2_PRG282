@@ -120,6 +120,8 @@ namespace PRG282_Milestone2.PresentationLayer
             try
             {
                 int SModule = int.Parse(txtSearch.Text);
+                Source.DataSource = null;
+                Source.DataSource = Handler.SearchModules(SModule);
                 
             }
             catch (Exception)
@@ -134,6 +136,16 @@ namespace PRG282_Milestone2.PresentationLayer
             this.Hide();
             frmNavigation FN = new frmNavigation();
             FN.Show();
+        }
+
+        private void btnUp_Click(object sender, EventArgs e)
+        {
+            int MNumber = int.Parse(txtMNumber.Text);
+            string MName = txtMName.Text;
+            string MDesc = txtMDesc.Text;
+            string MLink = txtMLink.Text;
+            Handler.UpdateModules(MNumber, MName, MDesc, MLink);
+            MessageBox.Show(Handler.UpdateModules(MNumber, MName, MDesc, MLink));
         }
     }
 }

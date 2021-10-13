@@ -102,13 +102,13 @@ namespace PRG282_Milestone2.DataLayer
             return modules;
         }
 
-        public string UpdateModules(string MCode, string MName, string MDescription, string Link)
+        public string UpdateModules(int MCode, string MName, string MDescription, string Link)
         {
             SqlConnection connect = new SqlConnection(conn);
             connect.Open();
             string Query = $"Update ModuleDetails set Module_Code = '" + MCode + "', Module_Name = '" + MName + "', Module_Description = '" + MDescription + "', Module_Link = '" + Link + "' Where Module_Code = '" + MCode + "'";
 
-            if (MCode != "")
+            if (MCode > 0)
             {
                 if (MName != "" && MDescription != "" && Link != "")
                 {
@@ -186,6 +186,27 @@ namespace PRG282_Milestone2.DataLayer
                 connect.Close();
                 return "Please enter a Module code.";
             }
+        }
+
+        public List<Module>SearchModules(int MCode)
+        {
+            List<Module> Found = new List<Module>();
+            SqlConnection connect = new SqlConnection(conn);
+            if (connect.State != ConnectionState.Open)
+            {
+                connect.Open();
+                string Query = "Select * from ModuleDetails Where Module_Codes= '" + MCode + "'";
+                SqlCommand Command = new SqlCommand(Query, connect);
+                using (var Reader = Command.ExecuteReader())
+                {
+                    while (Reader.Read())
+                    {
+                        Found.Add(new Module(int.Parse(Reader[0].ToString()), Reader[1].ToString(), Reader[2].ToString(), Reader[3].ToString()));
+                    }
+                }
+            }
+            connect.Close();
+            return Found;
         }
 
 

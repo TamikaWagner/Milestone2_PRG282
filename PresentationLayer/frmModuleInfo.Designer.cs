@@ -103,7 +103,7 @@ namespace PRG282_Milestone2.PresentationLayer
             this.label4.Location = new System.Drawing.Point(864, 370);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(103, 16);
+            this.label4.Size = new System.Drawing.Size(130, 19);
             this.label4.TabIndex = 38;
             this.label4.Text = "Close Program";
             // 
@@ -130,7 +130,7 @@ namespace PRG282_Milestone2.PresentationLayer
             this.lblSearch.Location = new System.Drawing.Point(142, 366);
             this.lblSearch.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSearch.Name = "lblSearch";
-            this.lblSearch.Size = new System.Drawing.Size(119, 16);
+            this.lblSearch.Size = new System.Drawing.Size(149, 19);
             this.lblSearch.TabIndex = 31;
             this.lblSearch.Text = "Enter a Course ID";
             this.lblSearch.Visible = false;
@@ -141,7 +141,7 @@ namespace PRG282_Milestone2.PresentationLayer
             this.txtSearch.Location = new System.Drawing.Point(85, 400);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(2);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(135, 22);
+            this.txtSearch.Size = new System.Drawing.Size(135, 26);
             this.txtSearch.TabIndex = 28;
             this.txtSearch.Visible = false;
             this.txtSearch.WordWrap = false;
@@ -179,7 +179,7 @@ namespace PRG282_Milestone2.PresentationLayer
             this.label5.Location = new System.Drawing.Point(130, 25);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(219, 16);
+            this.label5.Size = new System.Drawing.Size(271, 19);
             this.label5.TabIndex = 39;
             this.label5.Text = "Please enter the required details";
             // 
@@ -188,7 +188,7 @@ namespace PRG282_Milestone2.PresentationLayer
             this.txtMLink.Location = new System.Drawing.Point(234, 197);
             this.txtMLink.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMLink.Name = "txtMLink";
-            this.txtMLink.Size = new System.Drawing.Size(249, 22);
+            this.txtMLink.Size = new System.Drawing.Size(249, 26);
             this.txtMLink.TabIndex = 27;
             // 
             // brnReturn
@@ -209,7 +209,7 @@ namespace PRG282_Milestone2.PresentationLayer
             this.txtMDesc.Location = new System.Drawing.Point(234, 154);
             this.txtMDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMDesc.Name = "txtMDesc";
-            this.txtMDesc.Size = new System.Drawing.Size(249, 22);
+            this.txtMDesc.Size = new System.Drawing.Size(249, 26);
             this.txtMDesc.TabIndex = 26;
             // 
             // btnUp
@@ -223,13 +223,14 @@ namespace PRG282_Milestone2.PresentationLayer
             this.btnUp.TabIndex = 35;
             this.btnUp.Text = "Update";
             this.btnUp.UseVisualStyleBackColor = false;
+            this.btnUp.Click += new System.EventHandler(this.btnUp_Click);
             // 
             // txtMName
             // 
             this.txtMName.Location = new System.Drawing.Point(234, 110);
             this.txtMName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMName.Name = "txtMName";
-            this.txtMName.Size = new System.Drawing.Size(249, 22);
+            this.txtMName.Size = new System.Drawing.Size(249, 26);
             this.txtMName.TabIndex = 22;
             // 
             // txtMNumber
@@ -237,7 +238,7 @@ namespace PRG282_Milestone2.PresentationLayer
             this.txtMNumber.Location = new System.Drawing.Point(234, 69);
             this.txtMNumber.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMNumber.Name = "txtMNumber";
-            this.txtMNumber.Size = new System.Drawing.Size(249, 22);
+            this.txtMNumber.Size = new System.Drawing.Size(249, 26);
             this.txtMNumber.TabIndex = 21;
             // 
             // label1
@@ -248,7 +249,7 @@ namespace PRG282_Milestone2.PresentationLayer
             this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label1.Location = new System.Drawing.Point(40, 154);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(156, 18);
+            this.label1.Size = new System.Drawing.Size(193, 23);
             this.label1.TabIndex = 20;
             this.label1.Text = "Module Description:";
             // 
@@ -260,7 +261,7 @@ namespace PRG282_Milestone2.PresentationLayer
             this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label2.Location = new System.Drawing.Point(41, 200);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(112, 18);
+            this.label2.Size = new System.Drawing.Size(138, 23);
             this.label2.TabIndex = 19;
             this.label2.Text = "Module Links: ";
             // 
@@ -272,7 +273,7 @@ namespace PRG282_Milestone2.PresentationLayer
             this.label3.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label3.Location = new System.Drawing.Point(37, 110);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(118, 18);
+            this.label3.Size = new System.Drawing.Size(147, 23);
             this.label3.TabIndex = 18;
             this.label3.Text = "Module Name:";
             // 
@@ -284,7 +285,7 @@ namespace PRG282_Milestone2.PresentationLayer
             this.lbl_SDStudentID.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.lbl_SDStudentID.Location = new System.Drawing.Point(37, 72);
             this.lbl_SDStudentID.Name = "lbl_SDStudentID";
-            this.lbl_SDStudentID.Size = new System.Drawing.Size(88, 18);
+            this.lbl_SDStudentID.Size = new System.Drawing.Size(108, 23);
             this.lbl_SDStudentID.TabIndex = 17;
             this.lbl_SDStudentID.Text = "Module ID:";
             // 
@@ -311,7 +312,7 @@ namespace PRG282_Milestone2.PresentationLayer
             this.lblDel.Location = new System.Drawing.Point(567, 366);
             this.lblDel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDel.Name = "lblDel";
-            this.lblDel.Size = new System.Drawing.Size(130, 16);
+            this.lblDel.Size = new System.Drawing.Size(165, 19);
             this.lblDel.TabIndex = 33;
             this.lblDel.Text = "Delete module info";
             this.lblDel.Visible = false;
@@ -337,7 +338,7 @@ namespace PRG282_Milestone2.PresentationLayer
             this.lblRead.Location = new System.Drawing.Point(569, 22);
             this.lblRead.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRead.Name = "lblRead";
-            this.lblRead.Size = new System.Drawing.Size(128, 16);
+            this.lblRead.Size = new System.Drawing.Size(164, 19);
             this.lblRead.TabIndex = 32;
             this.lblRead.Text = "Show the  modules";
             // 
@@ -371,7 +372,7 @@ namespace PRG282_Milestone2.PresentationLayer
             // 
             // frmModuleInfo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1016, 474);
             this.Controls.Add(this.pnlStudentDetails);
