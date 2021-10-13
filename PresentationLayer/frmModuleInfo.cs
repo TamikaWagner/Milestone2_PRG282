@@ -147,5 +147,10 @@ namespace PRG282_Milestone2.PresentationLayer
             Handler.UpdateModules(MNumber, MName, MDesc, MLink);
             MessageBox.Show(Handler.UpdateModules(MNumber, MName, MDesc, MLink));
         }
+
+        private void lblSearch_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
