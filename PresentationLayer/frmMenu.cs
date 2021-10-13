@@ -304,11 +304,12 @@ namespace PRG282_Milestone2.PresentationLayer
                     this.Hide();
                     frmMenu M = new frmMenu();
                     M.Show();
+                    btnRead.PerformClick();
                 }
             }
             catch (Exception)
             {
-                MessageBox.Show("Something went wrong trying to register Student.");
+                MessageBox.Show("Something went wrong trying to register Student. Please make sure all the required information in entered");
             }
         }
 
@@ -341,16 +342,16 @@ namespace PRG282_Milestone2.PresentationLayer
 
                 if (Handler.UpdateStudent(SNumber, SName, Gender, DOB, Phone, SAddress, MCodes) == "Student with number " + SNumber + " was updated.")
                 {
-                    frmRegisterStudent R = new frmRegisterStudent();
-                    R.Hide();
                     frmMenu M = new frmMenu();
+                    this.Show();
                     M.Show();
+                    btnRead.PerformClick();
                     MessageBox.Show(Handler.RegisterStudent(SNumber, SName, Gender, DOB, Phone, SAddress, MCodes));
                 }
             }
             catch (Exception)
             {
-                MessageBox.Show("Something went wrong trying to register Student.");
+                MessageBox.Show("Something went wrong trying to register Student. Please make sure all the required information in entered");
             }
         }
 
