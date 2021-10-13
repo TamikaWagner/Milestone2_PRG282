@@ -29,6 +29,7 @@ namespace PRG282_Milestone2.PresentationLayer
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmModuleInfo));
             this.btnCreate = new System.Windows.Forms.Button();
             this.pnlStudentDetails = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
@@ -73,6 +74,7 @@ namespace PRG282_Milestone2.PresentationLayer
             // 
             // pnlStudentDetails
             // 
+            this.pnlStudentDetails.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlStudentDetails.BackgroundImage")));
             this.pnlStudentDetails.Controls.Add(this.label4);
             this.pnlStudentDetails.Controls.Add(this.btnClose);
             this.pnlStudentDetails.Controls.Add(this.lblSearch);
@@ -95,7 +97,9 @@ namespace PRG282_Milestone2.PresentationLayer
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label4.Location = new System.Drawing.Point(864, 370);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
@@ -120,7 +124,9 @@ namespace PRG282_Milestone2.PresentationLayer
             // lblSearch
             // 
             this.lblSearch.AutoSize = true;
+            this.lblSearch.BackColor = System.Drawing.Color.Transparent;
             this.lblSearch.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSearch.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.lblSearch.Location = new System.Drawing.Point(142, 366);
             this.lblSearch.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSearch.Name = "lblSearch";
@@ -144,6 +150,7 @@ namespace PRG282_Milestone2.PresentationLayer
             // 
             this.pnlModuleD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlModuleD.BackColor = System.Drawing.Color.Transparent;
             this.pnlModuleD.Controls.Add(this.label5);
             this.pnlModuleD.Controls.Add(this.txtMLink);
             this.pnlModuleD.Controls.Add(this.brnReturn);
@@ -166,7 +173,9 @@ namespace PRG282_Milestone2.PresentationLayer
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label5.Location = new System.Drawing.Point(130, 25);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
@@ -234,7 +243,9 @@ namespace PRG282_Milestone2.PresentationLayer
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label1.Location = new System.Drawing.Point(40, 154);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(156, 18);
@@ -244,7 +255,9 @@ namespace PRG282_Milestone2.PresentationLayer
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label2.Location = new System.Drawing.Point(41, 200);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(112, 18);
@@ -254,7 +267,9 @@ namespace PRG282_Milestone2.PresentationLayer
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label3.Location = new System.Drawing.Point(37, 110);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(118, 18);
@@ -264,7 +279,9 @@ namespace PRG282_Milestone2.PresentationLayer
             // lbl_SDStudentID
             // 
             this.lbl_SDStudentID.AutoSize = true;
+            this.lbl_SDStudentID.BackColor = System.Drawing.Color.Transparent;
             this.lbl_SDStudentID.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_SDStudentID.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.lbl_SDStudentID.Location = new System.Drawing.Point(37, 72);
             this.lbl_SDStudentID.Name = "lbl_SDStudentID";
             this.lbl_SDStudentID.Size = new System.Drawing.Size(88, 18);
@@ -288,7 +305,9 @@ namespace PRG282_Milestone2.PresentationLayer
             // lblDel
             // 
             this.lblDel.AutoSize = true;
+            this.lblDel.BackColor = System.Drawing.Color.Transparent;
             this.lblDel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDel.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.lblDel.Location = new System.Drawing.Point(567, 366);
             this.lblDel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDel.Name = "lblDel";
@@ -312,7 +331,9 @@ namespace PRG282_Milestone2.PresentationLayer
             // lblRead
             // 
             this.lblRead.AutoSize = true;
+            this.lblRead.BackColor = System.Drawing.Color.Transparent;
             this.lblRead.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRead.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.lblRead.Location = new System.Drawing.Point(569, 22);
             this.lblRead.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRead.Name = "lblRead";
